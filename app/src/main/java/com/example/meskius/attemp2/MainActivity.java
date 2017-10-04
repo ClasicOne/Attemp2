@@ -1,4 +1,5 @@
 package com.example.meskius.attemp2;
+import android.content.Intent;
 
 import android.os.AsyncTask;
 import android.provider.DocumentsContract;
@@ -24,7 +25,8 @@ import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
     TextView text;
-
+    DoIt data;
+    //String programaDuomenys[] = new String[2];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +37,39 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new DoIt().execute();
+
+            }
+
+        });
+        final Spinner program=(Spinner)findViewById(R.id.spinner);
+        Button myg1 =(Button)findViewById(R.id.programData);
+        myg1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String test = text.getText().toString();
+
+                String[] programData = new String[2];
+                programData=test.split("\n",3);
+                Log.i("Duck",programData[0]);
+                spinner(programData,program);
             }
         });
+
+
+    }
+
+
+
+
+    public void spinner(String[] program, Spinner metai) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        metai.setAdapter(adapter);
     }
     public class DoIt extends AsyncTask<Void,Void,Void>{
-    String words;
+        String words;
+
+        MainActivity main;
         @Override
         protected Void doInBackground(Void... voids) {
             try {
@@ -47,36 +77,24 @@ public class MainActivity extends AppCompatActivity {
                 Elements el=d.select("#program");
                 String programa;
                 String method = null;
-                Spinner program = (Spinner)findViewById(R.id.program);
-                Spinner metai = (Spinner)findViewById(R.id.year);
-                Spinner grupe = (Spinner)findViewById(R.id.group);
                 for(Element step : el){
 
                     method = step.select("option").html();
                     words=method;
-
-
                 }
-
                 programa = method;
-                String[] programData = new String[2];
-                programData= programa.split("\n",3);
-                String test[] = {"guck","asd"};
-                List<String> list = new ArrayList<String>();
-                list.add("one");
-                list.add("two");
-                list.add("three");
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, list);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                program.setAdapter(adapter);
+
+                // iskaido tipa
 
 
+                //main.temp(programData);
 
+                // Iterpia informacija i spiineri
 
+                //spinner(programData,metai);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             return null;
         }
 
