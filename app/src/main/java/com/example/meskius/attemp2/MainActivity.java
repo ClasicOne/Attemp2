@@ -16,6 +16,8 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
+import static java.lang.Integer.parseInt;
+
 public class MainActivity extends AppCompatActivity {
     TextView text;
 
@@ -39,11 +41,19 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Document d = Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/groups.php").get();
                 Elements el=d.select("#program");
+                String programa;
+                String method = null;
 
                 for(Element step : el){
-                    String method = step.select("option").html();
-                    words = method;
+
+                    method = step.select("option").html();
+                    //words=method;
+
+
                 }
+                programa = method;
+                String[] program = new String[2];
+                program= programa.split("\n",3);
 
             } catch (IOException e) {
                 e.printStackTrace();
