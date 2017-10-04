@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -15,6 +17,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
@@ -43,17 +47,31 @@ public class MainActivity extends AppCompatActivity {
                 Elements el=d.select("#program");
                 String programa;
                 String method = null;
-
+                Spinner program = (Spinner)findViewById(R.id.program);
+                Spinner metai = (Spinner)findViewById(R.id.year);
+                Spinner grupe = (Spinner)findViewById(R.id.group);
                 for(Element step : el){
 
                     method = step.select("option").html();
-                    //words=method;
+                    words=method;
 
 
                 }
+
                 programa = method;
-                String[] program = new String[2];
-                program= programa.split("\n",3);
+                String[] programData = new String[2];
+                programData= programa.split("\n",3);
+                String test[] = {"guck","asd"};
+                List<String> list = new ArrayList<String>();
+                list.add("one");
+                list.add("two");
+                list.add("three");
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, list);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                program.setAdapter(adapter);
+
+
+
 
             } catch (IOException e) {
                 e.printStackTrace();
