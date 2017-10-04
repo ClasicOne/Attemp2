@@ -39,8 +39,12 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Document d = Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/groups.php").get();
                 Elements el=d.select("#program");
-                int a;
-                words =d.text();
+
+                for(Element step : el){
+                    String method = step.select("option").html();
+                    words = method;
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
