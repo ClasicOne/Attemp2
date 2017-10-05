@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -67,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
         ww.setWebViewClient(new WebViewClient());
 
+        class JsObject {
+            @JavascriptInterface
+            public String toString() { return "injectedObject"; }
+        }
+        ww.addJavascriptInterface(new JsObject(), "injectedObject");
+        ww.loadData("", "text/html", null);
+        ww.loadUrl("javascript:$('#program').val('1').change();");
     }
 
 
@@ -94,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
                     words=method;
                 }
                 programa = method;
-
-                // iskaido tipa
 
 
                 //main.temp(programData);
