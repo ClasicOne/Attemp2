@@ -2,11 +2,16 @@ package com.example.meskius.attemp2;
 import android.content.Intent;
 
 import android.os.AsyncTask;
+import android.provider.ContactsContract;
 import android.provider.DocumentsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -26,6 +31,7 @@ import static java.lang.Integer.parseInt;
 public class MainActivity extends AppCompatActivity {
     TextView text;
     DoIt data;
+    WebView ww;
     //String programaDuomenys[] = new String[2];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +53,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String test = text.getText().toString();
-
                 String[] programData = new String[2];
                 programData=test.split("\n",3);
                 Log.i("Duck",programData[0]);
                 spinner(programData,program);
             }
         });
-
+        ww= (WebView)findViewById(R.id.webView);
+        WebSettings webSettings = ww.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        ww.setWebChromeClient(new WebChromeClient());
+        //myWebView.loadUrl("http://google.com");
+        ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
+        ww.setWebViewClient(new WebViewClient());
 
     }
 
