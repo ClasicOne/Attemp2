@@ -1,18 +1,15 @@
 package com.example.meskius.attemp2;
-import android.content.Intent;
 
 import android.os.AsyncTask;
-import android.provider.ContactsContract;
-import android.provider.DocumentsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -24,8 +21,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
@@ -59,8 +54,46 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        final Spinner program=(Spinner)findViewById(R.id.spinner);
+        final Spinner programID=(Spinner)findViewById(R.id.tipasID);
+        final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
+        final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
         Button myg1 =(Button)findViewById(R.id.programData);
+        spinner(programTipas,programID);
+        programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String spinnerText = adapterView.getSelectedItem().toString();
+                switch (spinnerText){
+                    case "IŠT":
+                        spinner(yearMetaiIST,metaiID);
+                        break;
+                    case "NL":
+                        spinner(yearMetaiNL,metaiID);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        metaiID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String spinnerText = adapterView.getSelectedItem().toString();
+                switch (spinnerText){
+                    case "1":
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         myg1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -68,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 String[] programData = new String[2];
                 programData=test.split("\n",3);
                 Log.i("Duck",programData[0]);
-                spinner(programData,program);
+                spinner(programData,programID);
             }
         });
         ww= (WebView)findViewById(R.id.webView);
@@ -78,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         //myWebView.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
         ww.setWebViewClient(new WebViewClient());
-        ww.
+
 
      /*   class JsObject {
             @JavascriptInterface
