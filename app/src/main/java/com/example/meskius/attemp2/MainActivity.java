@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     TextView text;
     DoIt data;
     WebView ww;
+    String programSpinnerText;
     //String programaDuomenys[] = new String[2];
     String programTipas[] = {"--pasirinkti--", "IŠT","NL"};
     String yearMetaiNL[] = {"--pasirinkti--", "1","2","3"};
@@ -62,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String spinnerText = adapterView.getSelectedItem().toString();
-                switch (spinnerText){
+                programSpinnerText = adapterView.getSelectedItem().toString();
+
+                switch (programSpinnerText){
                     case "IŠT":
                         spinner(yearMetaiIST,metaiID);
                         break;
@@ -84,8 +86,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
+                if(programSpinnerText.indexOf("IŠT")!=-1)
                 switch (spinnerText){
                     case "1":
+                        spinner(groupGrupeIST1,grupeID);
+                        break;
+                    case "2":
+                        spinner(groupGrupeIST2,grupeID);
+                        break;
+                    case "3":
+                        spinner(groupGrupeIST3,grupeID);
+                        break;
+                    case "4":
+                        spinner(groupGrupeIST4,grupeID);
+                    default:
+                        break;
+
+                }else switch (spinnerText){
+                    case "1":
+                        spinner(groupGrupeNL1,grupeID);
+                        break;
+                    case "2":
+                        spinner(groupGrupeNL2,grupeID);
+                        break;
+                    case "3":
+                        spinner(groupGrupeNL3,grupeID);
+                        break;
+                    default:
+                        break;
                 }
             }
 
