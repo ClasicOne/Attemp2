@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KVK Tvarkaraštis</string>
+    <string name="app_name">Tvarkaraštis</string>
     <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
