@@ -1,6 +1,6 @@
 package com.example.meskius.attemp2;
 
-import android.os.AsyncTask;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,24 +14,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
-
-import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
     TextView text;
-    //DoIt data;
-    //
     WebView ww;
+
+
     String programSpinnerText;
-    //String programaDuomenys[] = new String[2];
+    String yearSpinnerText;
     String programTipas[] = {"--pasirinkti--", "IŠT","NL"};
     String yearMetaiNL[] = {"--pasirinkti--", "1","2","3"};
     String yearMetaiIST[] = {"--pasirinkti--", "1","2","3","4"};
@@ -48,22 +39,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text=(TextView)findViewById(R.id.text);
-       /*/*//*//* Button but=(Button)findViewById(R.id.button);
-        but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new DoIt().execute();
 
-            }
-
-        });*/
         final Spinner programID=(Spinner)findViewById(R.id.tipasID);
         final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
         final Button brachID = (Button)findViewById(R.id.branchID);
         final Button savaite = (Button)findViewById(R.id.savaitinis);
 
-        //Button myg1 =(Button)findViewById(R.id.programData);
         spinner(programTipas,programID);
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -91,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
         metaiID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String spinnerText = adapterView.getSelectedItem().toString();
+                yearSpinnerText = adapterView.getSelectedItem().toString();
                 if(programSpinnerText.indexOf("IŠT")!=-1)
-                switch (spinnerText){
+                switch (yearSpinnerText){
                     case "1":
                         spinner(groupGrupeIST1,grupeID);
                         selection("year","1");
@@ -112,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         break;
 
-                }else switch (spinnerText){
+                }else switch (yearSpinnerText){
                     case "1":
                         spinner(groupGrupeNL1,grupeID);
                         selection("year","1");
@@ -138,7 +120,39 @@ public class MainActivity extends AppCompatActivity {
         brachID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selection("branch","1");
+                if(programSpinnerText.indexOf("NL") !=-1 ){
+                    switch (yearSpinnerText){
+                        case "1":
+                            selection("branch","1");
+                            break;
+                        case "2":
+                            selection("branch","2");
+                            break;
+                        case "3":
+                            selection("branch","3");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                if(programSpinnerText == "IŠT"){
+                    switch (yearSpinnerText){
+                        case "1":
+                            selection("branch","8");
+                            break;
+                        case "2":
+                            selection("branch","5");
+                            break;
+                        case "3":
+                            selection("branch","4");
+                            break;
+                        case "4":
+                            selection("branch","7");
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
         });
         grupeID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
@@ -435,16 +449,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        /*myg1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                String test = text.getText().toString();
-                String[] programData = new String[2];
-                programData=test.split("\n",3);
-                Log.i("Duck",programData[0]);
-                spinner(programData,programID);
-            }
-        });*/
+
         savaite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -457,91 +462,30 @@ public class MainActivity extends AppCompatActivity {
         ww.setWebChromeClient(new WebChromeClient());
         //myWebView.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
-        //ww.loadUrl("http://google.com");
+
         ww.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                hide();
-               // String tekstas ="Puslapis baiges krautis";
-                //ww.loadUrl("javascript:changeHappened('program',2)");
-                //Toast.makeText(this,tekstas,Toast.LENGTH_SHORT).show();
 
+                hide();
             }
         });
-
-
-        //changeHappen("program",2);
-
-
-     /* //  class JsObject
-
-      {
-            @JavascriptInterface
-            public String toString() { return "injectedObject"; }
-        }
-        ww.addJavascriptInterface(new JsObject(), "injectedObject");
-        ww.loadData("", "text/html", null);
-        ww.loadUrl("javascript:alert('ssd')");*/
     }
     public void hide(){
         ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
-
     }
     public void selection( String pasirinkimas, String val) {
 
-        // ww.loadUrl("javascript:changeHappened('program',2)");
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
 
     }
-
-
-
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }
-   /* public class DoIt extends AsyncTask<Void,Void,Void>{
-        String words;
-
-        MainActivity main;
-        @Override
-        protected Void doInBackground(Void... voids) {
-            try {
-                Document d = Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/groups.php").get();
-                Elements el=d.select("#program");
-                String programa;
-                String method = null;
-                for(Element step : el){
-
-                    method = step.select("option").html();
-                    words=method;
-                }
-                programa = method;
-
-
-                //main.temp(programData);
-
-                // Iterpia informacija i spiineri
-
-                //spinner(programData,metai);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            text.setText(words);
-        }
-    }
-
-*/
-
 }
