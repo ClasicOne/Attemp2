@@ -139,6 +139,13 @@ public class MainActivity extends AppCompatActivity {
         //myWebView.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
         ww.setWebViewClient(new WebViewClient());
+        ww.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                ww.loadUrl("javascript:changeHappened('program',2)");
+            }
+        });
 
 
         //changeHappen("program",2);
