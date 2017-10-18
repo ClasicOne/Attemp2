@@ -125,108 +125,8 @@ public class MainActivity extends AppCompatActivity {
                         spinner(groupGrupeNL3,grupeID);
                         selection("year","3");
                         break;
-                    case "ATE 35-3":
-                        selection("group", "53");
-                        break;
-                    case "ATE 35-3, 1 p.":
-                        selection("group", "90");
-                        break;
-                    case "ATE 35-3, 2 p.":
-                        selection("group", "89");
-                        break;
-                    case "EA 28-3":
-                        selection("group", "52");
-                        break;
-                    case "EA 28-3, 1 p.":
-                        selection("group", "92");
-                        break;
-                    case "EA 28-3, 2 p.":
-                        selection("group", "91");
-                        break;
-                    case "G 19-3":
-                        selection("group", "90");
-                        break;
-                    case "I 11-3":
-                        selection("group", "50");
-                        break;
-                    case "KD 8-3":
-                        selection("group", "49");
-                        break;
-                    case "MCH 14-3":
-                        selection("group", "48");
-                        break;
-                    case "MT 11-3":
-                        selection("group", "47");
-                        break;
-                    case "MT 11-3, 1 p.":
-                        selection("group", "46");
-                        break;
-                    case "MT 11-3, 2 p.":
-                        selection("group", "45");
-                        break;
-                    case "S 34-3":
-                        selection("group", "56");
-                        break;
-                    case "S 34-3, 1 p.":
-                        selection("group", "55");
-                        break;
-                    case "S 34-3, 2 p.":
-                        selection("group", "54");
-                        break;
-                    case "T 11-3":
-                        selection("group", "44");
-                        break;
-                    //
-                    case "AT i 40-1":
-                        selection("group", "63");
-                        break;
-                    case "EA i 33-1":
-                        selection("group", "62");
-                        break;
-                    case "EA i 33-1, 1 p.":
-                        selection("group", "61");
-                        break;
-                    case "EA i 33-1, 2 p.":
-                        selection("group", "60");
-                        break;
-                    case "IN i 3-1":
-                        selection("group", "58");
-                        break;
-                    case "MCH i 19-1":
-                        selection("group", "59");
-                        break;
-                    case "MT i 16-1":
-                        selection("group", "57");
-                        break;
-                    case "MT i 16-1, 1 p.":
-                        selection("group", "93");
-                        break;
-                    case "MT i 16-1, 2 p.":
-                        selection("group", "94");
-                        break;
-                    case "S i 39-1":
-                        selection("group", "66");
-                        break;
-                    case "S i 39-1, 1 p.":
-                        selection("group", "65");
-                        break;
-                    case "S i 39-1, 2 p.":
-                        selection("group", "64");
-                        break;
-                    case "S i 39-1, 3 p.":
-                        selection("group", "95");
-                        break;
-                    case "TL i 16-1":
-                        selection("group", "67");
-                        break;
-
-
-
-
                     default:
                         break;
-
-
                 }
             }
 
@@ -246,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 switch (spinnerText){
+                    // NL 1
                     case "TL 15-1":
                         selection("group","1");
                         break;
@@ -306,6 +207,178 @@ public class MainActivity extends AppCompatActivity {
                     case "AT 39-1":
                         selection("group","20");
                         break;
+                    //NL 3
+                    case "ATE 35-3":
+                        selection("group", "53");
+                        break;
+                    case "ATE 35-3, 1 p.":
+                        selection("group", "90");
+                        break;
+                    case "ATE 35-3, 2 p.":
+                        selection("group", "89");
+                        break;
+                    case "EA 28-3":
+                        selection("group", "52");
+                        break;
+                    case "EA 28-3, 1 p.":
+                        selection("group", "92");
+                        break;
+                    case "EA 28-3, 2 p.":
+                        selection("group", "91");
+                        break;
+                    case "G 19-3":
+                        selection("group", "90");
+                        break;
+                    case "I 11-3":
+                        selection("group", "50");
+                        break;
+                    case "KD 8-3":
+                        selection("group", "49");
+                        break;
+                    case "MCH 14-3":
+                        selection("group", "48");
+                        break;
+                    case "MT 11-3":
+                        selection("group", "47");
+                        break;
+                    case "MT 11-3, 1 p.":
+                        selection("group", "46");
+                        break;
+                    case "MT 11-3, 2 p.":
+                        selection("group", "45");
+                        break;
+                    case "S 34-3":
+                        selection("group", "56");
+                        break;
+                    case "S 34-3, 1 p.":
+                        selection("group", "55");
+                        break;
+                    case "S 34-3, 2 p.":
+                        selection("group", "54");
+                        break;
+                    case "T 11-3":
+                        selection("group", "44");
+                        break;
+                    // IST 1
+                    case "AT i 40-1":
+                        selection("group", "63");
+                        break;
+                    case "EA i 33-1":
+                        selection("group", "62");
+                        break;
+                    case "EA i 33-1, 1 p.":
+                        selection("group", "61");
+                        break;
+                    case "EA i 33-1, 2 p.":
+                        selection("group", "60");
+                        break;
+                    case "IN i 3-1":
+                        selection("group", "58");
+                        break;
+                    case "MCH i 19-1":
+                        selection("group", "59");
+                        break;
+                    case "MT i 16-1":
+                        selection("group", "57");
+                        break;
+                    case "MT i 16-1, 1 p.":
+                        selection("group", "93");
+                        break;
+                    case "MT i 16-1, 2 p.":
+                        selection("group", "94");
+                        break;
+                    case "S i 39-1":
+                        selection("group", "66");
+                        break;
+                    case "S i 39-1, 1 p.":
+                        selection("group", "65");
+                        break;
+                    case "S i 39-1, 2 p.":
+                        selection("group", "64");
+                        break;
+                    case "S i 39-1, 3 p.":
+                        selection("group", "95");
+                        break;
+                    case "TL i 16-1":
+                        selection("group", "67");
+                        break;
+                    // NL 2
+                    case "ATE 37-2":
+                        selection("group", "42");
+                        break;
+                    case "ATE 37-2, 1 p.":
+                        selection("group", "41");
+                        break;
+                    case "ATE 37-2, 2 p.":
+                        selection("group", "40");
+                        break;
+                    case "EA 30-2":
+                        selection("group", "39");
+                        break;
+                    case "EA 30-2, 1 p.":
+                        selection("group", "38");
+                        break;
+                    case "EA 30-2, 2 p.":
+                        selection("group", "37");
+                        break;
+                    case "G 20-2":
+                        selection("group", "36");
+                        break;
+                    case "I 12-2":
+                        selection("group", "35");
+                        break;
+                    case "IN 1-2":
+                        selection("group", "34");
+                        break;
+                    case "MCH 16-2":
+                        selection("group", "33");
+                        break;
+                    case "MT 13-2":
+                        selection("group", "32");
+                        break;
+                    case "MT 13-2, 1 p.":
+                        selection("group", "31");
+                        break;
+                    case "MT 13-2, 2 p.":
+                        selection("group", "30");
+                        break;
+                    case "S 36-2":
+                        selection("group", "29");
+                        break;
+                    case "S 36-2, 1 p.":
+                        selection("group", "28");
+                        break;
+                    case "S 36-2, 2 p.":
+                        selection("group", "27");
+                        break;
+                    case "T 13-2":
+                        selection("group", "26");
+                        break;
+                    // IST 2
+                    case "ATE i 38-2":
+                        selection("group", "73");
+                        break;
+                    case "EA i 31-2":
+                        selection("group", "72");
+                        break;
+                    case "MCH i 17-2":
+                        selection("group", "71");
+                        break;
+                    case "MT i 14-2":
+                        selection("group", "70");
+                        break;
+                    case "S i 37-2":
+                        selection("group", "69");
+                        break;
+                    case "T i 14-2":
+                        selection("group", "68");
+                        break;
+                    // IST 3
+
+
+
+
+
                     default:
                         Log.i("Duck","error");
                         break;
@@ -368,11 +441,11 @@ public class MainActivity extends AppCompatActivity {
         ww.loadUrl("javascript:alert('ssd')");*/
     }
     public void hide(){
-      /*  ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
-*/
+
     }
     public void selection( String pasirinkimas, String val) {
 
