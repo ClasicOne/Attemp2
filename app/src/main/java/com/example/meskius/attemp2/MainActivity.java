@@ -454,6 +454,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ww.loadUrl("javascript:viewWeek();");
+               // ww.loadUrl("javascript:$(document.querySelector('.tdColor .inputButton').click();");
             }
         });
         ww= (WebView)findViewById(R.id.webView);
