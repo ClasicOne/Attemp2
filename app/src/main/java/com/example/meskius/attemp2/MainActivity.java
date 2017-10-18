@@ -69,11 +69,11 @@ public class MainActivity extends AppCompatActivity {
                 switch (programSpinnerText){
                     case "IŠT":
                         spinner(yearMetaiIST,metaiID);
-                        selection("program","1");
+                        selection("program","2");
                         break;
                     case "NL":
                         spinner(yearMetaiNL,metaiID);
-                        selection("program","2");
+                        selection("program","1");
                         break;
                     default:
                         break;
@@ -93,27 +93,34 @@ public class MainActivity extends AppCompatActivity {
                 switch (spinnerText){
                     case "1":
                         spinner(groupGrupeIST1,grupeID);
+                        selection("year","1");
                         break;
                     case "2":
                         spinner(groupGrupeIST2,grupeID);
+                        selection("year","2");
                         break;
                     case "3":
                         spinner(groupGrupeIST3,grupeID);
+                        selection("year","3");
                         break;
                     case "4":
                         spinner(groupGrupeIST4,grupeID);
+                        selection("year","4");
                     default:
                         break;
 
                 }else switch (spinnerText){
                     case "1":
                         spinner(groupGrupeNL1,grupeID);
+                        selection("year","1");
                         break;
                     case "2":
                         spinner(groupGrupeNL2,grupeID);
+                        selection("year","2");
                         break;
                     case "3":
                         spinner(groupGrupeNL3,grupeID);
+                        selection("year","3");
                         break;
                     default:
                         break;
@@ -141,13 +148,14 @@ public class MainActivity extends AppCompatActivity {
         ww.setWebChromeClient(new WebChromeClient());
         //myWebView.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
+        //ww.loadUrl("http://google.com");
         ww.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                String tekstas ="Puslapis baiges krautis";
+               // String tekstas ="Puslapis baiges krautis";
                 //ww.loadUrl("javascript:changeHappened('program',2)");
-                Toast.makeText(this,tekstas,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this,tekstas,Toast.LENGTH_SHORT).show();
 
             }
         });
