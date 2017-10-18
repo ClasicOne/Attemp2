@@ -60,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
         final Spinner programID=(Spinner)findViewById(R.id.tipasID);
         final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
-        Button myg1 =(Button)findViewById(R.id.programData);
+        final Button brachID = (Button)findViewById(R.id.branchID);
+        final Button savaite = (Button)findViewById(R.id.savaitinis);
+
+        //Button myg1 =(Button)findViewById(R.id.programData);
         spinner(programTipas,programID);
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -83,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
         metaiID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -133,7 +135,90 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        myg1.setOnClickListener(new View.OnClickListener(){
+        brachID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selection("branch","1");
+            }
+        });
+        grupeID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String spinnerText = adapterView.getSelectedItem().toString();
+                switch (spinnerText){
+                    case "TL 15-1":
+                        selection("group","1");
+                        break;
+                    case "S 38-1, 2 p.":
+                        selection("group","2");
+                        break;
+                    case "S 38-1, 1 p.":
+                        selection("group","3");
+                        break;
+                    case "S 38-1":
+                        selection("group","4");
+                        break;
+                    case "MT 15-1, 2 p.":
+                        selection("group","5");
+                        break;
+                    case "MT 15-1, 1 p.":
+                        selection("group","6");
+                        break;
+                    case "MT 15-1":
+                        selection("group","7");
+                        break;
+                    case "MCH 18-1":
+                        selection("group","8");
+                        break;
+                    case "IN 2-1":
+                        selection("group","9");
+                        break;
+                    case "I 13-1, 2 p.":
+                        selection("group","10");
+                        break;
+                    case "I 13-1, 1 p.":
+                        selection("group","11");
+                        break;
+                    case "I 13-1":
+                        selection("group","12");
+                        break;
+                    case "G 21-1":
+                        selection("group","13");
+                        break;
+                    case "EA 32-1, 2 p.":
+                        selection("group","14");
+                        break;
+                    case "EA 32-1, 1 p.":
+                        selection("group","15");
+                        break;
+                    case "EA 32-1":
+                        selection("group","16");
+                        break;
+                    case "AT 39-1,1 p. ":
+                        selection("group","17");
+                        break;
+                    case "AT 39-1, 3 p. ":
+                        selection("group","18");
+                        break;
+                    case "AT 39-1, 2 p. ":
+                        selection("group","19");
+                        break;
+                    case "AT 39-1":
+                        selection("group","20");
+                        break;
+                    default:
+                        Log.i("Duck","error");
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        /*myg1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 String test = text.getText().toString();
@@ -141,6 +226,12 @@ public class MainActivity extends AppCompatActivity {
                 programData=test.split("\n",3);
                 Log.i("Duck",programData[0]);
                 spinner(programData,programID);
+            }
+        });*/
+        savaite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ww.loadUrl("javascript:viewWeek();");
             }
         });
         ww= (WebView)findViewById(R.id.webView);
@@ -154,6 +245,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+                hide();
                // String tekstas ="Puslapis baiges krautis";
                 //ww.loadUrl("javascript:changeHappened('program',2)");
                 //Toast.makeText(this,tekstas,Toast.LENGTH_SHORT).show();
@@ -174,6 +266,13 @@ public class MainActivity extends AppCompatActivity {
         ww.addJavascriptInterface(new JsObject(), "injectedObject");
         ww.loadData("", "text/html", null);
         ww.loadUrl("javascript:alert('ssd')");*/
+    }
+    public void hide(){
+        ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
+
     }
     public void selection( String pasirinkimas, String val) {
 
