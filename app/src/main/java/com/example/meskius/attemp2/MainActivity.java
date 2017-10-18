@@ -141,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
         ww.setWebViewClient(new WebViewClient());
 
 
+        //changeHappen("program",2);
+
+
      /* //  class JsObject {
             @JavascriptInterface
             public String toString() { return "injectedObject"; }
