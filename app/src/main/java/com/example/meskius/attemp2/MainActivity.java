@@ -374,8 +374,52 @@ public class MainActivity extends AppCompatActivity {
                         selection("group", "68");
                         break;
                     // IST 3
-
-
+                    case "ATE i 36-3":
+                        selection("group", "80");
+                        break;
+                    case "EA i 29-3":
+                        selection("group", "79");
+                        break;
+                    case "GRV - 3":
+                        selection("group", "74");
+                        break;
+                    case "MCH i 15-3":
+                        selection("group", "78");
+                        break;
+                    case "MT i 12-3":
+                        selection("group", "77");
+                        break;
+                    case "S i 35-3":
+                        selection("group", "76");
+                        break;
+                    case "T i 12-3":
+                        selection("group", "75");
+                        break;
+                    // IST 4
+                    case "ATE i 34-4":
+                        selection("group", "86");
+                        break;
+                    case "EA i 27-4":
+                        selection("group", "85");
+                        break;
+                    case "MCH i 13-4":
+                        selection("group", "84");
+                        break;
+                    case "MT i 10-4":
+                        selection("group", "83");
+                        break;
+                    case "MT i 10-4, 1 p.":
+                        selection("group", "88");
+                        break;
+                    case "MT i 10-4, 2 p.":
+                        selection("group", "87");
+                        break;
+                    case "S i 33-4":
+                        selection("group", "82");
+                        break;
+                    case "T i 10-4":
+                        selection("group", "81");
+                        break;
 
 
 
