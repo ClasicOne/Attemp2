@@ -166,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
 
 
      /* //  class JsObject
-      //{
+
+      {
             @JavascriptInterface
             public String toString() { return "injectedObject"; }
         }
