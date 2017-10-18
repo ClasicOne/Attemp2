@@ -27,7 +27,7 @@ import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
     TextView text;
-    DoIt data;
+    //DoIt data;
     //
     WebView ww;
     String programSpinnerText;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text=(TextView)findViewById(R.id.text);
-        Button but=(Button)findViewById(R.id.button);
+       /*/*//*//* Button but=(Button)findViewById(R.id.button);
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-        });
+        });*/
         final Spinner programID=(Spinner)findViewById(R.id.tipasID);
         final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }
-    public class DoIt extends AsyncTask<Void,Void,Void>{
+   /* public class DoIt extends AsyncTask<Void,Void,Void>{
         String words;
 
         MainActivity main;
@@ -325,6 +325,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+*/
 
 }
