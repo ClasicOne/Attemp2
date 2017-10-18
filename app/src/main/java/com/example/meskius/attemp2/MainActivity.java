@@ -28,6 +28,7 @@ import static java.lang.Integer.parseInt;
 public class MainActivity extends AppCompatActivity {
     TextView text;
     DoIt data;
+    //
     WebView ww;
     String programSpinnerText;
     //String programaDuomenys[] = new String[2];
