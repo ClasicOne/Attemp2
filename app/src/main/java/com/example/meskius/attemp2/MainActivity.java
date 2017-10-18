@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -68,9 +69,11 @@ public class MainActivity extends AppCompatActivity {
                 switch (programSpinnerText){
                     case "IŠT":
                         spinner(yearMetaiIST,metaiID);
+                        selection("program","1");
                         break;
                     case "NL":
                         spinner(yearMetaiNL,metaiID);
+                        selection("program","2");
                         break;
                     default:
                         break;
@@ -138,12 +141,14 @@ public class MainActivity extends AppCompatActivity {
         ww.setWebChromeClient(new WebChromeClient());
         //myWebView.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
-        ww.setWebViewClient(new WebViewClient());
         ww.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                ww.loadUrl("javascript:changeHappened('program',2)");
+                String tekstas ="Puslapis baiges krautis";
+                //ww.loadUrl("javascript:changeHappened('program',2)");
+                Toast.makeText(this,tekstas,Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -159,7 +164,12 @@ public class MainActivity extends AppCompatActivity {
         ww.loadData("", "text/html", null);
         ww.loadUrl("javascript:alert('ssd')");*/
     }
+    public void selection( String pasirinkimas, String val) {
 
+        // ww.loadUrl("javascript:changeHappened('program',2)");
+        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
+
+    }
 
 
 
