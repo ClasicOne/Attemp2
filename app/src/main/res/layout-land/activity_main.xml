@@ -8,6 +8,22 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Spinner
         android:id="@+id/grupeID"
         android:layout_width="56dp"
@@ -35,7 +51,7 @@
         android:background="#42dff4"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098"
+        app:layout_constraintVertical_bias="0.148"
         app:layout_constraintRight_toLeftOf="@+id/branchID"
         android:layout_marginRight="8dp"
         app:layout_constraintLeft_toRightOf="@+id/tipasID"
@@ -54,7 +70,10 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.025" />
+        app:layout_constraintHorizontal_bias="0.027"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintVertical_bias="0.041" />
 
     <TextView
         android:id="@+id/program"
@@ -120,7 +139,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintHorizontal_bias="0.772" />
+        app:layout_constraintHorizontal_bias="0.788" />
 
     <Button
         android:id="@+id/branchID"
@@ -132,9 +151,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintVertical_bias="0.137"
+        app:layout_constraintVertical_bias="0.122"
         app:layout_constraintRight_toLeftOf="@+id/grupeID"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="9dp" />
 
     <Button
         android:id="@+id/savAtgal"
@@ -146,11 +165,11 @@
         android:layout_marginTop="8dp"
         android:text="Savaite Atgal"
         app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintHorizontal_bias="0.649"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/savPirmyn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.981" />
 
     <Button
         android:id="@+id/savPirmyn"
@@ -163,21 +182,21 @@
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.981" />
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="600dp"
-        android:layout_height="167dp"
+        android:layout_width="611dp"
+        android:layout_height="222dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteY="128dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

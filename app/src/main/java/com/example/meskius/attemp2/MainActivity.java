@@ -122,13 +122,13 @@ public class MainActivity extends AppCompatActivity {
         savAtgal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ww.loadUrl("javascript:function a(){var a = document.querySelector(\".btn.btn-primary\");a[1].click();}");
+                ww.loadUrl("javascript:$(document.querySelectorAll(\".btn.btn-primary\")[1]).click();");
             }
         });
         savPirmyn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ww.loadUrl("javascript:function a(){var a = document.querySelector(\".btn.btn-primary\");a[2].click();}");
+                ww.loadUrl("javascript:$(document.querySelectorAll(\".btn.btn-primary\")[2]).click();");
             }
         });
         refresh.setOnClickListener(new View.OnClickListener() {
