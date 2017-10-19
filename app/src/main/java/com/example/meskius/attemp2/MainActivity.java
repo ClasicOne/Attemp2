@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -38,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         text=(TextView)findViewById(R.id.text);
 
@@ -458,6 +454,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ww.loadUrl("javascript:viewWeek();");
+               // ww.loadUrl("javascript:$(document.querySelector('.tdColor .inputButton').click();");
             }
         });
         ww= (WebView)findViewById(R.id.webView);
@@ -477,7 +474,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void hide(){
-        // ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
+        //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
