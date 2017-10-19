@@ -35,26 +35,29 @@
         android:background="#42dff4"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14"
-        app:layout_constraintRight_toLeftOf="@+id/branchID"
-        android:layout_marginRight="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/tipasID"
+        app:layout_constraintVertical_bias="0.142"
         android:layout_marginLeft="8dp"
-        app:layout_constraintHorizontal_bias="0.428" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.282" />
 
     <Spinner
         android:id="@+id/tipasID"
         android:layout_width="56dp"
         android:layout_height="31dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="8dp"
         android:background="#42dff4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.039" />
+        app:layout_constraintHorizontal_bias="0.025"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintVertical_bias="0.142" />
 
     <TextView
         android:id="@+id/program"
@@ -132,8 +135,11 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/webView"
         app:layout_constraintVertical_bias="0.061"
-        app:layout_constraintRight_toLeftOf="@+id/grupeID"
-        android:layout_marginRight="37dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.603" />
 
     <WebView
         android:id="@+id/webView"
@@ -179,5 +185,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.737" />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:text="*"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

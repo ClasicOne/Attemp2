@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         final Button savaite = (Button)findViewById(R.id.savaitinis);
         Button savAtgal = (Button)findViewById(R.id.savAtgal);
         Button savPirmyn = (Button)findViewById(R.id.savPirmyn);
-
+        Button refresh = (Button)findViewById(R.id.refresh);
         spinner(programTipas,programID);
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -122,7 +122,19 @@ public class MainActivity extends AppCompatActivity {
         savAtgal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ww.loadUrl("javascript:");
+                ww.loadUrl("javascript:function a(){var a = document.querySelector(\".btn.btn-primary\");a[1].click();}");
+            }
+        });
+        savPirmyn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ww.loadUrl("javascript:function a(){var a = document.querySelector(\".btn.btn-primary\");a[2].click();}");
+            }
+        });
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
             }
         });
         brachID.setOnClickListener(new View.OnClickListener() {
@@ -463,21 +475,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ww.loadUrl("javascript:viewWeek();");
-               // ww.loadUrl("javascript:$(document.querySelector('.tdColor .inputButton').click();");
+                //ww.loadUrl("javascript:$(document.querySelector('.tdColor .inputButton').click();");
             }
         });
         ww= (WebView)findViewById(R.id.webView);
         WebSettings webSettings = ww.getSettings();
         webSettings.setJavaScriptEnabled(true);
         ww.setWebChromeClient(new WebChromeClient());
-        //myWebView.loadUrl("http://google.com");
+        //ww.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
 
         ww.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-
                 hide();
             }
         });
