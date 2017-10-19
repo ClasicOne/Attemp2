@@ -474,7 +474,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void hide(){
-        ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
+        //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
