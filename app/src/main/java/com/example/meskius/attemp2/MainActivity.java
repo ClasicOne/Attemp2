@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
         final Button brachID = (Button)findViewById(R.id.branchID);
         final Button savaite = (Button)findViewById(R.id.savaitinis);
+        Button savAtgal = (Button)findViewById(R.id.savAtgal);
+        Button savPirmyn = (Button)findViewById(R.id.savPirmyn);
 
         spinner(programTipas,programID);
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -117,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        savAtgal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ww.loadUrl("javascript:");
+            }
+        });
         brachID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -155,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         grupeID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
