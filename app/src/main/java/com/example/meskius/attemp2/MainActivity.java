@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     String groupGrupeNL2[] = {"--pasirinkti--", "ATE 37-2", "ATE 37-2, 1 p.", "ATE 37-2, 2 p.", "EA 30-2", "EA 30-2, 1 p.", "EA 30-2, 2 p.", "G 20-2", "I 12-2", "IN 1-2", "MCH 16-2", "MT 13-2", "MT 13-2, 1 p.", "MT 13-2, 2 p.", "S 36-2", "S 36-2, 1 p.", "S 36-2, 2 p.", "T 13-2"};
     String groupGrupeNL3[] = {"--pasirinkti--", "ATE 35-3", "ATE 35-3, 1 p.", "ATE 35-3, 2 p.", "EA 28-3", "EA 28-3, 1 p.", "EA 28-3, 2 p.", "G 19-3", "I 11-3", "KD 8-3", "MCH 14-3", "MT 11-3", "MT 11-3, 1 p.", "MT 11-3, 2 p.", "S 34-3", "S 34-3, 1 p.", "S 34-3, 2 p.", "T 11-3"};
     String groupGrupeIST1[] = {"--pasirinkti--", "AT i 40-1", "EA i 33-1", "EA i 33-1, 1 p.", "EA i 33-1, 2 p.", "IN i 3-1", "MCH i 19-1", "MT i 16-1", "MT i 16-1, 1 p.", "MT i 16-1, 2 p.", "S i 39-1", "S i 39-1, 1 p.", "S i 39-1, 2 p.", "S i 39-1, 3 p.", "TL i 16-1"};
-    String groupGrupeIST2[] = {"--pasirinkti--", "ATE i 38-", "EA i 31-", "MCH i 17-", "MT i 14-", "S i 37-", "T i 14-"};
+    String groupGrupeIST2[] = {"--pasirinkti--", "ATE i 38-2", "EA i 31-2", "MCH i 17-2", "MT i 14-2", "S i 37-2", "T i 14-2"};
     String groupGrupeIST3[] = {"--pasirinkti--", "ATE i 36-3", "EA i 29-3", "GRV - 3", "MCH i 15-3", "MT i 12-3", "S i 35-3", "T i 12-3"};
     String groupGrupeIST4[] = {"--pasirinkti--", "ATE i 34-4", "EA i 27-4", "MCH i 13-4", "MT i 10-4", "MT i 10-4, 1 p.", "MT i 10-4, 2 p.", "S i 33-4", "T i 10-4"};
 
