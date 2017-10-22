@@ -55,12 +55,10 @@ public class MainActivity extends AppCompatActivity {
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
         final Button brachID = (Button)findViewById(R.id.branchID);
         final Button savaite = (Button)findViewById(R.id.savaitinis);
-        final Button savAtgal = (Button)findViewById(R.id.savAtgal);
-        final Button savPirmyn = (Button)findViewById(R.id.savPirmyn);
+
         final Button changeID = (Button)findViewById(R.id.changeID);
         savaite.setVisibility(View.GONE);
-        savAtgal.setVisibility(View.GONE);
-        savPirmyn.setVisibility(View.GONE);
+
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
         brachID.setVisibility(View.GONE);
@@ -162,18 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        savAtgal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("javascript:$(document.querySelectorAll(\".btn.btn-primary\")[1]).click();");
-            }
-        });
-        savPirmyn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("javascript:$(document.querySelectorAll(\".btn.btn-primary\")[2]).click();");
-            }
-        });
+
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -238,8 +225,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 savaite.setVisibility(View.VISIBLE);
-                savAtgal.setVisibility(View.VISIBLE);
-                savPirmyn.setVisibility(View.VISIBLE);
+
                 switch (spinnerText){
                     // NL 1
                     case "TL 15-1":
@@ -570,7 +556,7 @@ public class MainActivity extends AppCompatActivity {
         ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
 
         ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr td\")[8]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody button\")[0]]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr button\")[0]).hide()");
 
 
         ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[5]).hide()");
