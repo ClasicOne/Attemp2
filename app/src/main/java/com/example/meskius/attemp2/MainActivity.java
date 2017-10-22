@@ -1,11 +1,15 @@
 package com.example.meskius.attemp2;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -14,8 +18,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.zip.Inflater;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
         final Button brachID = (Button)findViewById(R.id.branchID);
         final Button savaite = (Button)findViewById(R.id.savaitinis);
-
+        final Button savAtgal = (Button)findViewById(R.id.savAtgal);
+        final Button savPirmyn = (Button)findViewById(R.id.savPirmyn);
+        final Button changeID = (Button)findViewById(R.id.changeID);
+        savaite.setVisibility(View.GONE);
+        savAtgal.setVisibility(View.GONE);
+        savPirmyn.setVisibility(View.GONE);
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
         brachID.setVisibility(View.GONE);
@@ -59,10 +71,16 @@ public class MainActivity extends AppCompatActivity {
         final TextView grupe = (TextView)findViewById(R.id.group);
         grupe.setVisibility(View.GONE);
 
-        Button savAtgal = (Button)findViewById(R.id.savAtgal);
-        Button savPirmyn = (Button)findViewById(R.id.savPirmyn);
+
         Button refresh = (Button)findViewById(R.id.refresh);
         spinner(programTipas,programID);
+        changeID.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Destytojai.class);
+                startActivity(intent);
+            }
+        });
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -219,6 +237,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
+                savaite.setVisibility(View.VISIBLE);
+                savAtgal.setVisibility(View.VISIBLE);
+                savPirmyn.setVisibility(View.VISIBLE);
                 switch (spinnerText){
                     // NL 1
                     case "TL 15-1":
@@ -533,13 +554,34 @@ public class MainActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 hide();
             }
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                super.onReceivedError(view, request, error);
+                Context context = getApplicationContext();
+                Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
+            }
         });
     }
     public void hide(){
-        ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
+        //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[1]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[2]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
+
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr td\")[8]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody button\")[0]]).hide()");
+
+
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[5]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[6]).hide()");
+
         ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
+
         ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
+        ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
+        ww.loadUrl("javascript:document.body.style.marginTop=-10");
     }
     public void selection( String pasirinkimas, String val) {
 
