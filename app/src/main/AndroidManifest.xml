@@ -15,16 +15,37 @@
 
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".GrupesTF">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".Destytojai"
+            android:name=".DestytojaiTF"
             android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".AuditorijosTF"
+            android:label="Auditorijos">
+        </activity>
+        <activity
+            android:name=".AuditorijuVaizdavimasTF"
+            android:label="Auditoriju vaizdavimas">
+        </activity>
+        <activity
+            android:name=".Fakultetai"
+            android:label="Tvarkarastis">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".TFMenu"
+            android:label="Technologiju fakulteto menu">
+        </activity>
+        <activity
+            android:name=".DalykaiTF"
+            android:label="Dalykai">
         </activity>
     </application>
 

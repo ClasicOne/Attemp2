@@ -19,7 +19,7 @@ import android.widget.Toast;
  * Created by Meskius on 10/21/2017.
  */
 
-public class Destytojai extends MainActivity {
+public class DestytojaiTF extends GrupesTF {
     WebView wwD;
 
 
@@ -30,8 +30,8 @@ public class Destytojai extends MainActivity {
         setContentView(R.layout.activity_destytojai_main);
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Button backID = (Button)findViewById(R.id.backID);
-
+        Button backID = (Button)findViewById(R.id.backDTF);
+        //Button auditorijos =(Button)findViewById(R.id.auditorijD);
         Button refreshID = (Button)findViewById(R.id.refreshID);
 
         spinner(profText,profID);
@@ -63,10 +63,11 @@ public class Destytojai extends MainActivity {
         backID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Destytojai.this,MainActivity.class);
+                Intent intent = new Intent(DestytojaiTF.this,TFMenu.class);
                 startActivity(intent);
             }
         });
+
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

@@ -13,8 +13,8 @@
 
     <Button
         android:id="@+id/refresh"
-        android:layout_width="43dp"
-        android:layout_height="35dp"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -28,8 +28,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteY="85dp" />
+        app:layout_constraintVertical_bias="0.514" />
 
     <Spinner
         android:id="@+id/grupeID"
@@ -43,11 +42,11 @@
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
         app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <Spinner
         android:id="@+id/metaiID"
@@ -61,11 +60,11 @@
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
         app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <Spinner
         android:id="@+id/tipasID"
@@ -79,11 +78,11 @@
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
         app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
         android:id="@+id/program"
@@ -98,22 +97,30 @@
         android:text="Tipas"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tipasID"
-        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Metai"
         android:textStyle="bold"
-        tools:layout_editor_absoluteY="1dp"
-        tools:layout_editor_absoluteX="126dp" />
+        app:layout_constraintBottom_toTopOf="@+id/metaiID"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
 
     <TextView
         android:id="@+id/group"
@@ -123,11 +130,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Grupe"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/grupeID"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -135,9 +141,9 @@
 
     <Button
         android:id="@+id/savaitinis"
-        android:layout_width="146dp"
+        android:layout_width="120dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -145,66 +151,42 @@
         android:backgroundTint="#3BB9E7"
         android:text="Rodyti savaitini"
         app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="0.599"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
-
-    <Button
-        android:id="@+id/branchID"
-        android:layout_width="88dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#3BB9E7"
-        android:backgroundTint="#3BB9E7"
-        android:text="Studiju \nsritis"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109"
-        app:layout_constraintHorizontal_bias="0.418" />
-
-    <Button
-        android:id="@+id/changeID"
-        android:layout_width="108dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#ff0000"
-        android:text="Do NOT press"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="0.982"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135" />
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="0dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="443dp"
+        android:layout_marginTop="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.985">
 
 
     </WebView>
+
+    <Button
+        android:id="@+id/backGTF"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Atgal"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
 
 </android.support.constraint.ConstraintLayout>

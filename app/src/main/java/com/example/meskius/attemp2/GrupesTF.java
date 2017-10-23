@@ -20,12 +20,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
 
-import java.util.zip.Inflater;
-
-
-public class MainActivity extends AppCompatActivity {
+public class GrupesTF extends AppCompatActivity {
     TextView text;
     WebView ww;
 
@@ -49,19 +45,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text=(TextView)findViewById(R.id.text);
-
+        Intent intent= getIntent();
         final Spinner programID=(Spinner)findViewById(R.id.tipasID);
         final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
-        final Button brachID = (Button)findViewById(R.id.branchID);
         final Button savaite = (Button)findViewById(R.id.savaitinis);
 
-        final Button changeID = (Button)findViewById(R.id.changeID);
+        final Button atgal = (Button)findViewById(R.id.backGTF);
         savaite.setVisibility(View.GONE);
 
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
-        brachID.setVisibility(View.GONE);
+
 
         final TextView metai =(TextView) findViewById(R.id.year);
         metai.setVisibility(View.GONE);
@@ -72,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
         Button refresh = (Button)findViewById(R.id.refresh);
         spinner(programTipas,programID);
-        changeID.setOnClickListener(new View.OnClickListener() {
+        atgal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Destytojai.class);
+                Intent intent = new Intent(GrupesTF.this,TFMenu.class);
                 startActivity(intent);
             }
         });
@@ -115,22 +110,29 @@ public class MainActivity extends AppCompatActivity {
                     case "1":
                         spinner(groupGrupeIST1,grupeID);
                         selection("year","1");
-                        brachID.setVisibility(View.VISIBLE);
+                        selection("branch","8");
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "2":
                         spinner(groupGrupeIST2,grupeID);
                         selection("year","2");
-                        brachID.setVisibility(View.VISIBLE);
+                        selection("branch","5");
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "3":
                         spinner(groupGrupeIST3,grupeID);
                         selection("year","3");
-                        brachID.setVisibility(View.VISIBLE);
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "4":
                         spinner(groupGrupeIST4,grupeID);
                         selection("year","4");
-                        brachID.setVisibility(View.VISIBLE);
+                        selection("branch","7");
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                     default:
                         break;
 
@@ -138,17 +140,23 @@ public class MainActivity extends AppCompatActivity {
                     case "1":
                         spinner(groupGrupeNL1,grupeID);
                         selection("year","1");
-                        brachID.setVisibility(View.VISIBLE);
+                        selection("branch","1");
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "2":
                         spinner(groupGrupeNL2,grupeID);
                         selection("year","2");
-                        brachID.setVisibility(View.VISIBLE);
+                        selection("branch","2");
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "3":
                         spinner(groupGrupeNL3,grupeID);
                         selection("year","3");
-                        brachID.setVisibility(View.VISIBLE);
+                        selection("branch","3");
+                        grupe.setVisibility(View.VISIBLE);
+                        grupeID.setVisibility(View.VISIBLE);
                         break;
                     default:
                         break;
@@ -167,59 +175,6 @@ public class MainActivity extends AppCompatActivity {
                 ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
             }
         });
-        brachID.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(programSpinnerText.indexOf("NL") !=-1 ){
-                    switch (yearSpinnerText){
-                        case "1":
-                            selection("branch","1");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        case "2":
-                            selection("branch","2");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        case "3":
-                            selection("branch","3");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                if(programSpinnerText == "IŠT"){
-                    switch (yearSpinnerText){
-                        case "1":
-                            selection("branch","8");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        case "2":
-                            selection("branch","5");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        case "3":
-                            selection("branch","4");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        case "4":
-                            selection("branch","7");
-                            grupe.setVisibility(View.VISIBLE);
-                            grupeID.setVisibility(View.VISIBLE);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-        });
-
         grupeID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -230,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                     // NL 1
                     case "TL 15-1":
                         selection("group","1");
+
                         break;
                     case "S 38-1, 2 p.":
                         selection("group","2");
