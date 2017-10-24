@@ -4,7 +4,6 @@
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <supports-screens
         android:normalScreens="true"
-        android:smallScreens="true"
         android:largeScreens="true">
 
     </supports-screens>

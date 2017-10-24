@@ -43,7 +43,7 @@ public class GrupesTF extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.grupes_tf);
         text=(TextView)findViewById(R.id.text);
         Intent intent= getIntent();
         final Spinner programID=(Spinner)findViewById(R.id.tipasID);
