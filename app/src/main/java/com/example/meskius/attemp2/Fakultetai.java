@@ -24,7 +24,6 @@ public class Fakultetai extends AppCompatActivity {
         TextView svsmf=(TextView)findViewById(R.id.sveikatosMF);
         TextView about =(TextView)findViewById(R.id.about);
 
-
         tf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
