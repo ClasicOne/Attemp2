@@ -61,13 +61,11 @@
         android:layout_marginEnd="8dp" />
 
     <Button
-        android:id="@+id/backID"
+        android:id="@+id/back"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/tvarkarascioBlue"
         android:text="Back"
@@ -78,13 +76,12 @@
 
     <WebView
         android:id="@+id/wwID"
-        android:layout_width="match_parent"
-        android:layout_height="259dp"
+        android:layout_width="0dp"
+        android:layout_height="346dp"
         android:layout_marginBottom="-1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="127dp" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

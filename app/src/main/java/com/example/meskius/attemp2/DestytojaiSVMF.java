@@ -13,6 +13,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -23,21 +24,21 @@ import android.widget.Toast;
 /*function b(){for(var i=0;i<document.querySelectorAll('#prof option').length;i++){
         str += '"'+document.querySelectorAll('#prof option')[i].innerText+'",';}}*/
 public class DestytojaiSVMF extends AppCompatActivity{
-    GrupesSVMF g;
+
     WebView ww;
     String profText[] = {"--pasirinkti--","Abunevičius Romas","Albrechtienė Kristina","Altuchova Aida","Andriuškevičiūtė Gerda","Andruška Marius","Andruškienė Jurgita","Arlauskienė Renata","Arnašiūtė Roberta","Auglienė A.","Bačiulienė Kristina","Bagdonienė Irena","Bagdonienė Irena","Bardžiukienė Elytė","Barsevičienė Šarūnė","Barzdžiukienė Elytė","Beinorienė Jūratė","Bertašiūtė A.","Beržanskienė Justė","Bikuličienė Roberta","Bylaitė-Žakaitienė Andželika","Boltutienė Jurgita","Buivydaitė Eglė","Bumbliauskytė Dalia","Burdulis Dainius","Čekmariova J.","Dambrauskaitė Angelija","Dambrauskienė Nijolė","Danieliienė Jūratė","Daubarienė Jolanda","Daukantienė Danutė","Dėdinienė Ingrida","Derkintienė Jūratė","Dudėnė Jurgita","Dvarionaitė Lijana","Einars Bronius","Eismontienė Jekaterina","Enzelienė Renata","Enzelienė Renata","Freitakaitė V.","Freitakaitė V.","Gaižauskienė Ina","Galčionkova Ana","Galdikienė Nijolė","Gedrimė Lina","Gedrimienė Bernadeta","Gedvilienė L.","Giedraitienė Neringa","Girdžiūnienė Rasa","Indriuškienė Rasa","Jakubaitienė Vanda","Jankauskienė Rita","Janušas Leonas","Jonelienė Romena","Jonelys Valdas","Juknevičienė Aurelija","Juodienė Stasė","Juškienė Vaineta","Karpavičė Irma","Karpavičiūtė Solmita","Karžauskienė Edita","Kasnauskienė Jolanta","Kasperavičiūtė Simona","Kaunienė Jūratė","Kemzūrienė Deimantė","Kraniauskas Liutauras","Kraniauskienė Sigita","Kreišmonienė Jolanta","Kreivinienė B.","Kukštienė Viktorija","Lenčiauskienė Daiva","Letkauskaitė Kristina","Levickienė L.","Levickytė Greta","Levuškinas 0.","Liukienė Ramunė","Maniušienė Margarita","Mataitienė Angelija","Mauricaitė Ugnė","Mažionienė Asta","Mažionytė Indrė","Mickus Alvydas","Mockienė Aldona","Morkūnienė Rimantė","Morkūnienė Sonata","Muranovaitė Rūta","Narbutė Jūratė","Narutavičiūtė Evelina","Narvilienė Daiva","Nikolajevienė Aušra","Norbutaitė Asta","Pakalniškienė Jūratė","Pakštytė Aušra","Palijanskė Ugnė","Penkauskaitė Lina","Petrauskas Remigijus","Piekuvienė Vaida","Piklaps Arnoldas","Pleskonosova Irina","Pocienė Kristina","Pocienė Monika","Pocienė V.","Poimanskienė Vida","Poškienė Gintarė","Pranauskienė Dovilė","Pudžemienė Ernesta","Račkauskienė Skaidrė","Radavičienė A.","Ramanauskas Rimantas","Ramanauskienė Sigita","Razgutė Dovilė","Remeikienė Jurgita","Rimgailaitė A.","Rimkuvienė Daliuta","Romeraitė-Kuklierienė Laura","Rudžianskienė Aušra","Saudargė Odeta","Simonaitienė Gintarė","Sirtautaitė Ksavera","Smagurienė Aida","Spiriajevienė Irma","Stančaitytė Daiva","Staniulienė Vida","Stankaitienė Diana","Staražinskienė Aušra","Stončienė Vida","Stonkienė Asta","Stonkutė Renata","Stoukuvienė Žaneta","Stratkauskienė Rūta","Šatienė Salomėja","Šereikienė Vida","Šiaulinskienė R.","Šilanskaitė Jolita","Šlepetienė Asta","Šniepienė Gražina","Šoparienė Raimonda","Šostakienė Nijolė","Špiliauskaitė J","Šukienė Ingrida","Šulcaitė-Vasiljeva Mercedes","Šumskienė Aldona","Šutrajevienė Daina","Tauraitė-Janušauskienė Gitana","Trumpulytė Martyna","Urbonas Vincas","Urbonienė Dijana","Uselienė Daiva","Vaitiekienė Jurgita","Vaitkuvienė Jolanta","Valaitienė Aurelija","Valatkienė Dovilė","Valeckienė Ina","Venevičienė Viktorija","Vilčinskienė Irena","Viluckienė Jolita","Virbalienė Akvilė","Virbalis Tomas","Virketienė Diana","Vyšniauskas Julius","Zabitienė Rūta","Zavackienė Anželika","Zelenienė Irina","Zuzaitė Nijolė","Žakaitis Povilas","Žebrauskaitė Aurelija","Žernienė Aušra","Žičkuvienė Kristina","Žydžiūnaitė Vilma","Žymantienė Eglė","Žubrickienė Irena","Žukauskienė D.","Žulpienė Loreta","Žuravliova Olesia"};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.destytojai_svmf);
-        setContentView(R.layout.destytojai_tf);
+
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Button backID = (Button)findViewById(R.id.backDTF);
+        Button back = (Button)findViewById(R.id.back);
         //Button auditorijos =(Button)findViewById(R.id.auditorijD);
         Button refreshID = (Button)findViewById(R.id.refreshID);
 
-        g.spinner(profText,profID);
+        spinner(profText,profID);
 
 
         ww= (WebView)findViewById(R.id.wwID);
@@ -63,7 +64,7 @@ public class DestytojaiSVMF extends AppCompatActivity{
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
-        backID.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DestytojaiSVMF.this,SVMFMenu.class);
@@ -94,522 +95,696 @@ public class DestytojaiSVMF extends AppCompatActivity{
     private void destytojai(String destytojai) {
         switch (destytojai){
             case "Abunevičius Romas":
-                g.selection("group","64");
+                selection("prof","64");
+                click();
                 break;
             case "Albrechtienė Kristina":
-                g.selection("group","78");
+                selection("prof","78");
+                click();
                 break;
             case "Altuchova Aida":
-                g.selection("group","79");
+                selection("prof","79");
+                click();
                 break;
             case "Andriuškevičiūtė Gerda":
-                g.selection("group","176");
+                selection("prof","176");
+                click();
                 break;
             case "Andruška Marius":
-                g.selection("group","141");
+                selection("prof","141");
+                click();
                 break;
             case "Andruškienė Jurgita":
-                g.selection("group","37");
+                selection("prof","37");
+                click();
                 break;
             case "Arlauskienė Renata":
-                g.selection("group","183");
+                selection("prof","183");
+                click();
                 break;
             case "Arnašiūtė Roberta":
-                g.selection("group","80");
+                selection("prof","80");
+                click();
                 break;
             case "Auglienė A.":
-                g.selection("group","161");
+                selection("prof","161");
+                click();
                 break;
             case "Bačiulienė Kristina":
-                g.selection("group","81");
+                selection("prof","81");
+                click();
                 break;
             case "Bagdonienė Irena":
-                g.selection("group","82");
+                selection("prof","82");
+                click();
                 break;
-            case "Bagdonienė Irena":
-                g.selection("group","181");
-                break;
+            /*case "Bagdonienė Irena":
+                selection("prof","181");
+                click();
+                break;*/
             case "Bardžiukienė Elytė":
-                g.selection("group","16");
+                selection("prof","16");
+                click();
                 break;
             case "Barsevičienė Šarūnė":
-                g.selection("group","32");
+                selection("prof","32");
+                click();
                 break;
             case "Barzdžiukienė Elytė":
-                g.selection("group","36");
+                selection("prof","36");
+                click();
                 break;
             case "Beinorienė Jūratė":
-                g.selection("group","83");
+                selection("prof","83");
+                click();
                 break;
             case "Bertašiūtė A.":
-                g.selection("group","143");
+                selection("prof","143");
+                click();
                 break;
             case "Beržanskienė Justė":
-                g.selection("group","70");
+                selection("prof","70");
+                click();
                 break;
             case "Bikuličienė Roberta":
-                g.selection("group","164");
+                selection("prof","164");
+                click();
                 break;
             case "Bylaitė-Žakaitienė Andželika":
-                g.selection("group","84");
+                selection("prof","84");
+                click();
                 break;
             case "Boltutienė Jurgita":
-                g.selection("group","50");
+                selection("prof","50");
+                click();
                 break;
             case "Buivydaitė Eglė":
-                g.selection("group","85");
+                selection("prof","85");
+                click();
                 break;
             case "Bumbliauskytė Dalia":
-                g.selection("group","86");
+                selection("prof","86");
+                click();
                 break;
             case "Burdulis Dainius":
-                g.selection("group","87");
+                selection("prof","87");
+                click();
                 break;
             case "Čekmariova J.":
-                g.selection("group","169");
+                selection("prof","169");
+                click();
                 break;
             case "Dambrauskaitė Angelija":
-                g.selection("group","69");
+                selection("prof","69");
+                click();
                 break;
             case "Dambrauskienė Nijolė":
-                g.selection("group","88");
+                selection("prof","88");
+                click();
                 break;
             case "Danieliienė Jūratė":
-                g.selection("group","179");
+                selection("prof","179");
+                click();
                 break;
             case "Daubarienė Jolanda":
-                g.selection("group","185");
+                selection("prof","185");
+                click();
                 break;
             case "Daukantienė Danutė":
-                g.selection("group","89");
+                selection("prof","89");
+                click();
                 break;
             case "Dėdinienė Ingrida":
-                g.selection("group","90");
+                selection("prof","90");
+                click();
                 break;
             case "Derkintienė Jūratė":
-                g.selection("group","163");
+                selection("prof","163");
+                click();
                 break;
             case "Dudėnė Jurgita":
-                g.selection("group","134");
+                selection("prof","134");
+                click();
                 break;
             case "Dvarionaitė Lijana":
-                g.selection("group","63");
+                selection("prof","63");
+                click();
                 break;
             case "Einars Bronius":
-                g.selection("group","68");
+                selection("prof","68");
+                click();
                 break;
             case "Eismontienė Jekaterina":
-                g.selection("group","91");
+                selection("prof","91");
+                click();
                 break;
             case "Enzelienė Renata":
-                g.selection("group","144");
+                selection("prof","144");
+                click();
                 break;
-            case "Enzelienė Renata":
-                g.selection("group","145");
-                break;
+            /*case "Enzelienė Renata":
+                selection("prof","145");
+                click();
+                break;*/
             case "Freitakaitė V.":
-                g.selection("group","146");
+                selection("prof","146");
+                click();
                 break;
-            case "Freitakaitė V.":
-                g.selection("group","147");
-                break;
+            /*case "Freitakaitė V.":
+                selection("prof","147");
+                click();
+                break;*/
             case "Gaižauskienė Ina":
-                g.selection("group","74");
+                selection("prof","74");
+                click();
                 break;
             case "Galčionkova Ana":
-                g.selection("group","92");
+                selection("prof","92");
+                click();
                 break;
             case "Galdikienė Nijolė":
-                g.selection("group","93");
+                selection("prof","93");
+                click();
                 break;
             case "Gedrimė Lina":
-                g.selection("group","47");
+                selection("prof","47");
+                click();
                 break;
             case "Gedrimienė Bernadeta":
-                g.selection("group","76");
+                selection("prof","76");
+                click();
                 break;
             case "Gedvilienė L.":
-                g.selection("group","162");
+                selection("prof","162");
+                click();
                 break;
             case "Giedraitienė Neringa":
-                g.selection("group","75");
+                selection("prof","75");
+                click();
                 break;
             case "Girdžiūnienė Rasa":
-                g.selection("group","21");
+                selection("prof","21");
+                click();
                 break;
             case "Indriuškienė Rasa":
-                g.selection("group","177");
+                selection("prof","177");
+                click();
                 break;
             case "Jakubaitienė Vanda":
-                g.selection("group","23");
+                selection("prof","23");
+                click();
                 break;
             case "Jankauskienė Rita":
-                g.selection("group","53");
+                selection("prof","53");
+                click();
                 break;
             case "Janušas Leonas":
-                g.selection("group","95");
+                selection("prof","95");
+                click();
                 break;
             case "Jonelienė Romena":
-                g.selection("group","140");
+                selection("prof","140");
+                click();
                 break;
             case "Jonelys Valdas":
-                g.selection("group","96");
+                selection("prof","96");
+                click();
                 break;
             case "Juknevičienė Aurelija":
-                g.selection("group","97");
+                selection("prof","97");
+                click();
                 break;
             case "Juodienė Stasė":
-                g.selection("group","98");
+                selection("prof","98");
+                click();
                 break;
             case "Juškienė Vaineta":
-                g.selection("group","99");
+                selection("prof","99");
+                click();
                 break;
             case "Karpavičė Irma":
-                g.selection("group","187");
+                selection("prof","187");
+                click();
                 break;
             case "Karpavičiūtė Solmita":
-                g.selection("group","59");
+                selection("prof","59");
+                click();
                 break;
             case "Karžauskienė Edita":
-                g.selection("group","167");
+                selection("prof","167");
+                click();
                 break;
             case "Kasnauskienė Jolanta":
-                g.selection("group","42");
+                selection("prof","42");
+                click();
                 break;
             case "Kasperavičiūtė Simona":
-                g.selection("group","31");
+                selection("prof","31");
+                click();
                 break;
             case "Kaunienė Jūratė":
-                g.selection("group","51");
+                selection("prof","51");
+                click();
                 break;
             case "Kemzūrienė Deimantė":
-                g.selection("group","41");
+                selection("prof","41");
+                click();
                 break;
             case "Kraniauskas Liutauras":
-                g.selection("group","155");
+                selection("prof","155");
+                click();
                 break;
             case "Kraniauskienė Sigita":
-                g.selection("group","58");
+                selection("prof","58");
+                click();
                 break;
             case "Kreišmonienė Jolanta":
-                g.selection("group","171");
+                selection("prof","171");
+                click();
                 break;
             case "Kreivinienė B.":
-                g.selection("group","157");
+                selection("prof","157");
+                click();
                 break;
             case "Kukštienė Viktorija":
-                g.selection("group","28");
+                selection("prof","28");
+                click();
                 break;
             case "Lenčiauskienė Daiva":
-                g.selection("group","52");
+                selection("prof","52");
+                click();
                 break;
             case "Letkauskaitė Kristina":
-                g.selection("group","27");
+                selection("prof","27");
+                click();
                 break;
             case "Levickienė L.":
-                g.selection("group","142");
+                selection("prof","142");
+                click();
                 break;
             case "Levickytė Greta":
-                g.selection("group","101");
+                selection("prof","101");
+                click();
                 break;
             case "Levuškinas 0.":
-                g.selection("group","139");
+                selection("prof","139");
+                click();
                 break;
             case "Liukienė Ramunė":
-                g.selection("group","44");
+                selection("prof","44");
+                click();
                 break;
             case "Maniušienė Margarita":
-                g.selection("group","65");
+                selection("prof","65");
+                click();
                 break;
             case "Mataitienė Angelija":
-                g.selection("group","102");
+                selection("prof","102");
+                click();
                 break;
             case "Mauricaitė Ugnė":
-                g.selection("group","103");
+                selection("prof","103");
+                click();
                 break;
             case "Mažionienė Asta":
-                g.selection("group","8");
-                break; case "Mažionytė Indrė":
-                g.selection("group","168");
+                selection("prof","8");
+                click();
+                break;
+            case "Mažionytė Indrė":
+                selection("prof","168");
+                click();
                 break;
             case "Mickus Alvydas":
-                g.selection("group","158");
+                selection("prof","158");
+                click();
                 break;
             case "Mockienė Aldona":
-                g.selection("group","2");
+                selection("prof","2");
+                click();
                 break;
             case "Morkūnienė Rimantė":
-                g.selection("group","43");
+                selection("prof","43");
+                click();
                 break;
             case "Morkūnienė Sonata":
-                g.selection("group","104");
+                selection("prof","104");
+                click();
                 break;
             case "Muranovaitė Rūta":
-                g.selection("group","186");
+                selection("prof","186");
+                click();
                 break;
             case "Narbutė Jūratė":
-                g.selection("group","40");
+                selection("prof","40");
+                click();
                 break;
             case "Narutavičiūtė Evelina":
-                g.selection("group","62");
+                selection("prof","62");
+                click();
                 break;
             case "Narvilienė Daiva":
-                g.selection("group","14");
+                selection("prof","14");
+                click();
                 break;
             case "Nikolajevienė Aušra":
-                g.selection("group","13");
+                selection("prof","13");
+                click();
                 break;
             case "Norbutaitė Asta":
-                g.selection("group","35");
+                selection("prof","35");
+                click();
                 break;
             case "Pakalniškienė Jūratė":
-                g.selection("group","105");
+                selection("prof","105");
+                click();
                 break;
             case "Pakštytė Aušra":
-                g.selection("group","106");
+                selection("prof","106");
+                click();
                 break;
             case "Palijanskė Ugnė":
-                g.selection("group","137");
+                selection("prof","137");
+                click();
                 break;
             case "Penkauskaitė Lina":
-                g.selection("group","107");
+                selection("prof","107");
+                click();
                 break;
             case "Petrauskas Remigijus":
-                g.selection("group","49");
+                selection("prof","49");
+                click();
                 break;
             case "Piekuvienė Vaida":
-                g.selection("group","100");
+                selection("prof","100");
+                click();
                 break;
             case "Piklaps Arnoldas":
-                g.selection("group","159");
+                selection("prof","159");
+                click();
                 break;
             case "Pleskonosova Irina":
-                g.selection("group","184");
+                selection("prof","184");
+                click();
                 break;
             case "Pocienė Kristina":
-                g.selection("group","109");
+                selection("prof","109");
+                click();
                 break;
             case "Pocienė Monika":
-                g.selection("group","56");
+                selection("prof","56");
+                click();
                 break;
             case "Pocienė V.":
-                g.selection("group","170");
+                selection("prof","170");
+                click();
                 break;
             case "Poimanskienė Vida":
-                g.selection("group","11");
+                selection("prof","11");
+                click();
                 break;
             case "Poškienė Gintarė":
-                g.selection("group","132");
+                selection("prof","132");
+                click();
                 break;
             case "Pranauskienė Dovilė":
-                g.selection("group","110");
+                selection("prof","110");
+                click();
                 break;
             case "Pudžemienė Ernesta":
-                g.selection("group","111");
+                selection("prof","111");
+                click();
                 break;
             case "Račkauskienė Skaidrė":
-                g.selection("group","112");
+                selection("prof","112");
+                click();
                 break;
             case "Radavičienė A.":
-                g.selection("group","73");
+                selection("prof","73");
+                click();
                 break;
             case "Ramanauskas Rimantas":
-                g.selection("group","113");
+                selection("prof","113");
+                click();
                 break;
             case "Ramanauskienė Sigita":
-                g.selection("group","160");
+                selection("prof","160");
+                click();
                 break;
             case "Razgutė Dovilė":
-                g.selection("group","131");
+                selection("prof","131");
+                click();
                 break;
             case "Remeikienė Jurgita":
-                g.selection("group","136");
+                selection("prof","136");
+                click();
                 break;
             case "Rimgailaitė A.":
-                g.selection("group","166");
+                selection("prof","166");
+                click();
                 break;
             case "Rimkuvienė Daliuta":
-                g.selection("group","57");
+                selection("prof","57");
+                click();
                 break;
             case "Romeraitė-Kuklierienė Laura":
-                g.selection("group","25");
+                selection("prof","25");
+                click();
                 break;
             case "Rudžianskienė Aušra":
-                g.selection("group","60");
+                selection("prof","60");
+                click();
                 break;
             case "Saudargė Odeta":
-                g.selection("group","114");
+                selection("prof","114");
+                click();
                 break;
             case "Simonaitienė Gintarė":
-                g.selection("group","165");
+                selection("prof","165");
+                click();
                 break;
             case "Sirtautaitė Ksavera":
-                g.selection("group","30");
+                selection("prof","30");
+                click();
                 break;
             case "Smagurienė Aida":
-                g.selection("group","115");
+                selection("prof","115");
+                click();
                 break;
             case "Spiriajevienė Irma":
-                g.selection("group","154");
+                selection("prof","154");
+                click();
                 break;
             case "Stančaitytė Daiva":
-                g.selection("group","29");
+                selection("prof","29");
+                click();
                 break;
             case "Staniulienė Vida":
-                g.selection("group","3");
+                selection("prof","3");
+                click();
                 break;
             case "Stankaitienė Diana":
-                g.selection("group","45");
+                selection("prof","45");
+                click();
                 break;
             case "Staražinskienė Aušra":
-                g.selection("group","71");
+                selection("prof","71");
+                click();
                 break;
             case "Stončienė Vida":
-                g.selection("group","54");
+                selection("prof","54");
+                click();
                 break;
             case "Stonkienė Asta":
-                g.selection("group","116");
+                selection("prof","116");
+                click();
                 break;
             case "Stonkutė Renata":
-                g.selection("group","117");
+                selection("prof","117");
+                click();
                 break;
             case "Stoukuvienė Žaneta":
-                g.selection("group","178");
+                selection("prof","178");
+                click();
                 break;
             case "Stratkauskienė Rūta":
-                g.selection("group","172");
+                selection("prof","172");
+                click();
                 break;
             case "Šatienė Salomėja":
-                g.selection("group","46");
+                selection("prof","46");
+                click();
                 break;
             case "Šereikienė Vida":
-                g.selection("group","24");
+                selection("prof","24");
+                click();
                 break;
             case "Šiaulinskienė R.":
-                g.selection("group","175");
+                selection("prof","175");
+                click();
                 break;
             case "Šilanskaitė Jolita":
-                g.selection("group","148");
+                selection("prof","148");
+                click();
                 break;
             case "Šlepetienė Asta":
-                g.selection("group","118");
+                selection("prof","118");
+                click();
                 break;
             case "Šniepienė Gražina":
-                g.selection("group","22");
+                selection("prof","22");
+                click();
                 break;
             case "Šoparienė Raimonda":
-                g.selection("group","119");
+                selection("prof","119");
+                click();
                 break;
             case "Šostakienė Nijolė":
-                g.selection("group","120");
+                selection("prof","120");
+                click();
                 break;
             case "Špiliauskaitė J":
-                g.selection("group","121");
+                selection("prof","121");
+                click();
                 break;
             case "Šukienė Ingrida":
-                g.selection("group","6");
+                selection("prof","6");
+                click();
                 break;
             case "Šulcaitė-Vasiljeva Mercedes":
-                g.selection("group","26");
+                selection("prof","26");
+                click();
                 break;
             case "Šumskienė Aldona":
-                g.selection("group","39");
+                selection("prof","39");
+                click();
                 break;
             case "Šutrajevienė Daina":
-                g.selection("group","4");
+                selection("prof","4");
+                click();
                 break;
             case "Tauraitė-Janušauskienė Gitana":
-                g.selection("group","122");
+                selection("prof","122");
+                click();
                 break;
             case "Trumpulytė Martyna":
-                g.selection("group","174");
+                selection("prof","174");
+                click();
                 break;
             case "Urbonas Vincas":
-                g.selection("group","19");
+                selection("prof","19");
+                click();
                 break;
             case "Urbonienė Dijana":
-                g.selection("group","48");
+                selection("prof","48");
+                click();
                 break;
             case "Uselienė Daiva":
-                g.selection("group","20");
+                selection("prof","20");
+                click();
                 break;
             case "Vaitiekienė Jurgita":
-                g.selection("group","123");
+                selection("prof","123");
+                click();
                 break;
             case "Vaitkuvienė Jolanta":
-                g.selection("group","124");
+                selection("prof","124");
+                click();
                 break;
             case "Valaitienė Aurelija":
-                g.selection("group","125");
+                selection("prof","125");
+                click();
                 break;
             case "Valatkienė Dovilė":
-                g.selection("group","55");
+                selection("prof","55");
+                click();
                 break;
             case "Valeckienė Ina":
-                g.selection("group","156");
+                selection("prof","156");
+                click();
                 break;
             case "Venevičienė Viktorija":
-                g.selection("group","72");
+                selection("prof","72");
+                click();
                 break;
             case "Vilčinskienė Irena":
-                g.selection("group","180");
+                selection("prof","180");
+                click();
                 break;
             case "Viluckienė Jolita":
-                g.selection("group","182");
+                selection("prof","182");
+                click();
                 break;
             case "Virbalienė Akvilė":
-                g.selection("group","33");
+                selection("prof","33");
+                click();
                 break;
             case "Virbalis Tomas":
-                g.selection("group","34");
+                selection("prof","34");
+                click();
                 break;
             case "Virketienė Diana":
-                g.selection("group","135");
+                selection("prof","135");
+                click();
                 break;
             case "Vyšniauskas Julius":
-                g.selection("group","67");
+                selection("prof","67");
+                click();
                 break;
             case "Zabitienė Rūta":
-                g.selection("group","94");
+                selection("prof","94");
+                click();
                 break;
             case "Zavackienė Anželika":
-                g.selection("group","12");
+                selection("prof","12");
+                click();
                 break;
             case "Zelenienė Irina":
-                g.selection("group","133");
+                selection("prof","133");
+                click();
                 break;
             case "Zuzaitė Nijolė":
-                g.selection("group","18");
+                selection("prof","18");
+                click();
                 break;
             case "Žakaitis Povilas":
-                g.selection("group","149");
+                selection("prof","149");
+                click();
                 break;
             case "Žebrauskaitė Aurelija":
-                g.selection("group","126");
+                selection("prof","126");
+                click();
                 break;
             case "Žernienė Aušra":
-                g.selection("group","127");
+                selection("prof","127");
+                click();
                 break;
             case "Žičkuvienė Kristina":
-                g.selection("group","128");
+                selection("prof","128");
+                click();
                 break;
             case "Žydžiūnaitė Vilma":
-                g.selection("group","7");
+                selection("prof","7");
+                click();
                 break;
             case "Žymantienė Eglė":
-                g.selection("group","108");
+                selection("prof","108");
+                click();
                 break;
             case "Žubrickienė Irena":
-                g.selection("group","61");
+                selection("prof","61");
+                click();
                 break;
             case "Žukauskienė D.":
-                g.selection("group","173");
+                selection("prof","173");
+                click();
                 break;
             case "Žulpienė Loreta":
-                g.selection("group","129")
+                selection("prof","129");
+                click();
                 break;
             case "Žuravliova Olesia":
-                g.selection("group","130");
+                selection("prof","130");
+                click();
                 break;
             default:
                 break;
@@ -619,20 +794,34 @@ public class DestytojaiSVMF extends AppCompatActivity{
 
     public void hideD(){
         //wwD.loadUrl("javascript:$(document.querySelector(\".hdrTable\")).hide()");
-        wwD.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
-        wwD.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
-        wwD.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr td table td table tbody tr td\")[2]).hide()");
-        wwD.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[2]).hide()");
-        wwD.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
-        wwD.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr button\")[0]).hide();");
-        wwD.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr\")[6]).hide();");
-        wwD.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
-        wwD.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
-        wwD.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
-        wwD.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr td table td table tbody tr td\")[2]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[2]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr button\")[0]).hide();");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr\")[6]).hide();");
+        ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
+        ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
+        ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
+        ww.loadUrl("javascript:document.body.style.marginTop=-10");
     }public void selectionD( String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
 
+    }
+    public void spinner(String[] program, Spinner metai) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        metai.setAdapter(adapter);
+    }
+    public void selection( String pasirinkimas, String val) {
+
+        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
+
+    }
+    public void click(){
+        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
+        ww.loadUrl("javascript:viewWeek();");
     }
 }

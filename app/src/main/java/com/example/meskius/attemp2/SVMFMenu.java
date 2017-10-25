@@ -24,7 +24,7 @@ public class SVMFMenu extends AppCompatActivity {
         TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
         TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
         TextView auditorijosvaiz = (TextView)findViewById(R.id.auditorijuvaizTF);
-
+        auditorijosvaiz.setVisibility(View.GONE);
         Button back=(Button)findViewById(R.id.backTF);
 
 
@@ -42,28 +42,28 @@ public class SVMFMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*dalykai.setOnClickListener(new View.OnClickListener() {
+       /* dalykai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SVMFMenu.this,DalykaiTF.class);
                 startActivity(intent);
             }
-        });
+        });*/
         destytojai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SVMFMenu.this,DestytojaiTF.class);
+                Intent intent = new Intent(SVMFMenu.this,DestytojaiSVMF.class);
                 startActivity(intent);
             }
         });
-        auditorijos.setOnClickListener(new View.OnClickListener() {
+        /*auditorijos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SVMFMenu.this,AuditorijosTF.class);
                 startActivity(intent);
             }
-        });
-        auditorijosvaiz.setOnClickListener(new View.OnClickListener() {
+        });*/
+       /* auditorijosvaiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SMFMenu.this,AuditorijuVaizdavimasTF.class);
