@@ -50,10 +50,9 @@ public class GrupesTF extends AppCompatActivity {
         final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
         final Button savaite = (Button)findViewById(R.id.savaitinis);
-
         final Button atgal = (Button)findViewById(R.id.backGTF);
-        savaite.setVisibility(View.GONE);
 
+        savaite.setVisibility(View.GONE);
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
 
@@ -63,7 +62,6 @@ public class GrupesTF extends AppCompatActivity {
 
         final TextView grupe = (TextView)findViewById(R.id.group);
         grupe.setVisibility(View.GONE);
-
 
         Button refresh = (Button)findViewById(R.id.refresh);
         spinner(programTipas,programID);
@@ -168,7 +166,6 @@ public class GrupesTF extends AppCompatActivity {
 
             }
         });
-
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -472,7 +469,6 @@ public class GrupesTF extends AppCompatActivity {
 
             }
         });
-
         savaite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

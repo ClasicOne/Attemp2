@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by Meskius on 10/24/2017.
+ * Created by Meskius on 10/25/2017.
  */
 
-public class SMFMenu extends AppCompatActivity{
+public class SVMFMenu extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,35 +31,35 @@ public class SMFMenu extends AppCompatActivity{
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,Fakultetai.class);
+                Intent intent = new Intent(SVMFMenu.this,Fakultetai.class);
                 startActivity(intent);
             }
         });
         grupes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,GrupesSMF.class);
+                Intent intent = new Intent(SVMFMenu.this,GrupesSVMF.class);
                 startActivity(intent);
             }
         });
         /*dalykai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,DalykaiTF.class);
+                Intent intent = new Intent(SVMFMenu.this,DalykaiTF.class);
                 startActivity(intent);
             }
         });
         destytojai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,DestytojaiTF.class);
+                Intent intent = new Intent(SVMFMenu.this,DestytojaiTF.class);
                 startActivity(intent);
             }
         });
         auditorijos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,AuditorijosTF.class);
+                Intent intent = new Intent(SVMFMenu.this,AuditorijosTF.class);
                 startActivity(intent);
             }
         });

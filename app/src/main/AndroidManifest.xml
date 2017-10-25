@@ -46,6 +46,22 @@
             android:name=".DalykaiTF"
             android:label="Dalykai">
         </activity>
+        <activity
+            android:name=".SMFMenu"
+            android:label="SMFMenu">
+        </activity>
+        <activity
+            android:name=".GrupesSMF"
+            android:label="Grupes">
+        </activity>
+        <activity
+            android:name=".SVMFMenu"
+            android:label="SVMF">
+        </activity>
+        <activity
+            android:name=".GrupesSVMF"
+            android:label="Grupes">
+        </activity>
     </application>
 
 </manifest>

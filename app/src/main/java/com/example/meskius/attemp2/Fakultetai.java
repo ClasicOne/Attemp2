@@ -21,7 +21,7 @@ public class Fakultetai extends AppCompatActivity {
 
         TextView tf=(TextView)findViewById(R.id.tf);
         TextView smf=(TextView)findViewById(R.id.socialiniuMF);
-        TextView sveikatosmf=(TextView)findViewById(R.id.sveikatosMF);
+        TextView svsmf=(TextView)findViewById(R.id.sveikatosMF);
 
         tf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,35 @@ public class Fakultetai extends AppCompatActivity {
                 return false;
             }
         });
-
+        smf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Fakultetai.this,SMFMenu.class);
+                startActivity(intent);
+            }
+        });
+        smf.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(Fakultetai.this,GrupesSMF.class);
+                startActivity(intent);
+                return false;
+            }
+        });
+        svsmf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Fakultetai.this,SVMFMenu.class);
+                startActivity(intent);
+            }
+        });
+        svsmf.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Intent intent = new Intent(Fakultetai.this,GrupesSVMF.class);
+                startActivity(intent);
+                return false;
+            }
+        });
     }
 }

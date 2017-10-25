@@ -24,7 +24,7 @@ public class AuditorijuVaizdavimasTF extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.auditorijuatvazdavimas);
+        setContentView(R.layout.auditorijuatvazdavimas_tf);
         ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
         webSettings.setJavaScriptEnabled(true);
