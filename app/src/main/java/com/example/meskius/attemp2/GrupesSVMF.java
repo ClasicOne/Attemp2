@@ -352,8 +352,9 @@ public class GrupesSVMF extends AppCompatActivity {
     private void grupes_k1(String spinnerText) {
         switch (spinnerText){
             case "KT 16-1":
+                //selection("group","59");
                 selection("group","59");
-                click();
+                //click();
                 break;
             case "KT 16-1, 1-2":
                 selection("group","60");
@@ -981,21 +982,21 @@ public class GrupesSVMF extends AppCompatActivity {
                 case "1":
                     spinner(k1,grupe);
                     selection("year","1");
-                    selection("branch","9");
+                    selection("branch","15");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
                     spinner(k2,grupe);
                     selection("year","2");
-                    selection("branch","15");
+                    selection("branch","16");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
                     spinner(k3,grupe);
                     selection("year","3");
-                    selection("branch","16");
+                    selection("branch","9");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
