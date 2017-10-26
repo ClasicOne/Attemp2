@@ -24,7 +24,7 @@ import android.widget.Toast;
  */
 
 public class AuditorijosTF extends AppCompatActivity{
-    GrupesTF main;
+
     WebView ww;
 
     String auditorijosText[] ={"--pasirinkti--","101","102","103-komp.","104","105","106","120 Konferencijų salė","129- komp.","130-komp.","131-komp.","132-komp.","133-Statybos lab.","134-lab.","135-lab.","136-lab.","137-chem.lab.","139 auditorija","140 auditorija","141 auditorija","203 auditorija","204 auditorija","206 auditorija","208","212 salė","210","214","215","216 auditorija","219-komp.","220-komp.","223--IT","226-komp.","227-lab.","228 ","231","232-komp.","233- komp.","234-GIS","235","237-komp.","238 auditorija","304","305","306","308 auditorija","309","310","311","313","315","318","319","320","322","323","324","325","326","328","329","330","331","332","333-334 VPMF","335","401 auditorija","Klaipėdos laivų remonto ir statybos mokykla, Statybininkų pr. 39","002","KU, JTF, 216 a.","115","336"};
@@ -32,7 +32,7 @@ public class AuditorijosTF extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auditorijos_main);
+        setContentView(R.layout.auditorijos_tf);
 
         Intent intent= getIntent();
         ww= (WebView)findViewById(R.id.ww);

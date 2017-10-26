@@ -485,7 +485,391 @@ public class GrupesTF extends AppCompatActivity {
         ww.setWebChromeClient(new WebChromeClient());
         //ww.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
+        grupeID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String spinnerText = adapterView.getSelectedItem().toString();
+                savaite.setVisibility(View.VISIBLE);
 
+                switch (spinnerText){
+                    // NL 1
+                    case "TL 15-1":
+                        selection("group","1");
+                        click();
+
+                        break;
+                    case "S 38-1, 2 p.":
+                        selection("group","2");
+                        click();
+                        break;
+                    case "S 38-1, 1 p.":
+                        selection("group","3");
+                        click();
+                        break;
+                    case "S 38-1":
+                        selection("group","4");
+                        click();
+                        break;
+                    case "MT 15-1, 2 p.":
+                        selection("group","5");
+                        click();
+                        break;
+                    case "MT 15-1, 1 p.":
+                        selection("group","6");
+                        click();
+                        break;
+                    case "MT 15-1":
+                        selection("group","7");
+                        click();
+                        break;
+                    case "MCH 18-1":
+                        selection("group","8");
+                        click();
+                        break;
+                    case "IN 2-1":
+                        selection("group","9");
+                        click();
+                        break;
+                    case "I 13-1, 2 p.":
+                        selection("group","10");
+                        click();
+                        break;
+                    case "I 13-1, 1 p.":
+                        selection("group","11");
+                        click();
+                        break;
+                    case "I 13-1":
+                        selection("group","12");
+                        click();
+                        break;
+                    case "G 21-1":
+                        selection("group","13");
+                        click();
+                        break;
+                    case "EA 32-1, 2 p.":
+                        selection("group","14");
+                        click();
+                        break;
+                    case "EA 32-1, 1 p.":
+                        selection("group","15");
+                        click();
+                        break;
+                    case "EA 32-1":
+                        selection("group","16");
+                        click();
+                        break;
+                    case "AT 39-1,1 p. ":
+                        selection("group","17");
+                        click();
+                        break;
+                    case "AT 39-1, 3 p. ":
+                        selection("group","18");
+                        click();
+                        break;
+                    case "AT 39-1, 2 p. ":
+                        selection("group","19");
+                        click();
+                        break;
+                    case "AT 39-1":
+                        selection("group","20");
+                        click();
+                        break;
+                    //NL 3
+                    case "ATE 35-3":
+                        selection("group", "53");
+                        click();
+                        break;
+                    case "ATE 35-3, 1 p.":
+                        selection("group", "90");
+                        click();
+                        break;
+                    case "ATE 35-3, 2 p.":
+                        selection("group", "89");
+                        click();
+                        break;
+                    case "EA 28-3":
+                        selection("group", "52");
+                        click();
+                        break;
+                    case "EA 28-3, 1 p.":
+                        selection("group", "92");
+                        click();
+                        break;
+                    case "EA 28-3, 2 p.":
+                        selection("group", "91");
+                        click();
+                        break;
+                    case "G 19-3":
+                        selection("group", "90");
+                        click();
+                        break;
+                    case "I 11-3":
+                        selection("group", "50");
+                        click();
+                        break;
+                    case "KD 8-3":
+                        selection("group", "49");
+                        click();
+                        break;
+                    case "MCH 14-3":
+                        selection("group", "48");
+                        click();
+                        break;
+                    case "MT 11-3":
+                        selection("group", "47");
+                        click();
+                        break;
+                    case "MT 11-3, 1 p.":
+                        selection("group", "46");
+                        click();
+                        break;
+                    case "MT 11-3, 2 p.":
+                        selection("group", "45");
+                        click();
+                        break;
+                    case "S 34-3":
+                        selection("group", "56");
+                        click();
+                        break;
+                    case "S 34-3, 1 p.":
+                        selection("group", "55");
+                        click();
+                        break;
+                    case "S 34-3, 2 p.":
+                        selection("group", "54");
+                        click();
+                        break;
+                    case "T 11-3":
+                        selection("group", "44");
+                        click();
+                        break;
+                    // IST 1
+                    case "AT i 40-1":
+                        selection("group", "63");
+                        click();
+                        break;
+                    case "EA i 33-1":
+                        selection("group", "62");
+                        click();
+                        break;
+                    case "EA i 33-1, 1 p.":
+                        selection("group", "61");
+                        click();
+                        break;
+                    case "EA i 33-1, 2 p.":
+                        selection("group", "60");
+                        click();
+                        break;
+                    case "IN i 3-1":
+                        selection("group", "58");
+                        click();
+                        break;
+                    case "MCH i 19-1":
+                        selection("group", "59");
+                        click();
+                        break;
+                    case "MT i 16-1":
+                        selection("group", "57");
+                        click();
+                        break;
+                    case "MT i 16-1, 1 p.":
+                        selection("group", "93");
+                        click();
+                        break;
+                    case "MT i 16-1, 2 p.":
+                        selection("group", "94");
+                        click();
+                        break;
+                    case "S i 39-1":
+                        selection("group", "66");
+                        click();
+                        break;
+                    case "S i 39-1, 1 p.":
+                        selection("group", "65");
+                        click();
+                        break;
+                    case "S i 39-1, 2 p.":
+                        selection("group", "64");
+                        click();
+                        break;
+                    case "S i 39-1, 3 p.":
+                        selection("group", "95");
+                        click();
+                        break;
+                    case "TL i 16-1":
+                        selection("group", "67");
+                        click();
+                        break;
+                    // NL 2
+                    case "ATE 37-2":
+                        selection("group", "42");
+                        click();
+                        break;
+                    case "ATE 37-2, 1 p.":
+                        selection("group", "41");
+                        click();
+                        break;
+                    case "ATE 37-2, 2 p.":
+                        selection("group", "40");
+                        click();
+                        break;
+                    case "EA 30-2":
+                        selection("group", "39");
+                        click();
+                        break;
+                    case "EA 30-2, 1 p.":
+                        selection("group", "38");
+                        click();
+                        break;
+                    case "EA 30-2, 2 p.":
+                        selection("group", "37");
+                        click();
+                        break;
+                    case "G 20-2":
+                        selection("group", "36");
+                        click();
+                        break;
+                    case "I 12-2":
+                        selection("group", "35");
+                        click();
+                        break;
+                    case "IN 1-2":
+                        selection("group", "34");
+                        click();
+                        break;
+                    case "MCH 16-2":
+                        selection("group", "33");
+                        click();
+                        break;
+                    case "MT 13-2":
+                        selection("group", "32");
+                        click();
+                        break;
+                    case "MT 13-2, 1 p.":
+                        selection("group", "31");
+                        click();
+                        break;
+                    case "MT 13-2, 2 p.":
+                        selection("group", "30");
+                        click();
+                        break;
+                    case "S 36-2":
+                        selection("group", "29");
+                        click();
+                        break;
+                    case "S 36-2, 1 p.":
+                        selection("group", "28");
+                        click();
+                        break;
+                    case "S 36-2, 2 p.":
+                        selection("group", "27");
+                        click();
+                        break;
+                    case "T 13-2":
+                        selection("group", "26");
+                        click();
+                        break;
+                    // IST 2
+                    case "ATE i 38-2":
+                        selection("group", "73");
+                        click();
+                        break;
+                    case "EA i 31-2":
+                        selection("group", "72");
+                        click();
+                        break;
+                    case "MCH i 17-2":
+                        selection("group", "71");
+                        click();
+                        break;
+                    case "MT i 14-2":
+                        selection("group", "70");
+                        click();
+                        break;
+                    case "S i 37-2":
+                        selection("group", "69");
+                        click();
+                        break;
+                    case "T i 14-2":
+                        selection("group", "68");
+                        click();
+                        break;
+                    // IST 3
+                    case "ATE i 36-3":
+                        selection("group", "80");
+                        click();
+                        break;
+                    case "EA i 29-3":
+                        selection("group", "79");
+                        click();
+                        break;
+                    case "GRV - 3":
+                        selection("group", "74");
+                        click();
+                        break;
+                    case "MCH i 15-3":
+                        selection("group", "78");
+                        click();
+                        break;
+                    case "MT i 12-3":
+                        selection("group", "77");
+                        click();
+                        break;
+                    case "S i 35-3":
+                        selection("group", "76");
+                        click();
+                        break;
+                    case "T i 12-3":
+                        selection("group", "75");
+                        click();
+                        break;
+                    // IST 4
+                    case "ATE i 34-4":
+                        selection("group", "86");
+                        click();
+                        break;
+                    case "EA i 27-4":
+                        selection("group", "85");
+                        click();
+                        break;
+                    case "MCH i 13-4":
+                        selection("group", "84");
+                        click();
+                        break;
+                    case "MT i 10-4":
+                        selection("group", "83");
+                        click();
+                        break;
+                    case "MT i 10-4, 1 p.":
+                        selection("group", "88");
+                        click();
+                        break;
+                    case "MT i 10-4, 2 p.":
+                        selection("group", "87");
+                        click();
+                        break;
+                    case "S i 33-4":
+                        selection("group", "82");
+                        click();
+                        break;
+                    case "T i 10-4":
+                        selection("group", "81");
+                        click();
+                        break;
+
+
+
+                    default:
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         ww.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
@@ -499,6 +883,10 @@ public class GrupesTF extends AppCompatActivity {
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    public void click(){
+        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
+        ww.loadUrl("javascript:viewWeek();");
     }
     public void hide(){
         //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");

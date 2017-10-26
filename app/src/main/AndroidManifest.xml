@@ -69,6 +69,19 @@
             android:name=".DestytojaiSVMF"
             android:label="Destytojai">
         </activity>
+        <activity
+            android:name=".DestytojaiSMF"
+            android:label="Destytojai">
+        </activity>
+        <activity
+            android:name=".AuditorijosSMF"
+            android:label="Auditorijos">
+        </activity>
+        <activity
+            android:name=".AuditorijosSVMF"
+            android:label="Auditorijos">
+        </activity>
+
     </application>
 
 </manifest>

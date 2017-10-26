@@ -42,13 +42,7 @@ public class SVMFMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-       /* dalykai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SVMFMenu.this,DalykaiTF.class);
-                startActivity(intent);
-            }
-        });*/
+
         destytojai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,20 +50,14 @@ public class SVMFMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*auditorijos.setOnClickListener(new View.OnClickListener() {
+        auditorijos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SVMFMenu.this,AuditorijosTF.class);
+                Intent intent = new Intent(SVMFMenu.this,AuditorijosSVMF.class);
                 startActivity(intent);
             }
-        });*/
-       /* auditorijosvaiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,AuditorijuVaizdavimasTF.class);
-                startActivity(intent);
-            }
-        });*/
+        });
+
 
 
 

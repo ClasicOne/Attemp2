@@ -39,6 +39,8 @@ public class Fakultetai extends AppCompatActivity {
                 return false;
             }
         });
+
+
         smf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +56,8 @@ public class Fakultetai extends AppCompatActivity {
                 return false;
             }
         });
+
+
         svsmf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +73,8 @@ public class Fakultetai extends AppCompatActivity {
                 return false;
             }
         });
+
+
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

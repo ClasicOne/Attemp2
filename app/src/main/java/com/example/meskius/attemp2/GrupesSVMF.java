@@ -81,7 +81,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 hide();
             }
         });
-
         final Spinner program =(Spinner)findViewById(R.id.programGSMF);
         final Spinner metai = (Spinner)findViewById(R.id.yearGSMF);
         final Spinner grupe = (Spinner)findViewById(R.id.groupGSMF);
@@ -105,7 +104,7 @@ public class GrupesSVMF extends AppCompatActivity {
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/groups.php");
+                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
             }
         });
         program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -222,7 +221,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_sd2(String spinnerText) {
         switch (spinnerText){
             case "SD 14-2":
@@ -253,7 +251,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_sd3(String spinnerText) {
         switch (spinnerText){
             case "SD 12-3":
@@ -284,7 +281,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_sd4(String spinnerText) {
         switch (spinnerText){
             case "SDi 6-4":
@@ -295,7 +291,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_op3(String spinnerText) {
         switch (spinnerText){
             case "OP8-3":
@@ -318,7 +313,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_op2(String spinnerText) {
         switch (spinnerText){
             case "OP9-2":
@@ -337,7 +331,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_op1(String spinnerText) {
         switch (spinnerText){
             case "OP10-1":
@@ -356,7 +349,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_k1(String spinnerText) {
         switch (spinnerText){
             case "KT 16-1":
@@ -387,7 +379,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_k2(String spinnerText) {
         switch (spinnerText){
             case "KT 14-2":
@@ -442,7 +433,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_k3(String spinnerText) {
         switch (spinnerText){
             case "KT 12-3":
@@ -473,7 +463,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_gt1(String spinnerText) {
         switch (spinnerText){
             case "GT 17-1":
@@ -528,7 +517,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_gt2(String spinnerText) {
         switch (spinnerText){
             case "GT 15-2":
@@ -583,7 +571,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_gt3(String spinnerText) {
         switch (spinnerText){
             case "GT 13-3":
@@ -638,7 +625,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_d1(String spinnerText) {
         switch (spinnerText){
             case "DT 4-1":
@@ -669,7 +655,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_d2(String spinnerText) {
         switch (spinnerText){
             case "DT 3-2":
@@ -700,7 +685,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_d3(String spinnerText) {
         switch (spinnerText){
             case "DT 2-3":
@@ -715,7 +699,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bh3(String spinnerText) {
         switch (spinnerText){
             case "BH8-3":
@@ -746,7 +729,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bh2(String spinnerText) {
         switch (spinnerText){
             case "BH9-2":
@@ -765,7 +747,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bh1(String spinnerText) {
         switch (spinnerText){
             case "BH 10-1":
@@ -784,7 +765,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps4(String spinnerText) {
         switch (spinnerText){
             case "SL 13-4":
@@ -815,7 +795,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps3(String spinnerText) {
         switch (spinnerText) {
             case "SL 15-3":
@@ -846,7 +825,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps2(String spinnerText) {
         switch (spinnerText) {
             case "SL 17-2":
@@ -877,7 +855,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void ww() {
         ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();

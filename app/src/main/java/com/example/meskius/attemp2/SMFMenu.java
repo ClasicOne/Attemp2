@@ -43,34 +43,21 @@ public class SMFMenu extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-        /*dalykai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,DalykaiTF.class);
-                startActivity(intent);
-            }
-        });
         destytojai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,DestytojaiTF.class);
+                Intent intent = new Intent(SMFMenu.this,DestytojaiSVMF.class);
                 startActivity(intent);
             }
         });
         auditorijos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,AuditorijosTF.class);
+                Intent intent = new Intent(SMFMenu.this,AuditorijosSMF.class);
                 startActivity(intent);
             }
         });
-        auditorijosvaiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,AuditorijuVaizdavimasTF.class);
-                startActivity(intent);
-            }
-        });*/
+
 
 
 
