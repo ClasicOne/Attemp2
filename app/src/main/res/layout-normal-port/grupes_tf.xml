@@ -136,21 +136,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/savaitinis"
-        android:layout_width="120dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:backgroundTint="#3BB9E7"
-        android:text="Rodyti savaitini"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <WebView
         android:id="@+id/webView"
         android:layout_width="0dp"

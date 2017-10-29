@@ -49,13 +49,10 @@ public class GrupesTF extends AppCompatActivity {
         final Spinner programID=(Spinner)findViewById(R.id.tipasID);
         final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
         final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
-        final Button savaite = (Button)findViewById(R.id.savaitinis);
         final Button atgal = (Button)findViewById(R.id.backGTF);
 
-        savaite.setVisibility(View.GONE);
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
-
 
         final TextView metai =(TextView) findViewById(R.id.year);
         metai.setVisibility(View.GONE);
@@ -176,7 +173,6 @@ public class GrupesTF extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
-                savaite.setVisibility(View.VISIBLE);
 
                 switch (spinnerText){
                     // NL 1
@@ -469,13 +465,7 @@ public class GrupesTF extends AppCompatActivity {
 
             }
         });
-        savaite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("javascript:viewWeek();");
-                //ww.loadUrl("javascript:$(document.querySelector('.tdColor .inputButton').click();");
-            }
-        });
+
         ww= (WebView)findViewById(R.id.webView);
         WebSettings webSettings = ww.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -489,7 +479,6 @@ public class GrupesTF extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
-                savaite.setVisibility(View.VISIBLE);
 
                 switch (spinnerText){
                     // NL 1
