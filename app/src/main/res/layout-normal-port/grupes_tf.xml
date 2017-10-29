@@ -20,7 +20,7 @@
         android:backgroundTint="#f44242"
         android:elevation="4dp"
         android:text="F5"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
         app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.888" />
 
     <Spinner
-        android:id="@+id/grupeID"
+        android:id="@+id/groupGSMF"
         android:layout_width="56dp"
         android:layout_height="31dp"
         android:layout_marginBottom="8dp"
@@ -38,7 +38,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <Spinner
-        android:id="@+id/metaiID"
+        android:id="@+id/yearGSMF"
         android:layout_width="56dp"
         android:layout_height="31dp"
         android:layout_marginBottom="8dp"
@@ -56,7 +56,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <Spinner
-        android:id="@+id/tipasID"
+        android:id="@+id/programGSMF"
         android:layout_width="56dp"
         android:layout_height="31dp"
         android:layout_marginBottom="8dp"
@@ -74,7 +74,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -93,7 +93,7 @@
         android:layout_marginTop="8dp"
         android:text="Tipas"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tipasID"
+        app:layout_constraintBottom_toTopOf="@+id/programGSMF"
         app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -112,7 +112,7 @@
         android:layout_marginTop="8dp"
         android:text="Metai"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/metaiID"
+        app:layout_constraintBottom_toTopOf="@+id/yearGSMF"
         app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -129,7 +129,7 @@
         android:layout_marginStart="8dp"
         android:text="Grupe"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/grupeID"
+        app:layout_constraintBottom_toTopOf="@+id/groupGSMF"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <WebView
-        android:id="@+id/webView"
+        android:id="@+id/ww"
         android:layout_width="0dp"
         android:layout_height="392dp"
         android:layout_marginTop="200dp"
@@ -162,7 +162,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Atgal"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

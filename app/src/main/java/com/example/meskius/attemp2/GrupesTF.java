@@ -46,9 +46,9 @@ public class GrupesTF extends AppCompatActivity {
         setContentView(R.layout.grupes_tf);
         text=(TextView)findViewById(R.id.text);
         Intent intent= getIntent();
-        final Spinner programID=(Spinner)findViewById(R.id.tipasID);
-        final Spinner metaiID = (Spinner)findViewById(R.id.metaiID);
-        final Spinner grupeID = (Spinner)findViewById(R.id.grupeID);
+        final Spinner programID=(Spinner)findViewById(R.id.programGSMF);
+        final Spinner metaiID = (Spinner)findViewById(R.id.yearGSMF);
+        final Spinner grupeID = (Spinner)findViewById(R.id.groupGSMF);
         final Button atgal = (Button)findViewById(R.id.backGTF);
 
         metaiID.setVisibility(View.GONE);
@@ -466,7 +466,7 @@ public class GrupesTF extends AppCompatActivity {
             }
         });
 
-        ww= (WebView)findViewById(R.id.webView);
+        ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
         webSettings.setJavaScriptEnabled(true);
         ww.getSettings().setSupportZoom(true);
