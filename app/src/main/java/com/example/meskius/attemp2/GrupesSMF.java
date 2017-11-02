@@ -159,32 +159,31 @@ public class GrupesSMF extends AppCompatActivity {
                     grupeText.setVisibility(View.VISIBLE);
                 default:
                     break;
-
             }
         if(programSpinnerText.contains("Nuolatinės"))
             switch (yearSpinnerText){
-        case "1":
-            spinner(groupNL1,grupe);
-            selection("year","1");
-            selection("branch","5");
-            grupe.setVisibility(View.VISIBLE);
-            grupeText.setVisibility(View.VISIBLE);
-            break;
-        case "2":
-            spinner(groupNL2,grupe);
-            selection("year","2");
-            selection("branch","3");
-            grupe.setVisibility(View.VISIBLE);
-            grupeText.setVisibility(View.VISIBLE);
-            break;
-        case "3":
-            spinner(groupNL3,grupe);
-            selection("year","3");
-            selection("branch","2");
-            grupe.setVisibility(View.VISIBLE);
-            grupeText.setVisibility(View.VISIBLE);
-            break;
-        default:
+                case "1":
+                    spinner(groupNL1,grupe);
+                    selection("year","1");
+                    selection("branch","5");
+                    grupe.setVisibility(View.VISIBLE);
+                    grupeText.setVisibility(View.VISIBLE);
+                    break;
+                case "2":
+                    spinner(groupNL2,grupe);
+                    selection("year","2");
+                    selection("branch","3");
+                    grupe.setVisibility(View.VISIBLE);
+                    grupeText.setVisibility(View.VISIBLE);
+                    break;
+                case "3":
+                    spinner(groupNL3,grupe);
+                    selection("year","3");
+                    selection("branch","2");
+                    grupe.setVisibility(View.VISIBLE);
+                    grupeText.setVisibility(View.VISIBLE);
+                    break;
+                default:
             break;
     }
     }
