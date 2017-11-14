@@ -24,17 +24,6 @@ public class TFMenu extends AppCompatActivity {
         TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
         TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
 
-
-        Button back=(Button)findViewById(R.id.backTF);
-
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TFMenu.this,Fakultetai.class);
-                startActivity(intent);
-            }
-        });
         grupes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

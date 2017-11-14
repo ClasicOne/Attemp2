@@ -7,24 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg12">
 
-    <Button
-        android:id="@+id/backTF"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="16dp"
-        android:text="Atgal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/ww"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="0.042"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginEnd="8dp" />
-
     <Spinner
         android:id="@+id/spinnerATF"
         android:layout_width="177dp"
@@ -60,24 +42,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="25dp" />
-
-    <Button
-        android:id="@+id/refreshATF"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#f90000"
-        android:text="F5"
-        app:layout_constraintBottom_toTopOf="@+id/ww"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp" />
 
 </android.support.constraint.ConstraintLayout>

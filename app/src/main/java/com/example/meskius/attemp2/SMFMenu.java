@@ -27,16 +27,7 @@ public class SMFMenu extends AppCompatActivity{
         TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
         TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
         TextView auditorijosvaiz = (TextView)findViewById(R.id.auditorijuvaizTF);
-        Button back=(Button)findViewById(R.id.backTF);
 
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,Fakultetai.class);
-                startActivity(intent);
-            }
-        });
         grupes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
