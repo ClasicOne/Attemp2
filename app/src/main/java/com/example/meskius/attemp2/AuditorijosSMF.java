@@ -64,12 +64,11 @@ public class AuditorijosSMF extends AppCompatActivity{
             }
         });
 
-        Button back = (Button)findViewById(R.id.backTF);
+
         //Button savaite = (Button)findViewById(R.id.savaiteATF);
         final Spinner spinner = (Spinner)findViewById(R.id.spinnerATF);
         spinner(auditorijosText,spinner);
         TextView textView= (TextView)findViewById(R.id.textA);
-        Button refresh=(Button)findViewById(R.id.refreshATF);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -234,12 +233,6 @@ public class AuditorijosSMF extends AppCompatActivity{
 
             }
         });
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/classrooms.php");
-            }
-        });
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -247,13 +240,7 @@ public class AuditorijosSMF extends AppCompatActivity{
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AuditorijosSMF.this,SMFMenu.class);
-                startActivity(intent);
-            }
-        });
+
 
 
     }

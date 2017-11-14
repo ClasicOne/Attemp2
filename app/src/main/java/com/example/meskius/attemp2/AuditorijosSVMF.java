@@ -62,7 +62,7 @@ public class AuditorijosSVMF extends AppCompatActivity{
         final Spinner spinner = (Spinner)findViewById(R.id.spinnerATF);
         spinner(auditorijosText,spinner);
         TextView textView= (TextView)findViewById(R.id.textA);
-        Button refresh=(Button)findViewById(R.id.refreshATF);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -327,12 +327,7 @@ public class AuditorijosSVMF extends AppCompatActivity{
 
             }
         });
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/classrooms.php");
-            }
-        });
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
