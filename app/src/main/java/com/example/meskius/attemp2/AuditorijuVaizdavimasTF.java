@@ -50,19 +50,7 @@ public class AuditorijuVaizdavimasTF extends AppCompatActivity{
         });
         FloatingActionButton back = (FloatingActionButton)findViewById(R.id.backAATF);
         FloatingActionButton refresh = (FloatingActionButton)findViewById(R.id.refreshAATF);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AuditorijuVaizdavimasTF.this,TFMenu.class);
-                startActivity(intent);
-            }
-        });
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/rooms.php");
-            }
-        });
+
 
     }
     public void hide(){

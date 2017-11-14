@@ -32,9 +32,8 @@ public class DestytojaiTF extends GrupesTF {
         setContentView(R.layout.destytojai_tf);
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Button backID = (Button)findViewById(R.id.backDTF);
-        //Button auditorijos =(Button)findViewById(R.id.auditorijD);
-        Button refreshID = (Button)findViewById(R.id.refreshID);
+
+
 
         spinner(profText,profID);
 
@@ -62,13 +61,6 @@ public class DestytojaiTF extends GrupesTF {
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
-        backID.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DestytojaiTF.this,TFMenu.class);
-                startActivity(intent);
-            }
-        });
 
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -82,12 +74,6 @@ public class DestytojaiTF extends GrupesTF {
             }
         });
 
-        refreshID.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                wwD.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/prof.php");
-            }
-        });
     }
 
     private void destytojai(String destytojai) {

@@ -57,7 +57,7 @@ public class AuditorijosSVMF extends AppCompatActivity{
             }
         });
 
-        Button back = (Button)findViewById(R.id.backTF);
+
         //Button savaite = (Button)findViewById(R.id.savaiteATF);
         final Spinner spinner = (Spinner)findViewById(R.id.spinnerATF);
         spinner(auditorijosText,spinner);
@@ -340,13 +340,7 @@ public class AuditorijosSVMF extends AppCompatActivity{
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AuditorijosSVMF.this,SVMFMenu.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     private void ww() {

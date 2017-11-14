@@ -88,27 +88,14 @@ public class GrupesSVMF extends AppCompatActivity {
         final Spinner grupe = (Spinner) findViewById(R.id.groupGSMF);
         final TextView metaiText = (TextView) findViewById(R.id.metaiGsmf);
         final TextView grupeText = (TextView) findViewById(R.id.grupeGsmf);
-        Button refresh = (Button) findViewById(R.id.refresh);
-        Button atgal = (Button) findViewById(R.id.backTF);
+
         metai.setVisibility(View.GONE);
         grupe.setVisibility(View.GONE);
         metaiText.setVisibility(View.GONE);
         grupeText.setVisibility(View.GONE);
 
         spinner(programText, program);
-        atgal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(GrupesSVMF.this, SVMFMenu.class);
-                startActivity(intent);
-            }
-        });
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
-            }
-        });
+
         program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

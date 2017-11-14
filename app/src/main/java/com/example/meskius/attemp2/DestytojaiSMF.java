@@ -40,10 +40,6 @@ public class DestytojaiSMF extends AppCompatActivity{
 
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Button back = (Button)findViewById(R.id.backTF);
-        //Button auditorijos =(Button)findViewById(R.id.auditorijD);
-        Button refreshID = (Button)findViewById(R.id.refreshID);
-
         spinner(profText,profID);
 
 
@@ -70,13 +66,6 @@ public class DestytojaiSMF extends AppCompatActivity{
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DestytojaiSMF.this,SMFMenu.class);
-                startActivity(intent);
-            }
-        });
 
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -90,12 +79,6 @@ public class DestytojaiSMF extends AppCompatActivity{
             }
         });
 
-        refreshID.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/prof.php");
-            }
-        });
     }
 
     private void destytojai(String destytojai) {
