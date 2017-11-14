@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
@@ -640,5 +642,20 @@ public class DestytojaiSMF extends AppCompatActivity{
     public void click(){
         // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
         ww.loadUrl("javascript:viewWeek();");
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.smf_destytojai,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_refresh:
+                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/prof.php");
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
