@@ -296,7 +296,7 @@ public class AuditorijosSMF extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                startActivity(new Intent(this,Fakultetai.class));
+                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/classrooms.php");
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -190,7 +192,6 @@ public class GrupesSVMF extends AppCompatActivity {
 
 
     }
-
     private void grupes_sd1(String spinnerText) {
         switch (spinnerText) {
             case "SD 16-1":
@@ -221,7 +222,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_sd2(String spinnerText) {
         switch (spinnerText) {
             case "SD 14-2":
@@ -252,7 +252,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_sd3(String spinnerText) {
         switch (spinnerText) {
             case "SD 12-3":
@@ -283,7 +282,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_sd4(String spinnerText) {
         switch (spinnerText) {
             case "SDi 6-4":
@@ -294,7 +292,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_op3(String spinnerText) {
         switch (spinnerText) {
             case "OP8-3":
@@ -317,7 +314,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_op2(String spinnerText) {
         switch (spinnerText) {
             case "OP9-2":
@@ -336,7 +332,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_op1(String spinnerText) {
         switch (spinnerText) {
             case "OP10-1":
@@ -355,7 +350,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_k1(String spinnerText) {
         switch (spinnerText) {
             case "KT 16-1":
@@ -387,7 +381,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_k2(String spinnerText) {
         switch (spinnerText) {
             case "KT 14-2":
@@ -442,7 +435,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_k3(String spinnerText) {
         switch (spinnerText) {
             case "KT 12-3":
@@ -473,7 +465,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_gt1(String spinnerText) {
         switch (spinnerText) {
             case "GT 17-1":
@@ -528,7 +519,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_gt2(String spinnerText) {
         switch (spinnerText) {
             case "GT 15-2":
@@ -583,7 +573,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_gt3(String spinnerText) {
         switch (spinnerText) {
             case "GT 13-3":
@@ -638,7 +627,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_d1(String spinnerText) {
         switch (spinnerText) {
             case "DT 4-1":
@@ -669,7 +657,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_d2(String spinnerText) {
         switch (spinnerText) {
             case "DT 3-2":
@@ -700,7 +687,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_d3(String spinnerText) {
         switch (spinnerText) {
             case "DT 2-3":
@@ -715,7 +701,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bh3(String spinnerText) {
         switch (spinnerText) {
             case "BH8-3":
@@ -746,7 +731,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bh2(String spinnerText) {
         switch (spinnerText) {
             case "BH9-2":
@@ -765,7 +749,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bh1(String spinnerText) {
         switch (spinnerText) {
             case "BH 10-1":
@@ -784,7 +767,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps4(String spinnerText) {
         switch (spinnerText) {
             case "SL 13-4":
@@ -815,7 +797,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps3(String spinnerText) {
         switch (spinnerText) {
             case "SL 15-3":
@@ -846,7 +827,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps2(String spinnerText) {
         switch (spinnerText) {
             case "SL 17-2":
@@ -877,7 +857,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void ww() {
         ww = (WebView) findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
@@ -887,7 +866,6 @@ public class GrupesSVMF extends AppCompatActivity {
         ww.getSettings().setDisplayZoomControls(false);
         ww.setWebChromeClient(new WebChromeClient());
     }
-
     private void year(Spinner grupe, TextView grupeText) {
         if (programSpinnerText.contains("Bendrosios praktikos slauga"))
             switch (yearSpinnerText) {
@@ -1088,7 +1066,6 @@ public class GrupesSVMF extends AppCompatActivity {
 
 
     }
-
     private void program(Spinner metai, TextView metaiText) {
         switch (programSpinnerText) {
             case "Bendrosios praktikos slauga":
@@ -1137,7 +1114,6 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     private void grupes_bps1(String spinnerText) {
         switch (spinnerText) {
             case "SL 19-1":
@@ -1214,12 +1190,10 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-
     public void click() {
         // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
         ww.loadUrl("javascript:viewWeek();");
     }
-
     public void hide() {
         //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
         ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
@@ -1241,17 +1215,30 @@ public class GrupesSVMF extends AppCompatActivity {
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
     }
-
     public void selection(String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas + "').val('" + val + "').change();");
 
     }
-
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.smvf_grupes,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_refresh:
+                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

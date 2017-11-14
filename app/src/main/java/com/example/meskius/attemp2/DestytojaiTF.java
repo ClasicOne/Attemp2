@@ -3,6 +3,8 @@ package com.example.meskius.attemp2;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
@@ -441,5 +443,20 @@ public class DestytojaiTF extends GrupesTF {
 
         wwD.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tf_destytojai,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_refresh:
+                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/prof.php");
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
