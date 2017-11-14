@@ -68,17 +68,9 @@ public class DalykaiTF extends AppCompatActivity {
         Spinner program = (Spinner)findViewById(R.id.programGrTF);
         final Spinner year = (Spinner)findViewById(R.id.yearGrTF);
         final Spinner dalykas = (Spinner)findViewById(R.id.brachGrTF);
-        Button back = (Button)findViewById(R.id.backGrTF);
         spinner(programTipas,program);
         year.setVisibility(View.GONE);
         dalykas.setVisibility(View.GONE);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(DalykaiTF.this,TFMenu.class);
-                startActivity(intent);
-            }
-        });
         program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

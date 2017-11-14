@@ -54,17 +54,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/backGrTF"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/tvarkarascioBlue"
-        android:text="Atgal"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Spinner
         android:id="@+id/programGrTF"
         android:layout_width="60dp"

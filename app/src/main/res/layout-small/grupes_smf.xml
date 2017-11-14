@@ -10,23 +10,6 @@
     tools:layout_editor_absoluteY="81dp">
 
 
-    <Button
-        android:id="@+id/refresh"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#f44242"
-        android:elevation="4dp"
-        android:text="F5"
-        app:layout_constraintBottom_toTopOf="@+id/ww"
-        app:layout_constraintHorizontal_bias="0.037"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
-
     <Spinner
         android:id="@+id/groupGSMF"
         android:layout_width="56dp"
@@ -47,36 +30,32 @@
         android:layout_width="56dp"
         android:layout_height="31dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
         app:layout_constraintBottom_toTopOf="@+id/ww"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.278"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.26" />
 
     <Spinner
         android:id="@+id/programGSMF"
         android:layout_width="56dp"
         android:layout_height="31dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#3BB9E7"
         app:layout_constraintBottom_toTopOf="@+id/ww"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.26" />
 
     <TextView
         android:id="@+id/tipasGsmf"
@@ -140,22 +119,6 @@
 
 
     </WebView>
-
-    <Button
-        android:id="@+id/backTF"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Atgal"
-        app:layout_constraintBottom_toTopOf="@+id/ww"
-        app:layout_constraintHorizontal_bias="0.97"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
 
 
 </android.support.constraint.ConstraintLayout>
