@@ -21,8 +21,7 @@ import android.widget.Toast;
 /**
  * Created by Meskius on 10/25/2017.
  */
-/*function b(){for(var i=0;i<document.querySelectorAll('#prof option').length;i++){
-        str += '"'+document.querySelectorAll('#prof option')[i].innerText+'",';}}*/
+/* */
 
 
 /*function a(){for(var i=0;i<document.querySelectorAll('#prof option').length;i++){
@@ -39,7 +38,7 @@ public class DestytojaiSMF extends AppCompatActivity{
 
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Button back = (Button)findViewById(R.id.back);
+        Button back = (Button)findViewById(R.id.backTF);
         //Button auditorijos =(Button)findViewById(R.id.auditorijD);
         Button refreshID = (Button)findViewById(R.id.refreshID);
 

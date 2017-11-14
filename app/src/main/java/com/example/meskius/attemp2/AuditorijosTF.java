@@ -58,12 +58,13 @@ public class AuditorijosTF extends AppCompatActivity{
             }
         });
 
-        Button back = (Button)findViewById(R.id.back);
-        //Button savaite = (Button)findViewById(R.id.savaiteATF);
+        Button back = (Button)findViewById(R.id.backTF);
         final Spinner spinner = (Spinner)findViewById(R.id.spinnerATF);
         spinner(auditorijosText,spinner);
         TextView textView= (TextView)findViewById(R.id.textA);
         Button refresh=(Button)findViewById(R.id.refreshATF);
+
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

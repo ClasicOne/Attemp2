@@ -34,7 +34,7 @@ public class DestytojaiSVMF extends AppCompatActivity{
 
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Button back = (Button)findViewById(R.id.back);
+        Button back = (Button)findViewById(R.id.backTF);
         //Button auditorijos =(Button)findViewById(R.id.auditorijD);
         Button refreshID = (Button)findViewById(R.id.refreshID);
 

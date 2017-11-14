@@ -24,8 +24,7 @@ import android.widget.Toast;
 public class GrupesTF extends AppCompatActivity {
     TextView text;
     WebView ww;
-
-
+   // <-------------------------
     String programSpinnerText;
     String yearSpinnerText;
     String programTipas[] = {"--pasirinkti--", "IŠT","NL"};

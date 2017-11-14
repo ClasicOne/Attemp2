@@ -24,9 +24,8 @@ public class SVMFMenu extends AppCompatActivity {
         TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
         TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
         TextView auditorijosvaiz = (TextView)findViewById(R.id.auditorijuvaizTF);
-        auditorijosvaiz.setVisibility(View.GONE);
+
         Button back=(Button)findViewById(R.id.backTF);
-        dalykai.setVisibility(View.GONE);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

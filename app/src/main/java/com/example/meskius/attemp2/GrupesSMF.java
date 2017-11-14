@@ -3,7 +3,6 @@ package com.example.meskius.attemp2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -57,7 +56,7 @@ public class GrupesSMF extends AppCompatActivity {
         final TextView metaiText =(TextView) findViewById(R.id.metaiGsmf);
         final TextView grupeText = (TextView)findViewById(R.id.grupeGsmf);
         Button refresh = (Button) findViewById(R.id.refresh);
-        Button atgal = (Button)findViewById(R.id.back);
+        Button atgal = (Button)findViewById(R.id.backTF);
 
         metai.setVisibility(View.GONE);
         grupe.setVisibility(View.GONE);

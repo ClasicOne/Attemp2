@@ -87,7 +87,7 @@ public class GrupesSVMF extends AppCompatActivity {
         final TextView metaiText = (TextView) findViewById(R.id.metaiGsmf);
         final TextView grupeText = (TextView) findViewById(R.id.grupeGsmf);
         Button refresh = (Button) findViewById(R.id.refresh);
-        Button atgal = (Button) findViewById(R.id.back);
+        Button atgal = (Button) findViewById(R.id.backTF);
         metai.setVisibility(View.GONE);
         grupe.setVisibility(View.GONE);
         metaiText.setVisibility(View.GONE);

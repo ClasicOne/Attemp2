@@ -62,7 +62,7 @@ public class AuditorijosSMF extends AppCompatActivity{
             }
         });
 
-        Button back = (Button)findViewById(R.id.back);
+        Button back = (Button)findViewById(R.id.backTF);
         //Button savaite = (Button)findViewById(R.id.savaiteATF);
         final Spinner spinner = (Spinner)findViewById(R.id.spinnerATF);
         spinner(auditorijosText,spinner);

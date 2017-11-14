@@ -16,7 +16,7 @@ public class About extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about);
-        Button back = (Button)findViewById(R.id.back);
+        Button back = (Button)findViewById(R.id.backTF);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

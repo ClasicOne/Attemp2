@@ -20,13 +20,13 @@ public class TFMenu extends AppCompatActivity {
         Intent intent= getIntent();
 
         TextView grupes = (TextView)findViewById(R.id.grupesTF);
-        TextView dalykai = (TextView)findViewById(R.id.dalykaiTF);
+
         TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
         TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
-        TextView auditorijosvaiz = (TextView)findViewById(R.id.auditorijuvaizTF);
-        auditorijosvaiz.setVisibility(View.GONE);
+
+
         Button back=(Button)findViewById(R.id.backTF);
-        dalykai.setVisibility(View.GONE);
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +39,6 @@ public class TFMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TFMenu.this,GrupesTF.class);
-                startActivity(intent);
-            }
-        });
-        dalykai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TFMenu.this,DalykaiTF.class);
                 startActivity(intent);
             }
         });
@@ -63,13 +56,7 @@ public class TFMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        auditorijosvaiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TFMenu.this,AuditorijuVaizdavimasTF.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 
