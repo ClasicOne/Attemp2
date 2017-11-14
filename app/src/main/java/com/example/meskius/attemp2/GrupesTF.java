@@ -50,7 +50,6 @@ public class GrupesTF extends AppCompatActivity {
         final Spinner programID=(Spinner)findViewById(R.id.programGSMF);
         final Spinner metaiID = (Spinner)findViewById(R.id.yearGSMF);
         final Spinner grupeID = (Spinner)findViewById(R.id.groupGSMF);
-        final Button atgal = (Button)findViewById(R.id.backGTF);
 
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
@@ -61,15 +60,8 @@ public class GrupesTF extends AppCompatActivity {
         final TextView grupe = (TextView)findViewById(R.id.group);
         grupe.setVisibility(View.GONE);
 
-        Button refresh = (Button)findViewById(R.id.refresh);
         spinner(programTipas,programID);
-        atgal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(GrupesTF.this,TFMenu.class);
-                startActivity(intent);
-            }
-        });
+
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -164,12 +156,7 @@ public class GrupesTF extends AppCompatActivity {
 
             }
         });
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
-            }
-        });
+
         grupeID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
