@@ -60,19 +60,4 @@ public class SMFMenu extends AppCompatActivity{
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.smfmenu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_back:
-                startActivity(new Intent(this,Fakultetai.class));
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

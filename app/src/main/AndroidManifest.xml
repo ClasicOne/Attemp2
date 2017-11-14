@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".DestytojaiTF"
-            android:label="@string/app_name"
+            android:label="Destytojai"
             android:parentActivityName=".TFMenu">
         </activity>
         <activity
@@ -43,7 +43,7 @@
         </activity>
         <activity
             android:name=".TFMenu"
-            android:label="Technologiju fakulteto menu"
+            android:label="Technologiju fakulteto"
             android:parentActivityName=".Fakultetai">
         </activity>
         <activity
