@@ -71,6 +71,7 @@ public class SMFMenu extends AppCompatActivity{
         switch (item.getItemId()){
             case R.id.action_back:
                 startActivity(new Intent(this,Fakultetai.class));
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

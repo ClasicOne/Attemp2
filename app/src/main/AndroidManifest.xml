@@ -13,20 +13,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GrupesTF">
-
+        <activity
+            android:name=".GrupesTF"
+            android:label="Grupes"
+            android:parentActivityName=".TFMenu">
         </activity>
         <activity
             android:name=".DestytojaiTF"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:parentActivityName=".TFMenu">
         </activity>
         <activity
             android:name=".AuditorijosTF"
-            android:label="Auditorijos">
-        </activity>
-        <activity
-            android:name=".AuditorijuVaizdavimasTF"
-            android:label="Auditoriju vaizdavimas">
+            android:label="Auditorijos"
+            android:parentActivityName=".TFMenu">
         </activity>
         <activity
             android:name=".Fakultetai"
@@ -37,48 +37,54 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".About">
+        <activity android:name=".About"
+            android:parentActivityName=".Fakultetai">
 
         </activity>
         <activity
             android:name=".TFMenu"
-            android:label="Technologiju fakulteto menu">
-        </activity>
-        <activity
-            android:name=".DalykaiTF"
-            android:label="Dalykai">
+            android:label="Technologiju fakulteto menu"
+            android:parentActivityName=".Fakultetai">
         </activity>
         <activity
             android:name=".SMFMenu"
-            android:label="SMFMenu">
+            android:label="SMFMenu"
+            android:parentActivityName=".Fakultetai">
         </activity>
         <activity
             android:name=".GrupesSMF"
-            android:label="Grupes">
+            android:label="Grupes"
+            android:parentActivityName=".SMFMenu">
         </activity>
         <activity
             android:name=".SVMFMenu"
-            android:label="SVMF">
+            android:label="SVMF"
+            android:parentActivityName=".Fakultetai">
         </activity>
         <activity
             android:name=".GrupesSVMF"
-            android:label="Grupes">
+            android:label="Grupes"
+            android:parentActivityName=".SVMFMenu">
         </activity>
         <activity
             android:name=".DestytojaiSVMF"
-            android:label="Destytojai">
+            android:label="Destytojai"
+            android:parentActivityName=".SVMFMenu">
         </activity>
         <activity
             android:name=".DestytojaiSMF"
-            android:label="Destytojai">
+            android:label="Destytojai"
+            android:parentActivityName=".SMFMenu">
         </activity>
         <activity
             android:name=".AuditorijosSMF"
-            android:label="Auditorijos">
+            android:label="Auditorijos"
+            android:parentActivityName=".SMFMenu">
         </activity>
         <activity
             android:name=".AuditorijosSVMF"
-            android:label="Auditorijos">
+            android:label="Auditorijos"
+            android:parentActivityName=".SVMFMenu">
         </activity>
 
     </application>
