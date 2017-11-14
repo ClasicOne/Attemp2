@@ -15,17 +15,17 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".GrupesTF"
-            android:label="Grupes"
+            android:label="TF Grupes"
             android:parentActivityName=".TFMenu">
         </activity>
         <activity
             android:name=".DestytojaiTF"
-            android:label="Destytojai"
+            android:label="TF Destytojai"
             android:parentActivityName=".TFMenu">
         </activity>
         <activity
             android:name=".AuditorijosTF"
-            android:label="Auditorijos"
+            android:label="TF Auditorijos"
             android:parentActivityName=".TFMenu">
         </activity>
         <activity
@@ -43,17 +43,17 @@
         </activity>
         <activity
             android:name=".TFMenu"
-            android:label="Technologiju fakulteto"
+            android:label="TF"
             android:parentActivityName=".Fakultetai">
         </activity>
         <activity
             android:name=".SMFMenu"
-            android:label="SMFMenu"
+            android:label="SMF"
             android:parentActivityName=".Fakultetai">
         </activity>
         <activity
             android:name=".GrupesSMF"
-            android:label="Grupes"
+            android:label="SMF Grupes"
             android:parentActivityName=".SMFMenu">
         </activity>
         <activity
@@ -63,27 +63,27 @@
         </activity>
         <activity
             android:name=".GrupesSVMF"
-            android:label="Grupes"
+            android:label="SVMF Grupes"
             android:parentActivityName=".SVMFMenu">
         </activity>
         <activity
             android:name=".DestytojaiSVMF"
-            android:label="Destytojai"
+            android:label="SVMF Destytojai"
             android:parentActivityName=".SVMFMenu">
         </activity>
         <activity
             android:name=".DestytojaiSMF"
-            android:label="Destytojai"
+            android:label="SMF Destytojai"
             android:parentActivityName=".SMFMenu">
         </activity>
         <activity
             android:name=".AuditorijosSMF"
-            android:label="Auditorijos"
+            android:label="SMF Auditorijos"
             android:parentActivityName=".SMFMenu">
         </activity>
         <activity
             android:name=".AuditorijosSVMF"
-            android:label="Auditorijos"
+            android:label="SVMF Auditorijos"
             android:parentActivityName=".SVMFMenu">
         </activity>
 
