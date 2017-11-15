@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 /**
@@ -19,10 +20,10 @@ public class Fakultetai extends AppCompatActivity {
 
         Intent intent= getIntent();
 
-        TextView tf=(TextView)findViewById(R.id.tf);
-        TextView smf=(TextView)findViewById(R.id.socialiniuMF);
-        TextView svsmf=(TextView)findViewById(R.id.sveikatosMF);
-        TextView about =(TextView)findViewById(R.id.about);
+        ImageButton tf=(ImageButton) findViewById(R.id.tf);
+        ImageButton smf=(ImageButton) findViewById(R.id.svmf);
+        ImageButton svsmf=(ImageButton) findViewById(R.id.svmf);
+        TextView about =(TextView) findViewById(R.id.about);
 
         tf.setOnClickListener(new View.OnClickListener() {
             @Override
