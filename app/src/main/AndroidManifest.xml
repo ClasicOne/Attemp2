@@ -6,6 +6,7 @@
         android:normalScreens="true"
         android:largeScreens="true">
 
+
     </supports-screens>
     <application
         android:allowBackup="true"
@@ -16,21 +17,25 @@
         <activity
             android:name=".GrupesTF"
             android:label="TF Grupes"
-            android:parentActivityName=".TFMenu">
+            android:parentActivityName=".TFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DestytojaiTF"
             android:label="TF Destytojai"
-            android:parentActivityName=".TFMenu">
+            android:parentActivityName=".TFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".AuditorijosTF"
             android:label="TF Auditorijos"
-            android:parentActivityName=".TFMenu">
+            android:parentActivityName=".TFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Fakultetai"
-            android:label="Tvarkarastis">
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -38,53 +43,63 @@
         </intent-filter>
         </activity>
         <activity android:name=".About"
-            android:parentActivityName=".Fakultetai">
+            android:parentActivityName=".Fakultetai"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity
             android:name=".TFMenu"
             android:label="TF"
-            android:parentActivityName=".Fakultetai">
+            android:parentActivityName=".Fakultetai"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SMFMenu"
             android:label="SMF"
-            android:parentActivityName=".Fakultetai">
+            android:parentActivityName=".Fakultetai"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".GrupesSMF"
             android:label="SMF Grupes"
-            android:parentActivityName=".SMFMenu">
+            android:parentActivityName=".SMFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SVMFMenu"
             android:label="SVMF"
-            android:parentActivityName=".Fakultetai">
+            android:parentActivityName=".Fakultetai"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".GrupesSVMF"
             android:label="SVMF Grupes"
-            android:parentActivityName=".SVMFMenu">
+            android:parentActivityName=".SVMFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DestytojaiSVMF"
             android:label="SVMF Destytojai"
-            android:parentActivityName=".SVMFMenu">
+            android:parentActivityName=".SVMFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".DestytojaiSMF"
             android:label="SMF Destytojai"
-            android:parentActivityName=".SMFMenu">
+            android:parentActivityName=".SMFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".AuditorijosSMF"
             android:label="SMF Auditorijos"
-            android:parentActivityName=".SMFMenu">
+            android:parentActivityName=".SMFMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".AuditorijosSVMF"
             android:label="SVMF Auditorijos"
-            android:parentActivityName=".SVMFMenu">
+            android:parentActivityName=".SVMFMenu"
+            android:screenOrientation="portrait">
         </activity>
 
     </application>
