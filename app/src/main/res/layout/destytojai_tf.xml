@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.meskius.attemp2.DestytojaiTF"
-    android:background="@drawable/bluetowhite">
+    android:background="@drawable/mizedblue">
 
     <Spinner
         android:id="@+id/profID"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bluetowhite"
+    android:background="@drawable/mizedblue"
     android:orientation="vertical">
 
     <TextView
@@ -16,7 +16,6 @@
         android:layout_x="50dp"
         android:layout_y="34dp"
         android:text="Tvarkaraščiai"
-        android:textColor="#689df2"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/svmf"
@@ -96,7 +95,7 @@
         app:srcCompat="@drawable/tfsmaller" />
 
     <ImageButton
-        android:id="@+id/svf"
+        android:id="@+id/smf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

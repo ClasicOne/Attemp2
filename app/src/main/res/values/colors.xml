@@ -5,4 +5,6 @@
     <color name="colorAccent">#caff60</color>
     <color name="tvarkarascioBlue">#3BB9E7</color>
     <color name="textfieldbackground">#f4f9f6</color>
+    <color name="bluetoolbar">#002565</color>
+    <color name="LigthBlue">#689df2</color>
 </resources>

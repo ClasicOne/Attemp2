@@ -21,7 +21,7 @@ public class Fakultetai extends AppCompatActivity {
         Intent intent= getIntent();
 
         ImageButton tf=(ImageButton) findViewById(R.id.tf);
-        ImageButton smf=(ImageButton) findViewById(R.id.svmf);
+        ImageButton smf=(ImageButton) findViewById(R.id.smf);
         ImageButton svsmf=(ImageButton) findViewById(R.id.svmf);
         TextView about =(TextView) findViewById(R.id.about);
 
