@@ -179,6 +179,7 @@ public class GrupesSVMF extends AppCompatActivity {
 
 
     }
+    // Socialinis darbas 1 metai
     private void grupes_sd1(String spinnerText) {
         switch (spinnerText) {
             case "SD 16-1":
@@ -209,6 +210,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Socialinis darbas 2 metai
     private void grupes_sd2(String spinnerText) {
         switch (spinnerText) {
             case "SD 14-2":
@@ -239,6 +241,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Socialinis darbas 3 metai
     private void grupes_sd3(String spinnerText) {
         switch (spinnerText) {
             case "SD 12-3":
@@ -269,6 +272,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Socialinis darbas 4 metai
     private void grupes_sd4(String spinnerText) {
         switch (spinnerText) {
             case "SDi 6-4":
@@ -279,6 +283,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Odontologinė priežiūra 4 metai
     private void grupes_op3(String spinnerText) {
         switch (spinnerText) {
             case "OP8-3":
@@ -301,6 +306,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Odontologinė priežiūra 3 metai
     private void grupes_op2(String spinnerText) {
         switch (spinnerText) {
             case "OP9-2":
@@ -319,6 +325,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Odontologinė priežiūra 2 metai
     private void grupes_op1(String spinnerText) {
         switch (spinnerText) {
             case "OP10-1":
@@ -337,6 +344,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Kineziterapija 1 metai
     private void grupes_k1(String spinnerText) {
         switch (spinnerText) {
             case "KT 16-1":
@@ -368,6 +376,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Kineziterapija 1 metai
     private void grupes_k2(String spinnerText) {
         switch (spinnerText) {
             case "KT 14-2":
@@ -422,6 +431,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Kineziterapija 2 metai
     private void grupes_k3(String spinnerText) {
         switch (spinnerText) {
             case "KT 12-3":
@@ -452,6 +462,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Grožio terapija 3 metai
     private void grupes_gt1(String spinnerText) {
         switch (spinnerText) {
             case "GT 17-1":
@@ -506,6 +517,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Grožio terapija 1 metai
     private void grupes_gt2(String spinnerText) {
         switch (spinnerText) {
             case "GT 15-2":
@@ -560,6 +572,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Grožio terapija 2 metai
     private void grupes_gt3(String spinnerText) {
         switch (spinnerText) {
             case "GT 13-3":
@@ -614,6 +627,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Dietetika 3 metai
     private void grupes_d1(String spinnerText) {
         switch (spinnerText) {
             case "DT 4-1":
@@ -644,6 +658,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Dietetika 1 metai
     private void grupes_d2(String spinnerText) {
         switch (spinnerText) {
             case "DT 3-2":
@@ -674,6 +689,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Dietetika 2 metai
     private void grupes_d3(String spinnerText) {
         switch (spinnerText) {
             case "DT 2-3":
@@ -688,6 +704,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Burnos higiena 3 metai
     private void grupes_bh3(String spinnerText) {
         switch (spinnerText) {
             case "BH8-3":
@@ -718,6 +735,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Burnos higiena 3 metai
     private void grupes_bh2(String spinnerText) {
         switch (spinnerText) {
             case "BH9-2":
@@ -736,6 +754,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Burnos higiena 2 metai
     private void grupes_bh1(String spinnerText) {
         switch (spinnerText) {
             case "BH 10-1":
@@ -754,6 +773,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Bendrosios praktikos slauga 1 metai
     private void grupes_bps4(String spinnerText) {
         switch (spinnerText) {
             case "SL 13-4":
@@ -784,6 +804,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Bendrosios praktikos slauga 4 metai
     private void grupes_bps3(String spinnerText) {
         switch (spinnerText) {
             case "SL 15-3":
@@ -814,6 +835,7 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Bendrosios praktikos slauga 3 metai
     private void grupes_bps2(String spinnerText) {
         switch (spinnerText) {
             case "SL 17-2":
@@ -844,6 +866,84 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
+    // Bendrosios praktikos slauga 2 metai
+    private void grupes_bps1(String spinnerText) {
+        switch (spinnerText) {
+            case "SL 19-1":
+                selection("group", "68");
+                click();
+                break;
+            case "SL 19-1, 1-2":
+                selection("group", "69");
+                click();
+                break;
+            case "SL 19-1, 1-3":
+                selection("group", "71");
+                click();
+                break;
+            case "SL 19-1, 2-2":
+                selection("group", "70");
+                click();
+                break;
+            case "SL 19-1, 2-3":
+                selection("group", "72");
+                click();
+                break;
+            case "SL 19-1, 3-3":
+                selection("group", "73");
+                click();
+                break;
+            case "SL 20-1":
+                selection("group", "74");
+                click();
+                break;
+            case "SL 20-1, 1-2":
+                selection("group", "75");
+                click();
+                break;
+            case "SL 20-1, 1-3":
+                selection("group", "77");
+                click();
+                break;
+            case "SL 20-1, 2-2":
+                selection("group", "76");
+                click();
+                break;
+            case "SL 20-1, 2-3":
+                selection("group", "78");
+                click();
+                break;
+            case "SL 20-1, 3-3":
+                selection("group", "79");
+                click();
+                break;
+            case "SL 21-1":
+                selection("group", "188");
+                click();
+                break;
+            case "SL 21-1, 1-2":
+                selection("group", "184");
+                click();
+                break;
+            case "SL 21-1, 2-2":
+                selection("group", "183");
+                click();
+                break;
+            case "SL 21-1,2-3":
+                selection("group", "186");
+                click();
+                break;
+            case "SL 21-1,3-3":
+                selection("group", "187");
+                click();
+                break;
+            case "SL 21-1.1-3":
+                selection("group", "185");
+                click();
+                break;
+        }
+    }
+    // ww stuf
     private void ww() {
         ww = (WebView) findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
@@ -853,6 +953,7 @@ public class GrupesSVMF extends AppCompatActivity {
         ww.getSettings().setDisplayZoomControls(false);
         ww.setWebChromeClient(new WebChromeClient());
     }
+    // metai
     private void year(Spinner grupe, TextView grupeText) {
         if (programSpinnerText.contains("Bendrosios praktikos slauga"))
             switch (yearSpinnerText) {
@@ -1053,6 +1154,7 @@ public class GrupesSVMF extends AppCompatActivity {
 
 
     }
+    // Tipas
     private void program(Spinner metai, TextView metaiText) {
         switch (programSpinnerText) {
             case "Bendrosios praktikos slauga":
@@ -1101,86 +1203,12 @@ public class GrupesSVMF extends AppCompatActivity {
                 break;
         }
     }
-    private void grupes_bps1(String spinnerText) {
-        switch (spinnerText) {
-            case "SL 19-1":
-                selection("group", "68");
-                click();
-                break;
-            case "SL 19-1, 1-2":
-                selection("group", "69");
-                click();
-                break;
-            case "SL 19-1, 1-3":
-                selection("group", "71");
-                click();
-                break;
-            case "SL 19-1, 2-2":
-                selection("group", "70");
-                click();
-                break;
-            case "SL 19-1, 2-3":
-                selection("group", "72");
-                click();
-                break;
-            case "SL 19-1, 3-3":
-                selection("group", "73");
-                click();
-                break;
-            case "SL 20-1":
-                selection("group", "74");
-                click();
-                break;
-            case "SL 20-1, 1-2":
-                selection("group", "75");
-                click();
-                break;
-            case "SL 20-1, 1-3":
-                selection("group", "77");
-                click();
-                break;
-            case "SL 20-1, 2-2":
-                selection("group", "76");
-                click();
-                break;
-            case "SL 20-1, 2-3":
-                selection("group", "78");
-                click();
-                break;
-            case "SL 20-1, 3-3":
-                selection("group", "79");
-                click();
-                break;
-            case "SL 21-1":
-                selection("group", "188");
-                click();
-                break;
-            case "SL 21-1, 1-2":
-                selection("group", "184");
-                click();
-                break;
-            case "SL 21-1, 2-2":
-                selection("group", "183");
-                click();
-                break;
-            case "SL 21-1,2-3":
-                selection("group", "186");
-                click();
-                break;
-            case "SL 21-1,3-3":
-                selection("group", "187");
-                click();
-                break;
-            case "SL 21-1.1-3":
-                selection("group", "185");
-                click();
-                break;
-        }
-    }
+    // Rodyti savaite
     public void click() {
         // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
         ww.loadUrl("javascript:viewWeek();");
     }
+    // Paslepia nereikalingus elementusa
     public void hide() {
         //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
         ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
@@ -1202,22 +1230,25 @@ public class GrupesSVMF extends AppCompatActivity {
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
     }
+    // Pasirinkimo grupes ww js
     public void selection(String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas + "').val('" + val + "').change();");
 
     }
+    // Spinner idejimas duomenu (string array)
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }
+    // Atgal mygtukas
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.smvf_grupes,menu);
         return true;
     }
-
+    // Refresh mygtukas
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
