@@ -1,9 +1,9 @@
 package com.example.meskius.attemp2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,9 +13,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.HashMap;
 
 /**
  * Created by Meskius on 10/24/2017.
@@ -41,23 +42,21 @@ public class GrupesSMF extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grupes_smf);
-        ww();
-        //ww.loadUrl("http://google.com");
-        ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/groups.php");
-        ww.setWebViewClient(new WebViewClient(){
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-                hide();
-            }
-        });
+        wwShit();
 
         final Spinner program =(Spinner)findViewById(R.id.programGSMF);
         final Spinner metai = (Spinner)findViewById(R.id.yearGSMF);
         final Spinner grupe = (Spinner)findViewById(R.id.groupGSMF);
         final TextView metaiText =(TextView) findViewById(R.id.metaiGsmf);
         final TextView grupeText = (TextView)findViewById(R.id.grupeGsmf);
-
+        //<------------------------- Deklaruojamas Hashmap
+        final HashMap<String,String> grupesHashmap = new  HashMap<>();
+        String[] grupes_str = getResources().getStringArray(R.array.grupes_SMF_str);
+        String[] grupes_values = getResources().getStringArray(R.array.grupes_SMF_value);
+        Log.e("Duck",""+grupes_values.length+" "+ grupes_str.length );
+        for(int i = 0;i<grupes_str.length; i++)
+            grupesHashmap.put(grupes_str[i], grupes_values[i]);
+        //<-------------------------
 
         metai.setVisibility(View.GONE);
         grupe.setVisibility(View.GONE);
@@ -93,7 +92,9 @@ public class GrupesSMF extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
-                grupes(spinnerText);
+                if (!grupesHashmap.get(spinnerText).equals("duck")){
+                    selection("group",""+grupesHashmap.get(spinnerText)+"");
+                    click();}
 
             }
 
@@ -103,9 +104,19 @@ public class GrupesSMF extends AppCompatActivity {
             }
         });
 
-
     }
-
+    private void wwShit() {
+        ww();
+        //ww.loadUrl("http://google.com");
+        ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/groups.php");
+        ww.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                hide();
+            }
+        });
+    }
     private void ww() {
         ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
@@ -193,522 +204,7 @@ public class GrupesSMF extends AppCompatActivity {
                 break;
         }
     }
-    private void grupes(String spinnerText) {
-        switch (spinnerText){
-            //NL 1
 
-            case "A 16-1":
-                selection("group","750");
-                click();
-                break;
-            case "As 15-1":
-                selection("group","751");
-                click();
-                break;
-            case "As 15-1 1 pog":
-                selection("group","736");
-                click();
-                break;
-            case "As 15-1 2 pog":
-                selection("group","758");
-                click();
-                break;
-            case "BA 23-1":
-                selection("group","748");
-                click();
-                break;
-            case "BA 23-1 1 pog":
-                selection("group","835");
-                click();
-                break;
-            case "BA 23-1 2 pog":
-                selection("group","737");
-                click();
-                break;
-            case "F 19-1":
-                selection("group","747");
-                click();
-                break;
-            case "F 19-1 1 pog":
-                selection("group","791");
-                click();
-                break;
-            case "F 19-1 2 pog":
-                selection("group","732");
-                click();
-                break;
-            case "F 19-1 3 pog":
-                selection("group","812");
-                click();
-                break;
-            case "F 19-1 4 pog":
-                selection("group","813");
-                click();
-                break;
-            case "F 19-1 5 pog":
-                selection("group","801");
-                click();
-                break;
-            case "IPP 7-1":
-                selection("group","767");
-                click();
-                break;
-            case "IPP 7-1 1 pog":
-                selection("group","741");
-                click();
-                break;
-            case "LV 20-1":
-                selection("group","749");
-                click();
-                break;
-            case "LV 20-1 1 pog":
-                selection("group","771");
-                click();
-                break;
-            case "LV 20-1 2 pog":
-                selection("group","738");
-                click();
-                break;
-            case "LV 20-1 3 pog":
-                selection("group","739");
-                click();
-                break;
-            case "LV 20-1 4 pog":
-                selection("group","814");
-                click();
-                break;
-            case "LV 20-1 5 pog":
-                selection("group","815");
-                click();
-                break;
-            case "LV 20-1 6 pog":
-                selection("group","807");
-                click();
-                break;
-            case "SP 4-1":
-                selection("group","730");
-                click();
-                break;
-            case "TA 19-1":
-                selection("group","762");
-                click();
-                break;
-            case "TA 19-1 1 pog":
-                selection("group","770");
-                click();
-                break;
-            case "TA 19-1 2 pog":
-                selection("group","731");
-                click();
-                break;
-            case "TA-1":
-                selection("group","946");
-                click();
-                break;
-            // NL 2
-            case "A 15-2":
-                selection("group","746");
-                click();
-                break;
-            case "A 15-2 1 pog":
-                selection("group","811");
-                click();
-                break;
-            case "A 15-2 2 pog":
-                selection("group","818");
-                click();
-                break;
-            case "A 15-2 3 pog":
-                selection("group","820");
-                click();
-                break;
-            case "A 15-2 4 pog":
-                selection("group","819");
-                click();
-                break;
-            case "BA 22-2":
-                selection("group","761");
-                click();
-                break;
-            case "BA 22-2 1 pog":
-                selection("group","724");
-                click();
-                break;
-            case "BA 22-2 2 pog":
-                selection("group","725");
-                click();
-                break;
-            case "BA 22-2 3 pog":
-                selection("group","821");
-                click();
-                break;
-            case "ERASMUS":
-                selection("group","943");
-                click();
-                break;
-            case "F 18-2":
-                selection("group","786");
-                click();
-                break;
-            case "F 18-2 1 pog":
-                selection("group","721");
-                click();
-                break;
-            case "F 18-2 2 pog":
-                selection("group","722");
-                click();
-                break;
-            case "F 18-2 3 pog":
-                selection("group","795");
-                click();
-                break;
-            case "F 18-2 4 pog":
-                selection("group","779");
-                click();
-                break;
-            case "IPP 6-2":
-                selection("group","775");
-                click();
-                break;
-            case "IPP 6-2 3 pog":
-                selection("group","828");
-                click();
-                break;
-            case "IPP 6-2 4 pog":
-                selection("group","827");
-                click();
-                break;
-            case "IPP 6-2 5 pog":
-                selection("group","826");
-                click();
-                break;
-            case "IPP 6-2 6 pog":
-                selection("group","825");
-                click();
-                break;
-            case "IPP 6-2 7 pog":
-                selection("group","824");
-                click();
-                break;
-            case "IPP 6-2 8 pog":
-                selection("group","823");
-                click();
-                break;
-            case "IPP 6-2 9 pog":
-                selection("group","822");
-                click();
-                break;
-            case "LV 19-2":
-                selection("group","782");
-                click();
-                break;
-            case "LV 19-2 1 pog":
-                selection("group","810");
-                click();
-                break;
-            case "LV 19-2 2 pog":
-                selection("group","817");
-                click();
-                break;
-            case "LV 19-2 3 pog":
-                selection("group","809");
-                click();
-                break;
-            case "LV 19-2 4 pog":
-                selection("group","832");
-                click();
-                break;
-            case "LV 19-2 5 pog":
-                selection("group","831");
-                click();
-                break;
-            case "LV 19-2 6 pog":
-                selection("group","830");
-                click();
-                break;
-            case "LV 19-2 7 pog":
-                selection("group","829");
-                click();
-                break;
-            case "SP 3-2":
-                selection("group","752");
-                click();
-                break;
-            case "TA 18-2":
-                selection("group","763");
-                click();
-                break;
-            case "TA 18-2 1 pog":
-                selection("group","790");
-                click();
-                break;
-            case "TA 18-2 2 pog":
-                selection("group","756");
-                click();
-                break;
-            case "TA 18-2 3 pog":
-                selection("group","834");
-                click();
-                break;
-            case "TA 18-2 4 pog":
-                selection("group","808");
-                click();
-                break;
-            case "TA-3":
-                selection("group","942");
-                click();
-                break;
-            case "VV 23-2":
-                selection("group","743");
-                click();
-                break;
-            // NL 3`
-            case "A 14-3":
-                selection("group","754");
-                click();
-                break;
-            case "BA 21-3":
-                selection("group","759");
-                click();
-                break;
-            case "BA 21-3 1 pog":
-                selection("group","727");
-                click();
-                break;
-            case "BA 21-3 2 pog":
-                selection("group","799");
-                click();
-                break;
-            case "F 17-3":
-                selection("group","755");
-                click();
-                break;
-            case "F 17-3 1 pog":
-                selection("group","726");
-                click();
-                break;
-            case "F 17-3 2 pog":
-                selection("group","728");
-                click();
-                break;
-            case "IPP 5-3":
-                selection("group","800");
-                click();
-                break;
-            case "KV 13-3":
-                selection("group","787");
-                click();
-                break;
-            case "LV 18-3":
-                selection("group","719");
-                click();
-                break;
-            case "SP 2-3":
-                selection("group","753");
-                click();
-                break;
-            case "SPV 6-3":
-                selection("group","768");
-                click();
-                break;
-            case "TA 17-3":
-                selection("group","764");
-                click();
-                break;
-            case "TA 17-3 3 pog":
-                selection("group","833");
-                click();
-                break;
-            case "TA 17-3 4 pog":
-                selection("group","794");
-                click();
-                break;
-            case "TA 17-3 5 pog":
-                selection("group","744");
-                click();
-                break;
-            case "TA 17-3 6 pog":
-                selection("group","777");
-                click();
-                break;
-            case "VV 22-3":
-                selection("group","781");
-                click();
-                break;
-            // IST 1
-            case "BAi 18-1":
-                selection("group","760");
-                click();
-                break;
-            case "BAi 18-1 1pog":
-                selection("group","793");
-                click();
-                break;
-            case "BAi 18-1 2 pog":
-                selection("group","792");
-                click();
-                break;
-            case "Fi 14-1":
-                selection("group","919");
-                click();
-                break;
-            case "IPPi 6-1":
-                selection("group","924");
-                click();
-                break;
-            case "IPPi 6-1 1 pog":
-                selection("group","923");
-                click();
-                break;
-            case "IPPi 6-1 2 pog":
-                selection("group","922");
-                click();
-                break;
-            case "IPPi 6-1 3 pog":
-                selection("group","921");
-                click();
-                break;
-            case "IPPi 6-1 4 pog":
-                selection("group","920");
-                click();
-                break;
-            case "LVi 15-1":
-                selection("group","927");
-                click();
-                break;
-            case "LVi 15-1 1 pog":
-                selection("group","926");
-                click();
-                break;
-            case "LVi 15-1 2 pog":
-                selection("group","925");
-                click();
-                break;
-            // IST 2
-            case "BAi 17-2":
-                selection("group","928");
-                click();
-                break;
-            case "BAi 17-2 1 pog":
-                selection("group","774");
-                click();
-                break;
-            case "BAi 17-2 2 pog":
-                selection("group","773");
-                click();
-                break;
-            case "BAi 17-2 3 pog":
-                selection("group","931");
-                click();
-                break;
-            case "BAi 17-2 4 pog":
-                selection("group","930");
-                click();
-                break;
-            case "BAi 17-2 5 pog":
-                selection("group","929");
-                click();
-                break;
-            case "Fi 13-2":
-                selection("group","933");
-                click();
-                break;
-            case "Fi 13-2 1 pog":
-                selection("group","932");
-                click();
-                break;
-            case "Fi 13-2 2 pog":
-                selection("group","802");
-                click();
-                break;
-            case "IPPi 5-2":
-                selection("group","816");
-                click();
-                break;
-            case "IPPi 5-2 1 pog":
-                selection("group","937");
-                click();
-                break;
-            case "IPPi 5-2 2 pog":
-                selection("group","936");
-                click();
-                break;
-            case "IPPi 5-2 3 pog":
-                selection("group","935");
-                click();
-                break;
-            case "IPPi 5-2 4 pog":
-                selection("group","934");
-                click();
-                break;
-            case "LVi 14-2":
-                selection("group","780");
-                click();
-                break;
-            case "LVi 14-2 1 pog":
-                selection("group","788");
-                click();
-                break;
-            case "LVi 14-2 2 pog":
-                selection("group","789");
-                click();
-                break;
-            //IST 3
-            case "Ai 14-3":
-                selection("group","939");
-                click();
-                break;
-            case "BAi 16-3":
-                selection("group","938");
-                click();
-                break;
-            case "Fi 12-3":
-                selection("group","723");
-                click();
-                break;
-            case "LVi1 3-3":
-                selection("group","783");
-                click();
-                break;
-            case "VVi 11-3":
-                selection("group","804");
-                click();
-                break;
-            case "VVi 11-3 1 pog":
-                selection("group","945");
-                click();
-                break;
-            case "VVi 11-3 2 pog":
-                selection("group","944");
-                click();
-                break;
-            // IST 4
-            case "Ai 13-4":
-                selection("group","769");
-                click();
-                break;
-            case "BAi 15-4":
-                selection("group","745");
-                click();
-                break;
-            case "Fi 11-4":
-                selection("group","718");
-                click();
-                break;
-            case "LVi 12-4":
-                selection("group","720");
-                click();
-                break;
-            case "LVi 12-4 1 pog":
-                selection("group","941");
-                click();
-                break;
-            case "LVi 12-4 2 pog":
-                selection("group","940");
-                click();
-                break;
-        }
-    }
     public void click(){
        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
         ww.loadUrl("javascript:viewWeek();");

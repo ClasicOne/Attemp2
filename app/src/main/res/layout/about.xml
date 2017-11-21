@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="420dp"
-        android:text="Created by \n Coded Džiugas Ramančionis\n Design Daugvydas Ringys\n@kvk"
+        android:text="Created by \n Coded Džiugas Ramančionis\n  Daugvydas Ringys\n@kvk"
         android:textColor="@android:color/darker_gray"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

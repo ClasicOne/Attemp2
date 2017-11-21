@@ -1,4 +1,2104 @@
 <resources>
     <string name="app_name">Tvarkaraštis</string>
+    <string-array name="grupes_TF_str">
+        <item>--pasirinkti--</item>
 
+        Tipas IŠT
+        Metai 1
+
+        <item>AT i 40-1</item>
+        <item>EA i 33-1</item>
+        <item>EA i 33-1, 1 p.</item>
+        <item>EA i 33-1, 2 p.</item>
+        <item>IN i 3-1</item>
+        <item>MCH i 19-1</item>
+        <item>MT i 16-1</item>
+        <item>MT i 16-1, 1 p.</item>
+        <item>MT i 16-1, 2 p.</item>
+        <item>S i 39-1</item>
+        <item>S i 39-1, 1 p.</item>
+        <item>S i 39-1, 2 p.</item>
+        <item>S i 39-1, 3 p.</item>
+        <item>TL i 16-1</item>
+
+        Tipas IŠT
+        Metai 2
+
+        <item>ATE i 38-2</item>
+        <item>EA i 31-2</item>
+        <item>MCH i 17-2</item>
+        <item>MT i 14-2</item>
+        <item>S i 37-2</item>
+        <item>T i 14-2</item>
+
+        Tipas IŠT
+        Metai 3
+
+        <item>ATE i 36-3</item>
+        <item>EA i 29-3</item>
+        <item>GRV - 3</item>
+        <item>MCH i 15-3</item>
+        <item>MT i 12-3</item>
+        <item>S i 35-3</item>
+        <item>T i 12-3</item>
+
+        Tipas IŠT
+        Metai 4
+
+        <item>ATE i 34-4</item>
+        <item>EA i 27-4</item>
+        <item>MCH i 13-4</item>
+        <item>MT i 10-4</item>
+        <item>MT i 10-4, 1 p.</item>
+        <item>MT i 10-4, 2 p.</item>
+        <item>S i 33-4</item>
+        <item>T i 10-4</item>
+
+        Tipas NL
+        Metai 1
+
+        <item>AT 39-1</item>
+        <item>AT 39-1, 2 p. </item>
+        <item>AT 39-1, 3 p. </item>
+        <item>AT 39-1,1 p. </item>
+        <item>EA 32-1</item>
+        <item>EA 32-1, 1 p.</item>
+        <item>EA 32-1, 2 p.</item>
+        <item>G 21-1</item>
+        <item>I 13-1</item>
+        <item>I 13-1, 1 p.</item>
+        <item>I 13-1, 2 p.</item>
+        <item>IN 2-1</item>
+        <item>MCH 18-1</item>
+        <item>MT 15-1</item>
+        <item>MT 15-1, 1 p.</item>
+        <item>MT 15-1, 2 p.</item>
+        <item>S 38-1</item>
+        <item>S 38-1, 1 p.</item>
+        <item>S 38-1, 2 p.</item>
+        <item>TL 15-1</item>
+
+        Tipas NL
+        Metai 2
+
+        <item>ATE 37-2</item>
+        <item>ATE 37-2, 1 p.</item>
+        <item>ATE 37-2, 2 p.</item>
+        <item>EA 30-2</item>
+        <item>EA 30-2, 1 p.</item>
+        <item>EA 30-2, 2 p.</item>
+        <item>G 20-2</item>
+        <item>I 12-2</item>
+        <item>IN 1-2</item>
+        <item>MCH 16-2</item>
+        <item>MT 13-2</item>
+        <item>MT 13-2, 1 p.</item>
+        <item>MT 13-2, 2 p.</item>
+        <item>S 36-2</item>
+        <item>S 36-2, 1 p.</item>
+        <item>S 36-2, 2 p.</item>
+        <item>T 13-2</item>
+
+        Tipas NL
+        Metai 3
+
+        <item>ATE 35-3</item>
+        <item>ATE 35-3, 1 p.</item>
+        <item>ATE 35-3, 2 p.</item>
+        <item>EA 28-3</item>
+        <item>EA 28-3, 1 p.</item>
+        <item>EA 28-3, 2 p.</item>
+        <item>G 19-3</item>
+        <item>I 11-3</item>
+        <item>KD 8-3</item>
+        <item>MCH 14-3</item>
+        <item>MT 11-3</item>
+        <item>MT 11-3, 1 p.</item>
+        <item>MT 11-3, 2 p.</item>
+        <item>S 34-3</item>
+        <item>S 34-3, 1 p.</item>
+        <item>S 34-3, 2 p.</item>
+        <item>T 11-3</item>
+
+
+
+    </string-array>
+    <string-array name="grupes_TF_value">
+        <item>duck</item>
+
+        Tipas IŠT
+        Metai 1
+
+        <item>63</item>
+        <item>62</item>
+        <item>61</item>
+        <item>60</item>
+        <item>58</item>
+        <item>59</item>
+        <item>57</item>
+        <item>93</item>
+        <item>94</item>
+        <item>66</item>
+        <item>65</item>
+        <item>64</item>
+        <item>95</item>
+        <item>67</item>
+
+        Tipas IŠT
+        Metai 2
+
+        <item>73</item>
+        <item>72</item>
+        <item>71</item>
+        <item>70</item>
+        <item>69</item>
+        <item>68</item>
+
+        Tipas IŠT
+        Metai 3
+
+        <item>80</item>
+        <item>79</item>
+        <item>74</item>
+        <item>78</item>
+        <item>77</item>
+        <item>76</item>
+        <item>75</item>
+
+        Tipas IŠT
+        Metai 4
+
+        <item>86</item>
+        <item>85</item>
+        <item>84</item>
+        <item>83</item>
+        <item>88</item>
+        <item>87</item>
+        <item>82</item>
+        <item>81</item>
+
+        Tipas NL
+        Metai 1
+
+        <item>20</item>
+        <item>18</item>
+        <item>17</item>
+        <item>19</item>
+        <item>16</item>
+        <item>15</item>
+        <item>14</item>
+        <item>13</item>
+        <item>12</item>
+        <item>11</item>
+        <item>10</item>
+        <item>9</item>
+        <item>8</item>
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+
+        Tipas NL
+        Metai 2
+
+        <item>42</item>
+        <item>41</item>
+        <item>40</item>
+        <item>39</item>
+        <item>38</item>
+        <item>37</item>
+        <item>36</item>
+        <item>35</item>
+        <item>34</item>
+        <item>33</item>
+        <item>32</item>
+        <item>31</item>
+        <item>30</item>
+        <item>29</item>
+        <item>28</item>
+        <item>27</item>
+        <item>26</item>
+
+        Tipas NL
+        Metai 3
+
+        <item>53</item>
+        <item>90</item>
+        <item>89</item>
+        <item>52</item>
+        <item>92</item>
+        <item>91</item>
+        <item>51</item>
+        <item>50</item>
+        <item>49</item>
+        <item>48</item>
+        <item>47</item>
+        <item>46</item>
+        <item>45</item>
+        <item>56</item>
+        <item>55</item>
+        <item>54</item>
+        <item>44</item>
+
+
+    </string-array>
+    <string-array name="grupes_SMF_str">
+        <item>--pasirinkti--</item>
+        Tipas Ištestinės
+        Metai 1
+
+        <item>BAi 18-1</item>
+        <item>BAi 18-1 1pog</item>
+        <item>BAi 18-1 2 pog</item>
+        <item>Fi 14-1</item>
+        <item>IPPi 6-1</item>
+        <item>IPPi 6-1 1 pog</item>
+        <item>IPPi 6-1 2 pog</item>
+        <item>IPPi 6-1 3 pog</item>
+        <item>IPPi 6-1 4 pog</item>
+        <item>LVi 15-1</item>
+        <item>LVi 15-1 1 pog</item>
+        <item>LVi 15-1 2 pog</item>
+
+        Tipas Ištestinės
+        Metai 2
+
+        <item>BAi 17-2</item>
+        <item>BAi 17-2 1 pog</item>
+        <item>BAi 17-2 2 pog</item>
+        <item>BAi 17-2 3 pog</item>
+        <item>BAi 17-2 4 pog</item>
+        <item>BAi 17-2 5 pog</item>
+        <item>Fi 13-2</item>
+        <item>Fi 13-2 1 pog</item>
+        <item>Fi 13-2 2 pog</item>
+        <item>IPPi 5-2</item>
+        <item>IPPi 5-2 1 pog</item>
+        <item>IPPi 5-2 2 pog</item>
+        <item>IPPi 5-2 3 pog</item>
+        <item>IPPi 5-2 4 pog</item>
+        <item>LVi 14-2</item>
+        <item>LVi 14-2 1 pog</item>
+        <item>LVi 14-2 2 pog</item>
+
+        Tipas Ištestinės
+        Metai 3
+
+        <item>Ai 13-4</item>
+        <item>BAi 15-4</item>
+        <item>Fi 11-4</item>
+        <item>LVi 12-4</item>
+        <item>LVi 12-4 1 pog</item>
+        <item>LVi 12-4 2 pog</item>
+
+        Tipas Ištestinės
+        Metai 4
+
+        <item>Ai 13-4</item>
+        <item>BAi 15-4</item>
+        <item>Fi 11-4</item>
+        <item>LVi 12-4</item>
+        <item>LVi 12-4 1 pog</item>
+        <item>LVi 12-4 2 pog</item>
+
+        Tipas Nuolatinės
+        Metai 1
+
+        <item>A 16-1</item>
+        <item>As 15-1</item>
+        <item>As 15-1 1 pog</item>
+        <item>As 15-1 2 pog</item>
+        <item>BA 23-1</item>
+        <item>BA 23-1 1 pog</item>
+        <item>BA 23-1 2 pog</item>
+        <item>F 19-1</item>
+        <item>F 19-1 1 pog</item>
+        <item>F 19-1 2 pog</item>
+        <item>F 19-1 3 pog</item>
+        <item>F 19-1 4 pog</item>
+        <item>F 19-1 5 pog</item>
+        <item>IPP 7-1</item>
+        <item>IPP 7-1 1 pog</item>
+        <item>LV 20-1</item>
+        <item>LV 20-1 1 pog</item>
+        <item>LV 20-1 2 pog</item>
+        <item>LV 20-1 3 pog</item>
+        <item>LV 20-1 4 pog</item>
+        <item>LV 20-1 5 pog</item>
+        <item>LV 20-1 6 pog</item>
+        <item>SP 4-1</item>
+        <item>TA 19-1</item>
+        <item>TA 19-1 1 pog</item>
+        <item>TA 19-1 2 pog</item>
+        <item>TA-1</item>
+
+        Tipas Nuolatinės
+        Metai 2
+
+        <item>A 15-2</item>
+        <item>A 15-2 1 pog</item>
+        <item>A 15-2 2 pog</item>
+        <item>A 15-2 3 pog</item>
+        <item>A 15-2 4 pog</item>
+        <item>BA 22-2</item>
+        <item>BA 22-2 1 pog</item>
+        <item>BA 22-2 2 pog</item>
+        <item>BA 22-2 3 pog</item>
+        <item>ERASMUS</item>
+        <item>F 18-2</item>
+        <item>F 18-2 1 pog</item>
+        <item>F 18-2 2 pog</item>
+        <item>F 18-2 3 pog</item>
+        <item>F 18-2 4 pog</item>
+        <item>IPP 6-2</item>
+        <item>IPP 6-2 3 pog</item>
+        <item>IPP 6-2 4 pog</item>
+        <item>IPP 6-2 5 pog</item>
+        <item>IPP 6-2 6 pog</item>
+        <item>IPP 6-2 7 pog</item>
+        <item>IPP 6-2 8 pog</item>
+        <item>IPP 6-2 9 pog</item>
+        <item>LV 19-2</item>
+        <item>LV 19-2 1 pog</item>
+        <item>LV 19-2 2 pog</item>
+        <item>LV 19-2 3 pog</item>
+        <item>LV 19-2 4 pog</item>
+        <item>LV 19-2 5 pog</item>
+        <item>LV 19-2 6 pog</item>
+        <item>LV 19-2 7 pog</item>
+        <item>SP 3-2</item>
+        <item>TA 18-2</item>
+        <item>TA 18-2 1 pog</item>
+        <item>TA 18-2 2 pog</item>
+        <item>TA 18-2 3 pog</item>
+        <item>TA 18-2 4 pog</item>
+        <item>TA-3</item>
+        <item>VV 23-2</item>
+
+        Tipas Nuolatinės
+        Metai 3
+
+        <item>A 14-3</item>
+        <item>BA 21-3</item>
+        <item>BA 21-3 1 pog</item>
+        <item>BA 21-3 2 pog</item>
+        <item>F 17-3</item>
+        <item>F 17-3 1 pog</item>
+        <item>F 17-3 2 pog</item>
+        <item>IPP 5-3</item>
+        <item>KV 13-3</item>
+        <item>LV 18-3</item>
+        <item>SP 2-3</item>
+        <item>SPV 6-3</item>
+        <item>TA 17-3</item>
+        <item>TA 17-3 3 pog</item>
+        <item>TA 17-3 4 pog</item>
+        <item>TA 17-3 5 pog</item>
+        <item>TA 17-3 6 pog</item>
+        <item>VV 22-3</item>
+
+    </string-array>
+    <string-array name="grupes_SMF_value">
+        <item>duck</item>
+       <!-- Tipas Ištestinės
+        Metai 1-->
+
+        <item>760</item>
+        <item>793</item>
+        <item>792</item>
+        <item>919</item>
+        <item>924</item>
+        <item>923</item>
+        <item>922</item>
+        <item>921</item>
+        <item>920</item>
+        <item>927</item>
+        <item>926</item>
+        <item>925</item>
+<!--
+        Tipas Ištestinės
+        Metai 2-->
+
+        <item>928</item>
+        <item>774</item>
+        <item>773</item>
+        <item>931</item>
+        <item>930</item>
+        <item>929</item>
+        <item>933</item>
+        <item>932</item>
+        <item>802</item>
+        <item>816</item>
+        <item>937</item>
+        <item>936</item>
+        <item>935</item>
+        <item>934</item>
+        <item>780</item>
+        <item>788</item>
+        <item>789</item>
+<!--
+        Tipas Ištestinės
+        Metai 3-->
+
+        <item>769</item>
+        <item>745</item>
+        <item>718</item>
+        <item>720</item>
+        <item>941</item>
+        <item>940</item>
+
+       <!-- Tipas Ištestinės
+        Metai 4-->
+
+        <item>769</item>
+        <item>745</item>
+        <item>718</item>
+        <item>720</item>
+        <item>941</item>
+        <item>940</item>
+
+       <!-- Tipas Nuolatinės
+        Metai 1
+-->
+        <item>750</item>
+        <item>751</item>
+        <item>736</item>
+        <item>758</item>
+        <item>748</item>
+        <item>835</item>
+        <item>737</item>
+        <item>747</item>
+        <item>791</item>
+        <item>732</item>
+        <item>812</item>
+        <item>813</item>
+        <item>801</item>
+        <item>767</item>
+        <item>741</item>
+        <item>749</item>
+        <item>771</item>
+        <item>738</item>
+        <item>739</item>
+        <item>814</item>
+        <item>815</item>
+        <item>807</item>
+        <item>730</item>
+        <item>762</item>
+        <item>770</item>
+        <item>731</item>
+        <item>946</item>
+
+        <!--Tipas Nuolatinės
+        Metai 2
+-->
+        <item>746</item>
+        <item>811</item>
+        <item>818</item>
+        <item>820</item>
+        <item>819</item>
+        <item>761</item>
+        <item>724</item>
+        <item>725</item>
+        <item>821</item>
+        <item>943</item>
+        <item>786</item>
+        <item>721</item>
+        <item>722</item>
+        <item>795</item>
+        <item>779</item>
+        <item>775</item>
+        <item>828</item>
+        <item>827</item>
+        <item>826</item>
+        <item>825</item>
+        <item>824</item>
+        <item>823</item>
+        <item>822</item>
+        <item>782</item>
+        <item>810</item>
+        <item>817</item>
+        <item>809</item>
+        <item>832</item>
+        <item>831</item>
+        <item>830</item>
+        <item>829</item>
+        <item>752</item>
+        <item>763</item>
+        <item>790</item>
+        <item>756</item>
+        <item>834</item>
+        <item>808</item>
+        <item>942</item>
+        <item>743</item>
+        <!---->
+        <!--Tipas Nuolatinės-->
+        <!--Metai 3-->
+
+        <item>754</item>
+        <item>759</item>
+        <item>727</item>
+        <item>799</item>
+        <item>755</item>
+        <item>726</item>
+        <item>728</item>
+        <item>800</item>
+        <item>787</item>
+        <item>719</item>
+        <item>753</item>
+        <item>768</item>
+        <item>764</item>
+        <item>833</item>
+        <item>794</item>
+        <item>744</item>
+        <item>777</item>
+        <item>781</item>
+
+    </string-array>
+    <string-array name="destytojai_TF_str">
+        <item>--pasirinkti--</item>
+        <item>Adomkus Aidas</item>
+        <item>Andriušienė Liudmila</item>
+        <item>Andriušis Algimantas</item>
+        <item>Anužis Mantas</item>
+        <item>Arlauskienė Renata</item>
+        <item>Artemčiukas Edgaras</item>
+        <item>Baronaitė Jolanta</item>
+        <item>Beniušienė Gražina</item>
+        <item>Beniušis Mantas</item>
+        <item>Berlinskas Šarūnas</item>
+        <item>Bernotas Almantas</item>
+        <item>Bernotienė Liolita</item>
+        <item>Bernotienė Rima</item>
+        <item>Bradauskienė Vijolė</item>
+        <item>Breivė Juozas</item>
+        <item>Budrytė-Ausiejienė Laurencija</item>
+        <item>Dikun Jelena</item>
+        <item>Doroševas Viktoras</item>
+        <item>Drizgaitė Jurgita</item>
+        <item>Drungilas Darius</item>
+        <item>Eglynas Tomas</item>
+        <item>Eidukaitis Edvinas</item>
+        <item>Ežerskienė Sigutė</item>
+        <item>Freitakaitė Vitalija</item>
+        <item>Garnienė Birutė</item>
+        <item>Gedmintas Donatas</item>
+        <item>Gerikienė Vida</item>
+        <item>Gotautienė Eglė</item>
+        <item>Grinkevičius Saulius</item>
+        <item>Gudlekis Romanas</item>
+        <item>Ivavičiūtė Giedrė</item>
+        <item>Jakubauskienė Vilma</item>
+        <item>Jankauskas Evaldas</item>
+        <item>Jankauskienė Dainora</item>
+        <item>Janulevičius Algirdas</item>
+        <item>Jokubynienė Vida</item>
+        <item>Juknienė Danguolė</item>
+        <item>Juknys Vigandas</item>
+        <item>Juškienė Rita</item>
+        <item>Kairienė Virginija</item>
+        <item>Karbauskas Antanas</item>
+        <item>Kasparaitis Vytautas</item>
+        <item>Kinderis Remigijus</item>
+        <item>Kirkilis Rolandas</item>
+        <item>Kučinskas Gintaras</item>
+        <item>Kučinskas Tadas</item>
+        <item>Kučinskienė Jurga</item>
+        <item>Kuklienė Lina</item>
+        <item>Kuklys Indrius</item>
+        <item>Kurmis Mindaugas</item>
+        <item>Laučys Mindaugas</item>
+        <item>Laureckas Evaldas</item>
+        <item>Levuškinas Orestas</item>
+        <item>Liebuvienė Jūratė</item>
+        <item>Liorančas Viktoras</item>
+        <item>Luzin Maksim</item>
+        <item>Malkus Ričardas</item>
+        <item>Martinkus Narūnas</item>
+        <item>Mauricienė Ingrida</item>
+        <item>Mickus Tautvydas</item>
+        <item>Montrimaitė Kristina</item>
+        <item>Moščenkova Elena</item>
+        <item>Narščius Aleksas</item>
+        <item>NEVARDINĖS NEVARDINĖS</item>
+        <item>Ovaltaitė Vida</item>
+        <item>Ozbinaitė Rasa</item>
+        <item>Paulauskas Donatas</item>
+        <item>Petkus Saulius</item>
+        <item>Petraitienė Lilija</item>
+        <item>Piauliokas Nerijus</item>
+        <item>Piklaps Arnoldas</item>
+        <item>Pocius Antanas</item>
+        <item>Povilavičius Marius</item>
+        <item>Pridotkienė Lina</item>
+        <item>Rataitė Birutė</item>
+        <item>Rutė Jevgenija</item>
+        <item>Ruzgienė Birutė</item>
+        <item>Savickas Tytas</item>
+        <item>Savickienė Sigutė</item>
+        <item>Simoneit Genovaitė</item>
+        <item>Sinkevičius Vytenis</item>
+        <item>Stanelytė Daiva</item>
+        <item>Staponkienė Ramutė</item>
+        <item>Statnickė Gita</item>
+        <item>Stonienė Adelė</item>
+        <item>Strumilienė Laima</item>
+        <item>Sūdžiuvienė Raimonda</item>
+        <item>Šateikienė Diana</item>
+        <item>Šilas Giedrius</item>
+        <item>Šneiderienė Valda</item>
+        <item>Tadžijevas Artūras</item>
+        <item>Tamelienė Reda</item>
+        <item>Tamokaitis Saulius</item>
+        <item>Tamošaitienė Loreta</item>
+        <item>Tautavičienė Benita</item>
+        <item>Tekutov Jurij</item>
+        <item>Tranavičius Ramūnas</item>
+        <item>Tumėnienė Virginija</item>
+        <item>Urmonienė Lionė</item>
+        <item>Uskovas Gediminas</item>
+        <item>Vaičekauskienė Vilma</item>
+        <item>Vaitekonienė Jūratė</item>
+        <item>Vaitiekus Antanas</item>
+        <item>Vaitkus Arvydas</item>
+        <item>Valevičius Romas</item>
+        <item>Verpečinskas Arūnas</item>
+        <item>Vrubliauskienė Rasida</item>
+        <item>Žvinienė Vida</item>
+    </string-array>
+    <string-array name="destytojai_TF_value">
+        <item>duck</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>102</item>
+        <item>96</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>99</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>105</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>106</item>
+        <item>40</item>
+        <item>109</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>100</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>110</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>95</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>93</item>
+        <item>56</item>
+        <item>97</item>
+        <item>57</item>
+        <item>104</item>
+        <item>94</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>98</item>
+        <item>71</item>
+        <item>72</item>
+        <item>107</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>108</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>103</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+    </string-array>
+    <string-array name="destytojai_SMF_str">
+        <item>--pasirinkti--</item>
+        <item>Aleliūnaitė Asta</item>
+        <item>Anužienė Aušra</item>
+        <item>Balkytė Giedrė</item>
+        <item>Baronaitė Jolanta</item>
+        <item>Bylaitė-Žakaitienė Andželika</item>
+        <item>Bytautienė Nijolė</item>
+        <item>Bojorovienė Jolanta</item>
+        <item>Bridikienė Vilma</item>
+        <item>Budrienė Liucija</item>
+        <item>Budrytė - Ausiejienė Laurencija</item>
+        <item>Čistienė Audronė</item>
+        <item>Danielienė Jūratė</item>
+        <item>Daubarienė Jolanda</item>
+        <item>Docienė Violeta</item>
+        <item>Dreižienė Lina</item>
+        <item>Ežerskienė Rima</item>
+        <item>Galdikienė Nijolė</item>
+        <item>Gotautienė Eglė</item>
+        <item>Grublienė Violeta</item>
+        <item>Ivanauskas Nerijus</item>
+        <item>Jonikas Donatas</item>
+        <item>Jonuševičienė Judita</item>
+        <item>Jurevičienė Jadvyga</item>
+        <item>Jurkaitienė Sabina</item>
+        <item>Kareivaitė Gintarė</item>
+        <item>Kasparienė Jurgita</item>
+        <item>Kavaliauskas Jonas</item>
+        <item>Kaveckė Ieva</item>
+        <item>Kavolius Robertas</item>
+        <item>Kiyak Deimena</item>
+        <item>Kinderis Remigijus</item>
+        <item>Klizaitė Jūratė</item>
+        <item>Kreišmonienė Jolanta</item>
+        <item>Kuprienė Laima</item>
+        <item>Kustienė Aurelija</item>
+        <item>Kvasaitė Virginija</item>
+        <item>Kvekšienė Milda</item>
+        <item>Leonavičienė Jūratė</item>
+        <item>Levickienė Lina</item>
+        <item>Mauricaitė Aurelija</item>
+        <item>Mecelienė Audronė</item>
+        <item>Meškelienė Audronė</item>
+        <item>Mickus Alvydas</item>
+        <item>Mikalauskas Rimantas</item>
+        <item>Nutautienė Rasa</item>
+        <item>Palubinskaitė Daiva</item>
+        <item>Pancerovienė Asta</item>
+        <item>Parišauskienė Dalia</item>
+        <item>Petraitienė Birutė</item>
+        <item>Petrauskienė Vita</item>
+        <item>Piklaps Arnoldas</item>
+        <item>Pikturnaitė Ilvija</item>
+        <item>Plačienė Birutė</item>
+        <item>Pocienė Monika</item>
+        <item>Pranauskienė Dovilė</item>
+        <item>Pranckūnienė Virginija</item>
+        <item>Rupkuvienė Silva</item>
+        <item>Sėlenienė Laura</item>
+        <item>Slušnienė Giedrė</item>
+        <item>Spiriajevas Eduardas</item>
+        <item>Statkuvienė Daiva</item>
+        <item>Statnickė Gita</item>
+        <item>Stonienė Adelė</item>
+        <item>Striaukaitė Lina</item>
+        <item>Šatienė Salomėja</item>
+        <item>Šikšnienė Aušra</item>
+        <item>Tamašauskienė Rūta</item>
+        <item>Tamošauskaitė Živilė</item>
+        <item>Uselienė Daiva</item>
+        <item>Vaitiekienė Janina</item>
+        <item>Vaitiekus Antanas</item>
+        <item>Valaitienė Aurelija</item>
+        <item>Valandos Nevardinės</item>
+        <item>Varneckienė Aniuta</item>
+        <item>Venckevičė Loreta</item>
+        <item>Zonienė Aurelija</item>
+        <item>Žakaitis Povilas</item>
+        <item>Žegunienė Vaida</item>
+        <item>Žvinienė Vida</item>
+    </string-array>
+    <string-array name="destytojai_SMF_value">
+        <item>duck</item>
+        <item>1</item>
+        <item>4</item>
+        <item>6</item>
+        <item>7</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>46</item>
+        <item>94</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>88</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+    </string-array>
+    <string-array name="destytojai_SVMF_str">
+        <item>--pasirinkti--</item>
+        <item>Abunevičius Romas</item>
+        <item>Albrechtienė Kristina</item>
+        <item>Altuchova Aida</item>
+        <item>Andriuškevičiūtė Gerda</item>
+        <item>Andruška Marius</item>
+        <item>Andruškienė Jurgita</item>
+        <item>Arlauskienė Renata</item>
+        <item>Arnašiūtė Roberta</item>
+        <item>Auglienė A.</item>
+        <item>Bačiulienė Kristina</item>
+        <item>Bagdonienė Irena</item>
+        <item>Bardžiukienė Elytė</item>
+        <item>Barsevičienė Šarūnė</item>
+        <item>Barzdžiukienė Elytė</item>
+        <item>Beinorienė Jūratė</item>
+        <item>Bertašiūtė A.</item>
+        <item>Beržanskienė Justė</item>
+        <item>Bikuličienė Roberta</item>
+        <item>Bylaitė-Žakaitienė Andželika</item>
+        <item>Boltutienė Jurgita</item>
+        <item>Buivydaitė Eglė</item>
+        <item>Bumbliauskytė Dalia</item>
+        <item>Burdulis Dainius</item>
+        <item>Čekmariova J.</item>
+        <item>Dambrauskaitė Angelija</item>
+        <item>Dambrauskienė Nijolė</item>
+        <item>Danielienė Jūratė</item>
+        <item>Daubarienė Jolanda</item>
+        <item>Daukantienė Danutė</item>
+        <item>Dėdinienė Ingrida</item>
+        <item>Derkintienė Jūratė</item>
+        <item>Dudėnė Jurgita</item>
+        <item>Dvarionaitė Lijana</item>
+        <item>Einars Bronius</item>
+        <item>Eismontienė Jekaterina</item>
+        <item>Freitakaitė V.</item>
+        <item>Gaižauskienė Ina</item>
+        <item>Galčionkova Ana</item>
+        <item>Galdikienė Nijolė</item>
+        <item>Gedrimė Lina</item>
+        <item>Gedrimienė Bernadeta</item>
+        <item>Gedvilienė L.</item>
+        <item>Giedraitienė Neringa</item>
+        <item>Girdžiūnienė Rasa</item>
+        <item>Indriuškienė Rasa</item>
+        <item>Jakubaitienė Vanda</item>
+        <item>Jankauskienė Rita</item>
+        <item>Janušas Leonas</item>
+        <item>Jonelienė Romena</item>
+        <item>Jonelys Valdas</item>
+        <item>Juknevičienė Aurelija</item>
+        <item>Juodienė Stasė</item>
+        <item>Juškienė Vaineta</item>
+        <item>Karpavičė Irma</item>
+        <item>Karpavičiūtė Solmita</item>
+        <item>Karžauskienė Edita</item>
+        <item>Kasnauskienė Jolanta</item>
+        <item>Kasperavičiūtė Simona</item>
+        <item>Kaunienė Jūratė</item>
+        <item>Kemzūrienė Deimantė</item>
+        <item>Kraniauskas Liutauras</item>
+        <item>Kraniauskienė Sigita</item>
+        <item>Kreišmonienė Jolanta</item>
+        <item>Kreivinienė B.</item>
+        <item>Kukštienė Viktorija</item>
+        <item>Lenčiauskienė Daiva</item>
+        <item>Letkauskaitė Kristina</item>
+        <item>Levickienė L.</item>
+        <item>Levickytė Greta</item>
+        <item>Levuškinas 0.</item>
+        <item>Liukienė Ramunė</item>
+        <item>Maniušienė Margarita</item>
+        <item>Mataitienė Angelija</item>
+        <item>Mauricaitė Ugnė</item>
+        <item>Mažionienė Asta</item>
+        <item>Mažionytė Indrė</item>
+        <item>Mickus Alvydas</item>
+        <item>Mockienė Aldona</item>
+        <item>Morkūnienė Rimantė</item>
+        <item>Morkūnienė Sonata</item>
+        <item>Muranovaitė Rūta</item>
+        <item>Narbutė Jūratė</item>
+        <item>Narutavičiūtė Evelina</item>
+        <item>Narvilienė Daiva</item>
+        <item>Nikolajevienė Aušra</item>
+        <item>Norbutaitė Asta</item>
+        <item>Pakalniškienė Jūratė</item>
+        <item>Pakštytė Aušra</item>
+        <item>Palijanskė Ugnė</item>
+        <item>Penkauskaitė Lina</item>
+        <item>Petrauskas Remigijus</item>
+        <item>Piekuvienė Vaida</item>
+        <item>Piklaps Arnoldas</item>
+        <item>Pleskonosova Irina</item>
+        <item>Pocienė Kristina</item>
+        <item>Pocienė Monika</item>
+        <item>Pocienė V.</item>
+        <item>Poimanskienė Vida</item>
+        <item>Poškienė Gintarė</item>
+        <item>Pranauskienė Dovilė</item>
+        <item>Pudžemienė Ernesta</item>
+        <item>Račkauskienė Skaidrė</item>
+        <item>Radavičienė A.</item>
+        <item>Ramanauskas Rimantas</item>
+        <item>Ramanauskienė Sigita</item>
+        <item>Razgutė Dovilė</item>
+        <item>Remeikienė Jurgita</item>
+        <item>Rimgailaitė A.</item>
+        <item>Rimkuvienė Daliuta</item>
+        <item>Romeraitė-Kuklierienė Laura</item>
+        <item>Rudžianskienė Aušra</item>
+        <item>Saudargė Odeta</item>
+        <item>Simonaitienė Gintarė</item>
+        <item>Sirtautaitė Ksavera</item>
+        <item>Smagurienė Aida</item>
+        <item>Spiriajevienė Irma</item>
+        <item>Stančaitytė Daiva</item>
+        <item>Staniulienė Vida</item>
+        <item>Stankaitienė Diana</item>
+        <item>Staražinskienė Aušra</item>
+        <item>Stončienė Vida</item>
+        <item>Stonkienė Asta</item>
+        <item>Stonkutė Renata</item>
+        <item>Stoukuvienė Žaneta</item>
+        <item>Stratkauskienė Rūta</item>
+        <item>Šatienė Salomėja</item>
+        <item>Šereikienė Vida</item>
+        <item>Šiaulinskienė R.</item>
+        <item>Šilanskaitė Jolita</item>
+        <item>Šlepetienė Asta</item>
+        <item>Šniepienė Gražina</item>
+        <item>Šoparienė Raimonda</item>
+        <item>Šostakienė Nijolė</item>
+        <item>Špiliauskaitė J</item>
+        <item>Šukienė Ingrida</item>
+        <item>Šulcaitė-Vasiljeva Mercedes</item>
+        <item>Šumskienė Aldona</item>
+        <item>Šutrajevienė Daina</item>
+        <item>Tauraitė-Janušauskienė Gitana</item>
+        <item>Trumpulytė Martyna</item>
+        <item>Urbonas Vincas</item>
+        <item>Urbonienė Dijana</item>
+        <item>Uselienė Daiva</item>
+        <item>Vaitiekienė Jurgita</item>
+        <item>Vaitkuvienė Jolanta</item>
+        <item>Valaitienė Aurelija</item>
+        <item>Valatkienė Dovilė</item>
+        <item>Valeckienė Ina</item>
+        <item>Venevičienė Viktorija</item>
+        <item>Vilčinskienė Irena</item>
+        <item>Viluckienė Jolita</item>
+        <item>Virbalienė Akvilė</item>
+        <item>Virbalis Tomas</item>
+        <item>Virketienė Diana</item>
+        <item>Vyšniauskas Julius</item>
+        <item>Zabitienė Rūta</item>
+        <item>Zavackienė Anželika</item>
+        <item>Zelenienė Irina</item>
+        <item>Zuzaitė Nijolė</item>
+        <item>Žakaitis Povilas</item>
+        <item>Žebrauskaitė Aurelija</item>
+        <item>Žernienė Aušra</item>
+        <item>Žičkuvienė Kristina</item>
+        <item>Žydžiūnaitė Vilma</item>
+        <item>Žymantienė Eglė</item>
+        <item>Žubrickienė Irena</item>
+        <item>Žukauskienė D.</item>
+        <item>Žulpienė Loreta</item>
+        <item>Žuravliova Olesia</item>
+    </string-array>
+    <string-array name="destytojai_SVMF_value">
+        <item>duck</item>
+        <item>64</item>
+        <item>78</item>
+        <item>79</item>
+        <item>176</item>
+        <item>141</item>
+        <item>37</item>
+        <item>183</item>
+        <item>80</item>
+        <item>161</item>
+        <item>81</item>
+        <item>181</item>
+        <item>16</item>
+        <item>32</item>
+        <item>36</item>
+        <item>83</item>
+        <item>143</item>
+        <item>70</item>
+        <item>164</item>
+        <item>84</item>
+        <item>50</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>169</item>
+        <item>69</item>
+        <item>88</item>
+        <item>179</item>
+        <item>185</item>
+        <item>89</item>
+        <item>90</item>
+        <item>163</item>
+        <item>134</item>
+        <item>63</item>
+        <item>68</item>
+        <item>91</item>
+        <item>146</item>
+        <item>74</item>
+        <item>92</item>
+        <item>93</item>
+        <item>47</item>
+        <item>76</item>
+        <item>162</item>
+        <item>75</item>
+        <item>21</item>
+        <item>177</item>
+        <item>23</item>
+        <item>53</item>
+        <item>95</item>
+        <item>140</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>187</item>
+        <item>59</item>
+        <item>167</item>
+        <item>42</item>
+        <item>31</item>
+        <item>51</item>
+        <item>41</item>
+        <item>155</item>
+        <item>58</item>
+        <item>171</item>
+        <item>157</item>
+        <item>28</item>
+        <item>52</item>
+        <item>27</item>
+        <item>142</item>
+        <item>101</item>
+        <item>139</item>
+        <item>44</item>
+        <item>65</item>
+        <item>102</item>
+        <item>103</item>
+        <item>8</item>
+        <item>168</item>
+        <item>158</item>
+        <item>2</item>
+        <item>43</item>
+        <item>104</item>
+        <item>186</item>
+        <item>40</item>
+        <item>62</item>
+        <item>14</item>
+        <item>13</item>
+        <item>35</item>
+        <item>105</item>
+        <item>106</item>
+        <item>137</item>
+        <item>107</item>
+        <item>49</item>
+        <item>100</item>
+        <item>159</item>
+        <item>184</item>
+        <item>109</item>
+        <item>56</item>
+        <item>170</item>
+        <item>11</item>
+        <item>132</item>
+        <item>110</item>
+        <item>111</item>
+        <item>112</item>
+        <item>73</item>
+        <item>113</item>
+        <item>160</item>
+        <item>131</item>
+        <item>136</item>
+        <item>166</item>
+        <item>57</item>
+        <item>25</item>
+        <item>60</item>
+        <item>114</item>
+        <item>165</item>
+        <item>30</item>
+        <item>115</item>
+        <item>154</item>
+        <item>29</item>
+        <item>3</item>
+        <item>45</item>
+        <item>71</item>
+        <item>54</item>
+        <item>116</item>
+        <item>117</item>
+        <item>178</item>
+        <item>172</item>
+        <item>46</item>
+        <item>24</item>
+        <item>175</item>
+        <item>148</item>
+        <item>118</item>
+        <item>22</item>
+        <item>119</item>
+        <item>120</item>
+        <item>121</item>
+        <item>6</item>
+        <item>26</item>
+        <item>39</item>
+        <item>4</item>
+        <item>122</item>
+        <item>174</item>
+        <item>19</item>
+        <item>48</item>
+        <item>20</item>
+        <item>123</item>
+        <item>124</item>
+        <item>125</item>
+        <item>55</item>
+        <item>156</item>
+        <item>72</item>
+        <item>180</item>
+        <item>182</item>
+        <item>33</item>
+        <item>34</item>
+        <item>135</item>
+        <item>67</item>
+        <item>94</item>
+        <item>12</item>
+        <item>133</item>
+        <item>18</item>
+        <item>149</item>
+        <item>126</item>
+        <item>127</item>
+        <item>128</item>
+        <item>7</item>
+        <item>108</item>
+        <item>61</item>
+        <item>173</item>
+        <item>129</item>
+        <item>130</item>
+    </string-array>
+    <string-array name="grupes_SVMF_str">
+        <item>--pasirinkti--</item>
+
+        Tipas Bendrosios praktikos slauga
+        Metai 1
+
+        <item>SL 19-1</item>
+        <item>SL 19-1, 1-2</item>
+        <item>SL 19-1, 1-3</item>
+        <item>SL 19-1, 2-2</item>
+        <item>SL 19-1, 2-3</item>
+        <item>SL 19-1, 3-3</item>
+        <item>SL 20-1</item>
+        <item>SL 20-1, 1-2</item>
+        <item>SL 20-1, 1-3</item>
+        <item>SL 20-1, 2-2</item>
+        <item>SL 20-1, 2-3</item>
+        <item>SL 20-1, 3-3</item>
+        <item>SL 21-1</item>
+        <item>SL 21-1, 1-2</item>
+        <item>SL 21-1, 2-2</item>
+        <item>SL 21-1,2-3</item>
+        <item>SL 21-1,3-3</item>
+        <item>SL 21-1.1-3</item>
+
+        Tipas Bendrosios praktikos slauga
+        Metai 2
+
+        <item>SL 17-2</item>
+        <item>SL 17-2, 1-2</item>
+        <item>SL 17-2, 2-2</item>
+        <item>SL 18-2</item>
+        <item>SL 18-2, 1-2</item>
+        <item>SL 18-2, 2-2</item>
+
+        Tipas Bendrosios praktikos slauga
+        Metai 3
+
+        <item>SL 15-3</item>
+        <item>SL 15-3, 1-2</item>
+        <item>SL 15-3, 2-2</item>
+        <item>SL 16-3</item>
+        <item>SL 16-3, 1-2</item>
+        <item>SL 16-3, 2-2</item>
+
+        Tipas Bendrosios praktikos slauga
+        Metai 4
+
+        <item>SL 13-4</item>
+        <item>SL 13-4, 1-2</item>
+        <item>SL 13-4, 2-2</item>
+        <item>SL 14-4</item>
+        <item>SL 14-4, 1-2</item>
+        <item>SL 14-4, 2-2</item>
+
+        Tipas Dietetika
+        Metai 1
+
+        <item>DT 4-1</item>
+        <item>DT 4-1, 1-2</item>
+        <item>DT 4-1, 2-2</item>
+        <item>DTs 1-1</item>
+        <item>DTs 1-1, 1-2</item>
+        <item>DTs 1-1, 2-2</item>
+
+        Tipas Dietetika
+        Metai 2
+
+        <item>DT 3-2</item>
+        <item>DT 3-2, 1-2</item>
+        <item>DT 3-2, 2-2</item>
+        <item>DTi 2-2</item>
+        <item>DTi 2-2, 1-2</item>
+        <item>DTi 2-2, 2-2</item>
+
+        Tipas Dietetika
+        Metai 3
+
+        <item>DT 2-3</item>
+        <item>DTi 1-3</item>
+
+        Tipas Gro%u017Eio terapija
+        Metai 1
+
+        <item>GT 17-1</item>
+        <item>GT 17-1, 1-2</item>
+        <item>GT 17-1, 1-3</item>
+        <item>GT 17-1, 2-2</item>
+        <item>GT 17-1, 2-3</item>
+        <item>GT 17-1, 3-3</item>
+        <item>GT 18-1</item>
+        <item>GT 18-1, 1-2</item>
+        <item>GT 18-1, 1-3</item>
+        <item>GT 18-1, 2-2</item>
+        <item>GT 18-1, 2-3</item>
+        <item>GT 18-1, 3-3</item>
+
+        Tipas Gro%u017Eio terapija
+        Metai 2
+
+        <item>GT 15-2</item>
+        <item>GT 15-2, 1-2</item>
+        <item>GT 15-2, 1-3</item>
+        <item>GT 15-2, 2-2</item>
+        <item>GT 15-2, 2-3</item>
+        <item>GT 15-2, 3-3</item>
+        <item>GT 16-2</item>
+        <item>GT 16-2, 1-2</item>
+        <item>GT 16-2, 1-3</item>
+        <item>GT 16-2, 2-2</item>
+        <item>GT 16-2, 2-3</item>
+        <item>GT 16-2, 3-3</item>
+
+        Tipas Gro%u017Eio terapija
+        Metai 3
+
+        <item>GT 13-3</item>
+        <item>GT 13-3, 1-2</item>
+        <item>GT 13-3, 1-3</item>
+        <item>GT 13-3, 2-2</item>
+        <item>GT 13-3, 2-3</item>
+        <item>GT 13-3, 3-3</item>
+        <item>GT 14-3</item>
+        <item>GT 14-3, 1-2</item>
+        <item>GT 14-3, 1-3</item>
+        <item>GT 14-3, 2-2</item>
+        <item>GT 14-3, 2-3</item>
+        <item>GT 14-3, 3-3</item>
+
+        Tipas Kineziterapija
+        Metai 1
+
+        <item>KT 16-1</item>
+        <item>KT 16-1, 1-2</item>
+        <item>KT 16-1, 2-2</item>
+        <item>KT 17-1</item>
+        <item>KT 17-1, 1-2</item>
+        <item>KT 17-1, 2-2</item>
+
+        Tipas Kineziterapija
+        Metai 2
+
+        <item>KT 14-2</item>
+        <item>KT 14-2  2-2</item>
+        <item>KT 14-2, 1-2</item>
+        <item>KT 14-2, 1-3</item>
+        <item>KT 14-2, 2-3</item>
+        <item>KT 14-2, 3-3</item>
+        <item>KT 15-2</item>
+        <item>KT 15-2, 1-2</item>
+        <item>KT 15-2, 1-3</item>
+        <item>KT 15-2, 2-2</item>
+        <item>KT 15-2, 2-3</item>
+        <item>KT 15-2, 3-3</item>
+
+        Tipas Kineziterapija
+        Metai 3
+
+        <item>KT 12-3</item>
+        <item>KT 12-3, 1-2</item>
+        <item>KT 12-3, 2-2</item>
+        <item>KT 13-3</item>
+        <item>KT 13-3, 1-2</item>
+        <item>KT 13-3, 2-2</item>
+
+        Tipas Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 1
+
+        <item>OP10-1</item>
+        <item>OP10-1, 1-2</item>
+        <item>OP10-1, 2-2</item>
+
+        Tipas Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 2
+
+        <item>OP9-2</item>
+        <item>OP9-2, 1-2</item>
+        <item>OP9-2, 2-2</item>
+
+        Tipas Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 3
+
+        <item>OP8-3</item>
+        <item>OP8-3, 1-3</item>
+        <item>OP8-3, 2-3</item>
+        <item>OP8-3, 3-3</item>
+
+        Tipas Socialinis darbas
+        Metai 1
+
+        <item>SD 16-1</item>
+        <item>SD 16-1, 1-2</item>
+        <item>SD 16-1, 2-2</item>
+        <item>SDs 1-1</item>
+        <item>SDs 1-1, 1-2</item>
+        <item>SDs 1-1, 2-2</item>
+
+        Tipas Socialinis darbas
+        Metai 2
+
+        <item>SD 14-2</item>
+        <item>SD 14-2, 1-2</item>
+        <item>SD 14-2, 2-2</item>
+        <item>SD 15-2</item>
+        <item>SD 15-2, 1-2</item>
+        <item>SD 15-2, 2-2</item>
+
+        Tipas Socialinis darbas
+        Metai 3
+
+        <item>SD 12-3</item>
+        <item>SD 12-3, 1-2</item>
+        <item>SD 12-3, 2-2</item>
+        <item>SD 13-3</item>
+        <item>SD 13-3, 1-2</item>
+        <item>SD 13-3, 2-2</item>
+
+        Tipas Socialinis darbas
+        Metai 4
+
+        <item>SDi 6-4</item>
+
+
+
+    </string-array>
+    <string-array name="grupes_SVMF_value">
+        <item>duck</item>
+        Tipas Bendrosios praktikos slauga
+        Metai 1
+
+        <item>68</item>
+        <item>69</item>
+        <item>71</item>
+        <item>70</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>77</item>
+        <item>76</item>
+        <item>78</item>
+        <item>79</item>
+        <item>188</item>
+        <item>184</item>
+        <item>183</item>
+        <item>186</item>
+        <item>187</item>
+        <item>185</item>
+
+        Tipas Bendrosios praktikos slauga
+        Metai 2
+
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+
+
+        Tipas Bendrosios praktikos slauga
+        Metai 3
+
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+
+        Tipas Bendrosios praktikos slauga
+        Metai 4
+
+        <item>150</item>
+        <item>151</item>
+        <item>152</item>
+        <item>153</item>
+        <item>154</item>
+        <item>155</item>
+
+        Tipas Dietetika
+        Metai 1
+
+        <item>100</item>
+        <item>177</item>
+        <item>176</item>
+        <item>160</item>
+        <item>161</item>
+        <item>162</item>
+
+        Tipas Dietetika
+        Metai 2
+
+        <item>141</item>
+        <item>171</item>
+        <item>170</item>
+        <item>173</item>
+        <item>175</item>
+        <item>174</item>
+
+        Tipas Dietetika
+        Metai 3
+
+        <item>172</item>
+        <item>182</item>
+
+        Tipas Grožio terapija
+        Metai 1
+
+        <item>123</item>
+        <item>124</item>
+        <item>126</item>
+        <item>125</item>
+        <item>127</item>
+        <item>128</item>
+        <item>25</item>
+        <item>26</item>
+        <item>28</item>
+        <item>27</item>
+        <item>29</item>
+        <item>30</item>
+
+        Tipas Grožio terapija
+        Metai 2
+
+        <item>37</item>
+        <item>38</item>
+        <item>119</item>
+        <item>39</item>
+        <item>120</item>
+        <item>121</item>
+        <item>31</item>
+        <item>32</item>
+        <item>34</item>
+        <item>33</item>
+        <item>35</item>
+        <item>36</item>
+
+        Tipas Grožio terapija
+        Metai 3
+
+        <item>111</item>
+        <item>112</item>
+        <item>166</item>
+        <item>113</item>
+        <item>167</item>
+        <item>168</item>
+        <item>114</item>
+        <item>115</item>
+        <item>163</item>
+        <item>116</item>
+        <item>164</item>
+        <item>165</item>
+
+        Tipas Kineziterapija
+        Metai 1
+
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+
+        Tipas Kineziterapija
+        Metai 2
+
+        <item>129</item>
+        <item>131</item>
+        <item>130</item>
+        <item>132</item>
+        <item>133</item>
+        <item>134</item>
+        <item>62</item>
+        <item>63</item>
+        <item>65</item>
+        <item>64</item>
+        <item>66</item>
+        <item>67</item>
+
+        Tipas Kineziterapija
+        Metai 3
+
+        <item>138</item>
+        <item>139</item>
+        <item>140</item>
+        <item>135</item>
+        <item>136</item>
+        <item>137</item>
+
+        Tipas Odontologinė priežiūra
+        Metai 1
+
+        <item>101</item>
+        <item>181</item>
+        <item>180</item>
+
+        Tipas Odontologinė priežiūra
+        Metai 2
+
+        <item>102</item>
+        <item>145</item>
+        <item>146</item>
+
+
+        Tipas Odontologinė priežiūra
+        Metai 3
+
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+
+        Tipas Socialinis darbas
+        Metai 1
+
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+
+        Tipas Socialinis darbas
+        Metai 2
+
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+
+        Tipas Socialinis darbas
+        Metai 3
+
+        <item>142</item>
+        <item>143</item>
+        <item>144</item>
+        <item>54</item>
+        <item>55</item>
+        <item>107</item>
+
+        Tipas Socialinis darbas
+        Metai 4
+
+        <item>159</item>
+    </string-array>
+    <string-array name="auditorijos_TF_str">
+        <item>--pasirinkti--</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103-komp.</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>120 Konferencijų salė</item>
+        <item>129- komp.</item>
+        <item>130-komp.</item>
+        <item>131-komp.</item>
+        <item>132-komp.</item>
+        <item>133-Statybos lab.</item>
+        <item>134-lab.</item>
+        <item>135-lab.</item>
+        <item>136-lab.</item>
+        <item>137-chem.lab.</item>
+        <item>139 auditorija</item>
+        <item>140 auditorija</item>
+        <item>141 auditorija</item>
+        <item>203 auditorija</item>
+        <item>204 auditorija</item>
+        <item>206 auditorija</item>
+        <item>208</item>
+        <item>212 salė</item>
+        <item>210</item>
+        <item>214</item>
+        <item>215</item>
+        <item>216 auditorija</item>
+        <item>219-komp.</item>
+        <item>220-komp.</item>
+        <item>223--IT</item>
+        <item>226-komp.</item>
+        <item>227-lab.</item>
+        <item>228 </item>
+        <item>231</item>
+        <item>232-komp.</item>
+        <item>233- komp.</item>
+        <item>234-GIS</item>
+        <item>235</item>
+        <item>237-komp.</item>
+        <item>238 auditorija</item>
+        <item>304</item>
+        <item>305</item>
+        <item>306</item>
+        <item>308 auditorija</item>
+        <item>309</item>
+        <item>310</item>
+        <item>311</item>
+        <item>313</item>
+        <item>315</item>
+        <item>318</item>
+        <item>319</item>
+        <item>320</item>
+        <item>322</item>
+        <item>323</item>
+        <item>324</item>
+        <item>325</item>
+        <item>326</item>
+        <item>328</item>
+        <item>329</item>
+        <item>330</item>
+        <item>331</item>
+        <item>332</item>
+        <item>333-334 VPMF</item>
+        <item>335</item>
+        <item>401 auditorija</item>
+        <item>Klaipėdos laivų remonto ir statybos mokykla, Statybininkų pr. 39</item>
+        <item>002</item>
+        <item>KU, JTF, 216 a.</item>
+        <item>115</item>
+        <item>336</item>
+        <item>Jaunystės 2</item>
+    </string-array>
+    <string-array name="auditorijos_TF_value">
+        <item>duck</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+    </string-array>
+    <string-array name="auditorijos_SMF_str">
+        <item>--pasirinkti--</item>
+        <item>2</item>
+        <item>3</item>
+        <item>7</item>
+        <item>9</item>
+        <item>11</item>
+        <item>126</item>
+        <item>207</item>
+        <item>211</item>
+        <item>216</item>
+        <item>302</item>
+        <item>304</item>
+        <item>306</item>
+        <item>307</item>
+        <item>308</item>
+        <item>309</item>
+        <item>310</item>
+        <item>311</item>
+        <item>312</item>
+        <item>315</item>
+        <item>317</item>
+        <item>402</item>
+        <item>405</item>
+        <item>406</item>
+        <item>407</item>
+        <item>408</item>
+        <item>410</item>
+        <item>411</item>
+        <item>412</item>
+        <item>409</item>
+        <item>209 VPMF</item>
+        <item>210 VPMF</item>
+        <item>216  (Jaunystės g. 2)</item>
+        <item>Debreceno g. 25</item>
+        <item>204</item>
+        <item>Biblioteka</item>
+        <item>417 (Jaunystės g. 2)</item>
+        <item>9.30 val.- Dariaus ir Girėno g. 8-  a. 26</item>
+        <item>Jaunystės g. 2 (salė- 4 aukštas)</item>
+        <item>14.00 val.- Bijūnų g. 17- 232 aud.</item>
+    </string-array>
+    <string-array name="auditorijos_SMF_value">
+        <item>duck</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+    </string-array>
+    <string-array name="auditorijos_SVMF_str">
+        <item>--pasirinkti--</item>
+        <item>Dariaus ir Girėno 8, 34a. </item>
+        <item>Dariaus ir Girėno 8, 36</item>
+        <item>Dariaus ir Girėno g. 8, 10a. </item>
+        <item>Dariaus ir Girėno g. 8, 11a. </item>
+        <item>Dariaus ir Girėno g. 8, 19a. </item>
+        <item>Dariaus ir Girėno g. 8, 23a. </item>
+        <item>Dariaus ir Girėno g. 8, 24a. </item>
+        <item>Dariaus ir Girėno g. 8, 29 a.</item>
+        <item>Gulbių g. 8, salė</item>
+        <item>Gulbių g.8, 1a. (masažas)</item>
+        <item>Gulbių g. 8, 2a. (fizioterapija)</item>
+        <item>Dariaus ir Girėno 8, 12a. </item>
+        <item>Dariaus ir Girėno g. 8, 13a. </item>
+        <item>Dariaus ir Girėno 8, 14a. </item>
+        <item>Dariaus ir Girėno 8, 17a. </item>
+        <item>Donelaičio 10, 2a. </item>
+        <item>Donelaičio g. 10, 3a. </item>
+        <item>Donelaičio 10, 4a. </item>
+        <item>Donelaičio g. 10, 11a. </item>
+        <item>Donelaičio g. 10, 12a. </item>
+        <item>Donelaičio g. 10, 13a. </item>
+        <item>Donelaičio g. 10, 16a. </item>
+        <item>Donelaičio g. 10, 19a. </item>
+        <item>Donelaičio g. 10, 21a. (vaiko slauga)</item>
+        <item>Dariaus ir Girėno g. 8, 3a. (foto studija)</item>
+        <item>Dariaus ir Girėno g. 8, 4a. (kūno priežiūros)</item>
+        <item>Dariaus ir Girėno g. 8, 4A a. (veido priežiūros)</item>
+        <item>Dariaus ir Girėno g. 8, 6a. </item>
+        <item>Gulbių g. 8, veido priežiūros laboratorija</item>
+        <item>Gulbių g. 8, manikiūro ir pedikiūro laboratorija</item>
+        <item>Gulbių g. 8, spa procedūros</item>
+        <item>Gulbių g. 8, spa procedūros (vychy)</item>
+        <item>Klaipėdos sutrikusio vystymosi kūdikių namai, Turistų g. 18</item>
+        <item>Taikos g. 76, Klaipėdos m. socialinės paramos centras</item>
+        <item>Naujakiemio g. 26, odontologijos klinika "Lela"</item>
+        <item>Dariaus ir Girėno 8, 26a. </item>
+        <item>Dariaus ir Girėno 8, 27a. </item>
+        <item>Klaipėdos universitetinė ligoninė, infekcinių ligų departamentas</item>
+        <item>Dariaus ir Girėno 8, 28a. </item>
+        <item>BĮŠVGC, Turgaus g. 22</item>
+        <item>Klaipėdos jūrininkų ligoninė, reabilitacijos skyrius</item>
+        <item>Klaipėdos universitetinė ligoninė, akušerijos departamentas</item>
+        <item>Palangos reabilitacinė ligoninė </item>
+        <item>Jaunystės g. 2, 317 a.</item>
+        <item>Jaunystės g.2, 309a. </item>
+        <item>Jaunystės g. 2, 314 </item>
+        <item>Jaunystės g. 2, 316 a.</item>
+        <item>Jaunystės g. 2, 313a. </item>
+        <item>Jaunystės g. 2, salė</item>
+        <item>Klaipėdos respublikinė ligoninė</item>
+        <item>Maisto chemijos laboratorija 137</item>
+        <item>TF (Bijūnų g. 10)  212 aud.</item>
+        <item>Jaunystės 2, 417 a. (informacinių technologijų)</item>
+        <item>Greitosios pagalbos stotis </item>
+        <item>Delfinų terapijos centras </item>
+        <item>Gulbių g.8, Bendrosios funkcinės diagnostikos laboratorija </item>
+        <item>Jaunystės g. 2, 310 a. </item>
+        <item>Jaunystės g. 2,  322 a.</item>
+        <item>Jaunystės g. 2, 324 a. </item>
+        <item>Ikiklinikinių studijų laboratorija, Gulbių g. 8</item>
+        <item>Klaipėdos universitetinė ligoninė </item>
+        <item>Jaunystės g. 2, 310 a.</item>
+        <item>Jaunystės 2, 412</item>
+    </string-array>
+    <string-array name="auditorijos_SVMF_value">
+        <item>duck</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+    </string-array>
 </resources>
