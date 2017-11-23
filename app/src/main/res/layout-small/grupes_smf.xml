@@ -65,18 +65,18 @@
         android:id="@+id/tipasGsmf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:text="Tipas"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/programGSMF"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <TextView
         android:id="@+id/metaiGsmf"
@@ -88,40 +88,41 @@
         android:layout_marginTop="8dp"
         android:text="Metai"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/yearGSMF"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <TextView
         android:id="@+id/grupeGsmf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:text="Grupė"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/groupGSMF"
-        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintBottom_toTopOf="@+id/ww"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <WebView
         android:id="@+id/ww"
-        android:layout_width="0dp"
+        android:layout_width="624dp"
         android:layout_height="392dp"
         android:layout_marginTop="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985">
+        app:layout_constraintVertical_bias="0.967">
 
 
     </WebView>
