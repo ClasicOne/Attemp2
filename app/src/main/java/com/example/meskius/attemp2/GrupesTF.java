@@ -171,6 +171,7 @@ public class GrupesTF extends AppCompatActivity {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 if (!grupesHashmap.get(spinnerText).equals("duck")){
                     selection("group",""+grupesHashmap.get(spinnerText)+"");
+                    ww.setVisibility(View.VISIBLE);
                     click();}
             }
 

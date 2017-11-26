@@ -5,7 +5,7 @@
     tools:context=".GrupesSVMF">
 
     <item android:id="@+id/action_refresh"
-        android:icon="@mipmap/ic_refresh_black_24dp"
+        android:icon="@mipmap/ic_refresh_white_24dp"
         android:title="Refresh"
         app:showAsAction="always">
     </item>
