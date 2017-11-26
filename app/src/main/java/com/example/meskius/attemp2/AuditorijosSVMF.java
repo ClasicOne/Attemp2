@@ -40,7 +40,7 @@ public class AuditorijosSVMF extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.auditorijos_svmf);
+        setContentView(R.layout.auditorijos_tf);
 
         Intent intent= getIntent();
         ww();
@@ -79,7 +79,9 @@ public class AuditorijosSVMF extends AppCompatActivity{
                // Log.e("Duck",spinnerText+" "+grupesHashmap.get(spinnerText));
                 if (!grupesHashmap.get(spinnerText).equals("duck") && !grupesHashmap.get(spinnerText).equals(null)){
                     selection("room",""+grupesHashmap.get(spinnerText)+"");
-                    click();}
+                    click();
+                    ww.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
@@ -130,6 +132,8 @@ public class AuditorijosSVMF extends AppCompatActivity{
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
@@ -146,9 +150,15 @@ public class AuditorijosSVMF extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/classrooms.php");
+                //ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/classrooms.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
     }
 }

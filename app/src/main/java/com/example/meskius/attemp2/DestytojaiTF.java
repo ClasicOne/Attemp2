@@ -50,7 +50,8 @@ public class DestytojaiTF extends AppCompatActivity {
                 if (!grupesHashmap.get(destytojai).equals("duck")){
                     selection("prof",""+grupesHashmap.get(destytojai)+"");
                     ww.setVisibility(View.VISIBLE);
-                    click();
+                    //click();
+
                 }
 
             }
