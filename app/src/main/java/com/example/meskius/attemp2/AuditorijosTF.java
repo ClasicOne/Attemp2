@@ -57,6 +57,7 @@ public class AuditorijosTF extends AppCompatActivity{
                 String spinnerText = adapterView.getSelectedItem().toString();
                 if (!grupesHashmap.get(spinnerText).equals("duck")) {
                     selection("room", "" + grupesHashmap.get(spinnerText) + "");
+                    ww.setVisibility(View.VISIBLE);
                     click();
                 }
             }
@@ -114,6 +115,8 @@ public class AuditorijosTF extends AppCompatActivity{
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
@@ -130,9 +133,15 @@ public class AuditorijosTF extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/classrooms.php");
+                //ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/classrooms.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
     }
 }
