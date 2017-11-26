@@ -16,6 +16,7 @@
         android:layout_x="50dp"
         android:layout_y="34dp"
         android:text="Tvarkaraščiai"
+        android:textColor="@android:color/background_dark"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/svmf"
@@ -92,7 +93,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tfsmaller" />
+        app:srcCompat="@drawable/tf_fixedtext" />
 
     <ImageButton
         android:id="@+id/smf"
