@@ -79,7 +79,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.245"
-        app:srcCompat="@drawable/smf2" />
+        app:srcCompat="@drawable/svm_small" />
 
     <ImageButton
         android:id="@+id/tf"
@@ -110,6 +110,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.785"
-        app:srcCompat="@drawable/svm_small" />
+        app:srcCompat="@drawable/smf2" />
 
 </android.support.constraint.ConstraintLayout>
