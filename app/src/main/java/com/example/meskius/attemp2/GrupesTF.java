@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,11 +47,11 @@ public class GrupesTF extends AppCompatActivity {
         setContentView(R.layout.grupes_tf);
         text=(TextView)findViewById(R.id.text);
         Intent intent= getIntent();
-        final Spinner programID=(Spinner)findViewById(R.id.programGSMF);
-        final Spinner metaiID = (Spinner)findViewById(R.id.yearGSMF);
-        final Spinner grupeID = (Spinner)findViewById(R.id.groupGSMF);
-        final TextView grupe = (TextView)findViewById(R.id.group);
-        final TextView metai =(TextView) findViewById(R.id.year);
+        final Spinner programID=(Spinner)findViewById(R.id.program);
+        final Spinner metaiID = (Spinner)findViewById(R.id.year);
+        final Spinner grupeID = (Spinner)findViewById(R.id.group);
+        final TextView grupe = (TextView)findViewById(R.id.group_text);
+        final TextView metai =(TextView) findViewById(R.id.year_text);
         //<------------------------- Deklaruojamas Hashmap
         final HashMap<String,String> grupesHashmap = new  HashMap<>();
         String[] grupes_str = getResources().getStringArray(R.array.grupes_TF_str);

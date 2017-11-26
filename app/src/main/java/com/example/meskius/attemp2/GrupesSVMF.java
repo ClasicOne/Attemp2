@@ -1,5 +1,6 @@
 package com.example.meskius.attemp2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -73,13 +74,13 @@ public class GrupesSVMF extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.grupes_svmf);
+        setContentView(R.layout.grupes_smf);
         wwShit();
-        final Spinner program = (Spinner) findViewById(R.id.programGSMF);
-        final Spinner metai = (Spinner) findViewById(R.id.yearGSMF);
-        final Spinner grupe = (Spinner) findViewById(R.id.groupGSMF);
-        final TextView metaiText = (TextView) findViewById(R.id.metaiGsmf);
-        final TextView grupeText = (TextView) findViewById(R.id.grupeGsmf);
+        final Spinner program = (Spinner) findViewById(R.id.program);
+        final Spinner metai = (Spinner) findViewById(R.id.year);
+        final Spinner grupe = (Spinner) findViewById(R.id.group);
+        final TextView metaiText = (TextView) findViewById(R.id.year_text);
+        final TextView grupeText = (TextView) findViewById(R.id.group_text);
         //<------------------------- Deklaruojamas Hashmap
         final HashMap<String,String> grupesHashmap = new  HashMap<>();
         String[] grupes_str = getResources().getStringArray(R.array.grupes_SVMF_str);
@@ -91,10 +92,10 @@ public class GrupesSVMF extends AppCompatActivity {
         //<-------------------------
 
         // Paslepti spinner kuriu nereikia
-        metai.setVisibility(View.GONE);
-        grupe.setVisibility(View.GONE);
-        metaiText.setVisibility(View.GONE);
-        grupeText.setVisibility(View.GONE);
+       /* metai.setVisibility(View.INVISIBLE);
+        grupe.setVisibility(View.INVISIBLE);
+        metaiText.setVisibility(View.INVISIBLE);
+        grupeText.setVisibility(View.INVISIBLE);*/
 
         spinner(programText, program);
         // spiiner paspaudimas tipas
@@ -128,9 +129,12 @@ public class GrupesSVMF extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
+                Log.e("Duck",""+spinnerText+" "+grupesHashmap.get(spinnerText));
                 if (!grupesHashmap.get(spinnerText).equals("duck")){
                 selection("group",""+grupesHashmap.get(spinnerText)+"");
-                click();}
+                click();
+                ww.setVisibility(View.VISIBLE);
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -439,6 +443,8 @@ public class GrupesSVMF extends AppCompatActivity {
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }
     // Pasirinkimo grupes ww js
     public void selection(String pasirinkimas, String val) {
@@ -463,10 +469,15 @@ public class GrupesSVMF extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
+                //ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
-
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
+    }
 }

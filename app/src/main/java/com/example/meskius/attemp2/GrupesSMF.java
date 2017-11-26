@@ -1,5 +1,6 @@
 package com.example.meskius.attemp2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -41,14 +42,14 @@ public class GrupesSMF extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.grupes_smf);
+        setContentView(R.layout.grupes_tf);
         wwShit();
 
-        final Spinner program =(Spinner)findViewById(R.id.programGSMF);
-        final Spinner metai = (Spinner)findViewById(R.id.yearGSMF);
-        final Spinner grupe = (Spinner)findViewById(R.id.groupGSMF);
-        final TextView metaiText =(TextView) findViewById(R.id.metaiGsmf);
-        final TextView grupeText = (TextView)findViewById(R.id.grupeGsmf);
+        final Spinner program =(Spinner)findViewById(R.id.program);
+        final Spinner metai = (Spinner)findViewById(R.id.year);
+        final Spinner grupe = (Spinner)findViewById(R.id.group);
+        final TextView metaiText =(TextView) findViewById(R.id.year_text);
+        final TextView grupeText = (TextView)findViewById(R.id.group_text);
         //<------------------------- Deklaruojamas Hashmap
         final HashMap<String,String> grupesHashmap = new  HashMap<>();
         String[] grupes_str = getResources().getStringArray(R.array.grupes_SMF_str);
@@ -94,7 +95,9 @@ public class GrupesSMF extends AppCompatActivity {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 if (!grupesHashmap.get(spinnerText).equals("duck")){
                     selection("group",""+grupesHashmap.get(spinnerText)+"");
-                    click();}
+                    click();
+                    ww.setVisibility(View.VISIBLE);
+                }
 
             }
 
@@ -229,6 +232,8 @@ public class GrupesSMF extends AppCompatActivity {
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }
     public void selection( String pasirinkimas, String val) {
 
@@ -250,9 +255,15 @@ public class GrupesSMF extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/groups.php");
+                //ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/groups.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
     }
 }
