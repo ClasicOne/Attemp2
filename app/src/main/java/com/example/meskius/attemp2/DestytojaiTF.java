@@ -49,6 +49,7 @@ public class DestytojaiTF extends AppCompatActivity {
                 String destytojai = adapterView.getSelectedItem().toString();
                 if (!grupesHashmap.get(destytojai).equals("duck")){
                     selection("prof",""+grupesHashmap.get(destytojai)+"");
+                    ww.setVisibility(View.VISIBLE);
                     click();
                 }
 
@@ -75,6 +76,7 @@ public class DestytojaiTF extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 hideD();
                 //ww.loadUrl("javascript:$(document.querySelector(\".tableMain\")).hide()");
+
             }
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
@@ -98,9 +100,12 @@ public class DestytojaiTF extends AppCompatActivity {
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }public void selectionD( String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
+
 
     }
     @Override
@@ -126,9 +131,15 @@ public class DestytojaiTF extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/prof.php");
+                //ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/prof.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
     }
 }

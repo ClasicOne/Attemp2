@@ -232,6 +232,8 @@ public class GrupesTF extends AppCompatActivity {
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }
     public void selection( String pasirinkimas, String val) {
 
@@ -253,9 +255,14 @@ public class GrupesTF extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_refresh:
-                ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
     }
 }
