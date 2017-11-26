@@ -56,7 +56,9 @@ public class DestytojaiSMF extends AppCompatActivity{
 
                 if (!grupesHashmap.get(destytojai).equals("duck")){
                     selection("prof",""+grupesHashmap.get(destytojai)+"");
-                    click();}
+                    click();
+                    ww.setVisibility(View.VISIBLE);
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -101,6 +103,8 @@ public class DestytojaiSMF extends AppCompatActivity{
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
     }public void selectionD( String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
@@ -131,8 +135,14 @@ public class DestytojaiSMF extends AppCompatActivity{
         switch (item.getItemId()){
             case R.id.action_refresh:
                 ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/prof.php");
+                restartActivity();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void restartActivity(){
+        Intent mIntent = getIntent();
+        finish();
+        startActivity(mIntent);
     }
 }
