@@ -37,7 +37,7 @@ public class DestytojaiSMF extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.destytojai_smf);
+        setContentView(R.layout.destytojai_tf);
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
         spinner(getResources().getStringArray(R.array.destytojai_SMF_str),profID);
@@ -56,7 +56,7 @@ public class DestytojaiSMF extends AppCompatActivity{
 
                 if (!grupesHashmap.get(destytojai).equals("duck")){
                     selection("prof",""+grupesHashmap.get(destytojai)+"");
-                    click();
+                   //click();
                     ww.setVisibility(View.VISIBLE);
                 }
             }
