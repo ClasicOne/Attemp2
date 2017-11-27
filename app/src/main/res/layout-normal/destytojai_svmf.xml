@@ -28,7 +28,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="Pavarde, Vardas"
+        android:text="Pavardė, Vardas"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/profID"
         app:layout_constraintHorizontal_bias="0.498"

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Sukurtas: \n Klaipėdos valstybinės kolegijos studentu \n Džiugo Ramančionio\n Daugvydo Ringio\n I12-2"
+        android:text="Sukurtas: \n Klaipėdos valstybinės kolegijos studentų: \n Džiugo Ramančionio\n Daugvydo Ringio\n I12-2"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
