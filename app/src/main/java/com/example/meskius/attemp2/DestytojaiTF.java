@@ -1,9 +1,14 @@
 package com.example.meskius.attemp2;
 
+import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.util.TimeUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +23,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.sql.Time;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Meskius on 10/21/2017.
@@ -27,6 +45,8 @@ import java.util.HashMap;
 public class DestytojaiTF extends AppCompatActivity {
     WebView ww;
 
+    String[] value = null;
+    String[] prof = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,14 +54,25 @@ public class DestytojaiTF extends AppCompatActivity {
         wwShit();
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        //<------------------------- Deklaruojamas Hashmap
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                update();
+            }}, (Calendar.getInstance().getTimeInMillis()+1000)-Calendar.getInstance().getTimeInMillis());
+
+
+
+        //<---------- Deklaruojamas Hashmap --------
         final HashMap<String,String> grupesHashmap = new  HashMap<>();
-        String[] destytojai_str = getResources().getStringArray(R.array.destytojai_TF_str);
-        String[] destytojai_value = getResources().getStringArray(R.array.destytojai_TF_value);
+        final String[] destytojai_value= getResources().getStringArray(R.array.destytojai_TF_value);
+        final String[] destytojai_str = getResources().getStringArray(R.array.destytojai_TF_str);
+
         for(int i = 0;i<destytojai_str.length; i++)
             grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
         //<-------------------------
-        spinner(getResources().getStringArray(R.array.destytojai_TF_str),profID);
+
+        spinner(destytojai_str,profID);
 
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -51,14 +82,38 @@ public class DestytojaiTF extends AppCompatActivity {
                     selection("prof",""+grupesHashmap.get(destytojai)+"");
                     ww.setVisibility(View.VISIBLE);
                     //click();
-
                 }
+
 
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Log.e("Duck",""+value.length +"   "+ destytojai_str.length);
+                if(value.length-1 != destytojai_str.length){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            int a =0;
+                            while (true) {
+                                Toast.makeText(DestytojaiTF.this, "Reikia atnaujinimo\nkreipkitės į Džiuga Ramančioni", Toast.LENGTH_LONG).show();
+                                if (a==49)
+                                    break;
+                                a++;
+                            }
+                        }
+                    });
+
+                }
+                Log.e("Duck","as");
+            }        }, (Calendar.getInstance().getTimeInMillis()+2000)-Calendar.getInstance().getTimeInMillis());
+
+
+
     }
 
     private void wwShit() {
@@ -87,7 +142,57 @@ public class DestytojaiTF extends AppCompatActivity {
             }
         });
     }
+    public  void update() {
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                try {
+                    String el="";
+                    String temp;
+                    String[] array;
+                    Document doc = Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                    Elements elements = doc.select("select#prof option");
+                    StringBuilder builder = new StringBuilder();
+                    for (Element things : elements)
+                        builder.append(things);
+                    el = builder.toString();
+                    temp =el.replaceAll("<option","")
+                            .replaceAll("/option>","")
+                            .replaceAll("extra_attribute","")
+                            .replaceAll("disabled value=\"","")
+                            .replaceAll("[{{}}]","")
+                            .replaceAll("\" selected>--pasirinkti-- value=\"101\" >- -","")
+                            .replaceAll("value=\"","")
+                            .replaceAll("\" selected>","")
+                            .replaceAll("\" >","_ ")
+                            .replaceAll("<",":");
+                    array = temp.split(":");
+                    value = new String[array.length];
+                    prof = new String[array.length];
+                    int a=0;
+                    String[] d1 ;
+                    for (int i=0;i<array.length;i++){
+                        //Log.i("Duck",""+array[i]);
+                        for (String retval: array[i].split("_")){
+                            if (a==0){
+                                prof[i] = retval;
+                                a++;}
+                            else {
+                                value[i] = retval;
+                                a=0;
+                            }
+                        }
+                        value[0]="duck";
+                       // Log.i("Duck","Value :"+ value[i]+ "  Prof : " + prof[i] );
+                    }
+                }catch (Exception e){
+                    Log.e("Duck",""+ e.getMessage()+":" );
+                    e.printStackTrace();
 
+                }
+            }
+        }).start();
+    }
     public void hideD(){
        //ww.loadUrl("javascript:$(document.querySelector(\".hdrTable\")).hide()");
         ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
@@ -101,8 +206,8 @@ public class DestytojaiTF extends AppCompatActivity {
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
         ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[2]).hide()");
     }public void selectionD( String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");

@@ -118,8 +118,8 @@ public class AuditorijosSMF extends AppCompatActivity{
         ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
         ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
         ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
+        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[2]).hide()");
     }
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
