@@ -1,5 +1,131 @@
 <resources>
     <string name="app_name">Tvarkaraštis</string>
+    <string-array name="G_TF_IST_1">
+        Tipas IST
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>AT i 40-1</item>
+        <item>EA i 33-1</item>
+        <item>EA i 33-1, 1 p.</item>
+        <item>EA i 33-1, 2 p.</item>
+        <item>IN i 3-1</item>
+        <item>MCH i 19-1</item>
+        <item>MT i 16-1</item>
+        <item>MT i 16-1, 1 p.</item>
+        <item>MT i 16-1, 2 p.</item>
+        <item>S i 39-1</item>
+        <item>S i 39-1, 1 p.</item>
+        <item>S i 39-1, 2 p.</item>
+        <item>S i 39-1, 3 p.</item>
+        <item>TL i 16-1</item>
+    </string-array>
+    <string-array name="G_TF_IST_2">
+        Tipas IST
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>ATE i 38-2</item>
+        <item>EA i 31-2</item>
+        <item>MCH i 17-2</item>
+        <item>MT i 14-2</item>
+        <item>S i 37-2</item>
+        <item>S i 37-2, 1 p.</item>
+        <item>S i 37-2, 2 p.</item>
+        <item>T i 14-2</item>
+    </string-array>
+    <string-array name="G_TF_IST_3">
+        Tipas IST
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>ATE i 36-3</item>
+        <item>EA i 29-3</item>
+        <item>GRV - 3</item>
+        <item>MCH i 15-3</item>
+        <item>MT i 12-3</item>
+        <item>S i 35-3</item>
+        <item>T i 12-3</item>
+    </string-array>
+    <string-array name="G_TF_IST_4">
+        Tipas IST
+        Metai 4
+        <item>--pasirinkti--</item>
+        <item>ATE i 34-4</item>
+        <item>EA i 27-4</item>
+        <item>MCH i 13-4</item>
+        <item>MT i 10-4</item>
+        <item>MT i 10-4, 1 p.</item>
+        <item>MT i 10-4, 2 p.</item>
+        <item>S i 33-4</item>
+        <item>T i 10-4</item>
+    </string-array>
+    <string-array name="G_TF_NL_1">
+        Tipas NL
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>AT 39-1</item>
+        <item>AT 39-1, 2 p. </item>
+        <item>AT 39-1, 3 p. </item>
+        <item>AT 39-1,1 p. </item>
+        <item>EA 32-1</item>
+        <item>EA 32-1, 1 p.</item>
+        <item>EA 32-1, 2 p.</item>
+        <item>G 21-1</item>
+        <item>I 13-1</item>
+        <item>I 13-1, 1 p.</item>
+        <item>I 13-1, 2 p.</item>
+        <item>IN 2-1</item>
+        <item>MCH 18-1</item>
+        <item>MT 15-1</item>
+        <item>MT 15-1, 1 p.</item>
+        <item>MT 15-1, 2 p.</item>
+        <item>S 38-1</item>
+        <item>S 38-1, 1 p.</item>
+        <item>S 38-1, 2 p.</item>
+        <item>TL 15-1</item>
+    </string-array>
+    <string-array name="G_TF_NL_2">
+        Tipas NL
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>ATE 37-2</item>
+        <item>ATE 37-2, 1 p.</item>
+        <item>ATE 37-2, 2 p.</item>
+        <item>EA 30-2</item>
+        <item>EA 30-2, 1 p.</item>
+        <item>EA 30-2, 2 p.</item>
+        <item>G 20-2</item>
+        <item>I 12-2</item>
+        <item>IN 1-2</item>
+        <item>MCH 16-2</item>
+        <item>MT 13-2</item>
+        <item>MT 13-2, 1 p.</item>
+        <item>MT 13-2, 2 p.</item>
+        <item>S 36-2</item>
+        <item>S 36-2, 1 p.</item>
+        <item>S 36-2, 2 p.</item>
+        <item>T 13-2</item>
+    </string-array>
+    <string-array name="G_TF_NL_3">
+        Tipas NL
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>ATE 35-3</item>
+        <item>ATE 35-3, 1 p.</item>
+        <item>ATE 35-3, 2 p.</item>
+        <item>EA 28-3</item>
+        <item>EA 28-3, 1 p.</item>
+        <item>EA 28-3, 2 p.</item>
+        <item>G 19-3</item>
+        <item>I 11-3</item>
+        <item>KD 8-3</item>
+        <item>MCH 14-3</item>
+        <item>MT 11-3</item>
+        <item>MT 11-3, 1 p.</item>
+        <item>MT 11-3, 2 p.</item>
+        <item>S 34-3</item>
+        <item>S 34-3, 1 p.</item>
+        <item>S 34-3, 2 p.</item>
+        <item>T 11-3</item>
+    </string-array>
     <string-array name="grupes_TF_str">
         <item>--pasirinkti--</item>
 

@@ -3,6 +3,7 @@ package com.example.meskius.attemp2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
@@ -24,6 +25,14 @@ public class Fakultetai extends AppCompatActivity {
         ImageButton smf=(ImageButton) findViewById(R.id.smf);
         ImageButton svsmf=(ImageButton) findViewById(R.id.svmf);
         TextView about =(TextView) findViewById(R.id.about);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Fakultetai.this,Renginiai.class);
+                startActivity(intent);
+            }
+        });
 
         tf.setOnClickListener(new View.OnClickListener() {
             @Override

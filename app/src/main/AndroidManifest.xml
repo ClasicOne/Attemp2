@@ -102,6 +102,12 @@
             android:parentActivityName=".SVMFMenu"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".Renginiai"
+            android:label = "Kalendorius"
+            android:parentActivityName=".Fakultetai"
+            android:screenOrientation="portrait">
+        </activity>
 
     </application>
 

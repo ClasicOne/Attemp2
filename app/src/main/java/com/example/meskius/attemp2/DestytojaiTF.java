@@ -93,7 +93,8 @@ public class DestytojaiTF extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Log.e("Duck",""+value.length +"   "+ destytojai_str.length);
+               // Log.e("Duck",""+value.length +"   "+ destytojai_str.length);
+                if (value!=null)
                 if(value.length-1 != destytojai_str.length){
                     runOnUiThread(new Runnable() {
                         @Override
@@ -109,8 +110,8 @@ public class DestytojaiTF extends AppCompatActivity {
                     });
 
                 }
-                Log.e("Duck","as");
-            }        }, (Calendar.getInstance().getTimeInMillis()+2000)-Calendar.getInstance().getTimeInMillis());
+                //Log.e("Duck","as");
+            }        }, (Calendar.getInstance().getTimeInMillis()+5000)-Calendar.getInstance().getTimeInMillis());
 
 
 
@@ -233,6 +234,7 @@ public class DestytojaiTF extends AppCompatActivity {
         // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
         ww.loadUrl("javascript:viewWeek();");
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){

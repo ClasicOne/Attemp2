@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,20 +27,12 @@ import java.util.HashMap;
 public class GrupesTF extends AppCompatActivity {
     TextView text;
     WebView ww;
-   // <-------------------------
+   //-------------------------
     String programSpinnerText;
     String yearSpinnerText;
     String programTipas[] = {"--pasirinkti--", "IŠT","NL"};
     String yearMetaiNL[] = {"--pasirinkti--", "1","2","3"};
     String yearMetaiIST[] = {"--pasirinkti--", "1","2","3","4"};
-    String groupGrupeNL1[] = {"--pasirinkti--", "AT 39-1", "AT 39-1, 2 p. ", "AT 39-1, 3 p. ", "AT 39-1,1 p. ", "EA 32-1", "EA 32-1, 1 p.", "EA 32-1, 2 p.", "G 21-1", "I 13-1", "I 13-1, 1 p.", "I 13-1, 2 p.", "IN 2-1", "MCH 18-1", "MT 15-1", "MT 15-1, 1 p.", "MT 15-1, 2 p.", "S 38-1", "S 38-1, 1 p.", "S 38-1, 2 p.", "TL 15-1"};
-    String groupGrupeNL2[] = {"--pasirinkti--", "ATE 37-2", "ATE 37-2, 1 p.", "ATE 37-2, 2 p.", "EA 30-2", "EA 30-2, 1 p.", "EA 30-2, 2 p.", "G 20-2", "I 12-2", "IN 1-2", "MCH 16-2", "MT 13-2", "MT 13-2, 1 p.", "MT 13-2, 2 p.", "S 36-2", "S 36-2, 1 p.", "S 36-2, 2 p.", "T 13-2"};
-    String groupGrupeNL3[] = {"--pasirinkti--", "ATE 35-3", "ATE 35-3, 1 p.", "ATE 35-3, 2 p.", "EA 28-3", "EA 28-3, 1 p.", "EA 28-3, 2 p.", "G 19-3", "I 11-3", "KD 8-3", "MCH 14-3", "MT 11-3", "MT 11-3, 1 p.", "MT 11-3, 2 p.", "S 34-3", "S 34-3, 1 p.", "S 34-3, 2 p.", "T 11-3"};
-    String groupGrupeIST1[] = {"--pasirinkti--", "AT i 40-1", "EA i 33-1", "EA i 33-1, 1 p.", "EA i 33-1, 2 p.", "IN i 3-1", "MCH i 19-1", "MT i 16-1", "MT i 16-1, 1 p.", "MT i 16-1, 2 p.", "S i 39-1", "S i 39-1, 1 p.", "S i 39-1, 2 p.", "S i 39-1, 3 p.", "TL i 16-1"};
-    String groupGrupeIST2[] = {"--pasirinkti--", "ATE i 38-2", "EA i 31-2", "MCH i 17-2", "MT i 14-2", "S i 37-2", "T i 14-2"};
-    String groupGrupeIST3[] = {"--pasirinkti--", "ATE i 36-3", "EA i 29-3", "GRV - 3", "MCH i 15-3", "MT i 12-3", "S i 35-3", "T i 12-3"};
-    String groupGrupeIST4[] = {"--pasirinkti--", "ATE i 34-4", "EA i 27-4", "MCH i 13-4", "MT i 10-4", "MT i 10-4, 1 p.", "MT i 10-4, 2 p.", "S i 33-4", "T i 10-4"};
-
     //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +50,9 @@ public class GrupesTF extends AppCompatActivity {
         String[] grupes_str = getResources().getStringArray(R.array.grupes_TF_str);
         String[] grupes_values = getResources().getStringArray(R.array.grupes_TF_value);
         //Log.e("Duck",""+grupes_values.length+" "+ grupes_str.length );
-        for(int i = 0;i<grupes_str.length; i++)
-           // Log.i("Duck",grupes_str[i]+" "+grupes_values[i]);
-            grupesHashmap.put(grupes_str[i], grupes_values[i]);
+        for(int i = 0;i<grupes_str.length; i++){
+            Log.i("Duck",grupes_str[i]+" "+grupes_values[i]);
+            grupesHashmap.put(grupes_str[i], grupes_values[i]);}
         //<-------------------------
 
         metaiID.setVisibility(View.GONE);
@@ -104,27 +97,28 @@ public class GrupesTF extends AppCompatActivity {
                 if(programSpinnerText.indexOf("IŠT")!=-1)
                 switch (yearSpinnerText){
                     case "1":
-                        spinner(groupGrupeIST1,grupeID);
+                        spinner( getResources().getStringArray(R.array.G_TF_IST_1),grupeID);
                         selection("year","1");
                         selection("branch","8");
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "2":
-                        spinner(groupGrupeIST2,grupeID);
+                        spinner(getResources().getStringArray(R.array.G_TF_IST_2),grupeID);
                         selection("year","2");
                         selection("branch","5");
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "3":
-                        spinner(groupGrupeIST3,grupeID);
+                        spinner(getResources().getStringArray(R.array.G_TF_IST_3),grupeID);
                         selection("year","3");
+                        selection("branch","4");
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "4":
-                        spinner(groupGrupeIST4,grupeID);
+                        spinner(getResources().getStringArray(R.array.G_TF_IST_4),grupeID);
                         selection("year","4");
                         selection("branch","7");
                         grupe.setVisibility(View.VISIBLE);
@@ -134,21 +128,21 @@ public class GrupesTF extends AppCompatActivity {
 
                 }else switch (yearSpinnerText){
                     case "1":
-                        spinner(groupGrupeNL1,grupeID);
+                        spinner(getResources().getStringArray(R.array.G_TF_NL_1),grupeID);
                         selection("year","1");
                         selection("branch","1");
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "2":
-                        spinner(groupGrupeNL2,grupeID);
+                        spinner(getResources().getStringArray(R.array.G_TF_NL_2),grupeID);
                         selection("year","2");
                         selection("branch","2");
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "3":
-                        spinner(groupGrupeNL3,grupeID);
+                        spinner(getResources().getStringArray(R.array.G_TF_NL_3),grupeID);
                         selection("year","3");
                         selection("branch","3");
                         grupe.setVisibility(View.VISIBLE);
@@ -168,6 +162,7 @@ public class GrupesTF extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
+                Log.e("Duck",""+spinnerText+ ":"+grupesHashmap.get(spinnerText) );
                 if (!grupesHashmap.get(spinnerText).equals("duck")){
                     selection("group",""+grupesHashmap.get(spinnerText)+"");
                     ww.setVisibility(View.VISIBLE);
