@@ -1,14 +1,11 @@
 package com.example.meskius.attemp2;
 
-import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
-import android.os.Looper;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.util.TimeUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,15 +25,14 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
-import java.io.StringReader;
-import java.sql.Time;
+import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * Created by Meskius on 10/21/2017.
@@ -44,9 +40,11 @@ import java.util.concurrent.TimeUnit;
 
 public class DestytojaiTF extends AppCompatActivity {
     WebView ww;
-
+    DBHandler dbHandler;
     String[] value = null;
     String[] prof = null;
+    String str = "",valuen = "";
+    Set<String> setStr = new HashSet<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +53,17 @@ public class DestytojaiTF extends AppCompatActivity {
         Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
         Timer timer = new Timer();
+
+
+
+
+
+
+
+
+
+
+
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -71,6 +80,14 @@ public class DestytojaiTF extends AppCompatActivity {
         for(int i = 0;i<destytojai_str.length; i++)
             grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
         //<-------------------------
+
+
+        dbHandler = new DBHandler(this, null, null,1);
+
+
+
+
+
 
         spinner(destytojai_str,profID);
 
@@ -93,30 +110,65 @@ public class DestytojaiTF extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-               // Log.e("Duck",""+value.length +"   "+ destytojai_str.length);
-                if (value!=null)
-                if(value.length-1 != destytojai_str.length){
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            int a =0;
-                            while (true) {
-                                Toast.makeText(DestytojaiTF.this, "Reikia atnaujinimo\nkreipkitės į Džiuga Ramančioni", Toast.LENGTH_LONG).show();
-                                if (a==49)
-                                    break;
-                                a++;
-                            }
-                        }
-                    });
 
+                Log.i("Database","dump : "+ str);
+                Log.i("Database","dump : "+ valuen);
+                Log.i("Database","dump : end");
+                Set<String> strSet1 = new HashSet<>(Arrays.asList(destytojai_str));
+                if(setStr.containsAll(strSet1)){
+                    Log.i("Database","dump : "+ str);
+                    Log.i("Database","dump : "+ valuen);
+                    Log.i("Database","dump : end");
+                }else{
+                    // Isvalo db
+                    dbHandler.deleteDB();
+                    dbHandler.createTable();
+                    dbHandler.deleteRow("null");
+                    // Ideda Destytojus ir values i db
+                    for (int i=0;i<prof.length;i++){
+                        dbHandler.addProduct(prof[i].toString(), value[i].toString());
+                    }
                 }
-                //Log.e("Duck","as");
+                try {
+                    getData();
+                    //str.replaceAll("null","");
+                    str.replaceAll(" - - "," ");
+                    valuen.replaceAll(" 101 "," ");
+                   // valuen.replaceAll("null","");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+                // Isvalo db
+                //dbHandler.deleteDB();
+                //dbHandler.createTable();
+
+                // Ideda Destytojus ir values i db
+               /* for (int i=0;i<prof.length;i++){
+                    dbHandler.addProduct(prof[i].toString(), value[i].toString());
+                }*/
+
+                //  String dbString = dbHandler.dbToString().toString();
+
             }        }, (Calendar.getInstance().getTimeInMillis()+5000)-Calendar.getInstance().getTimeInMillis());
 
 
 
     }
+    public void getData(){
 
+        int i=0;
+        Cursor cursor = dbHandler.getData();
+        for (cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){
+            if (cursor.getString(cursor.getColumnIndex("str")) != "null"){
+            str += cursor.getString(cursor.getColumnIndex("str"));
+            valuen += cursor.getString(cursor.getColumnIndex("value"));
+            }
+            setStr.add(str);
+        }
+
+
+    }
     private void wwShit() {
         ww = (WebView)findViewById(R.id.wwID);
         WebSettings webSettings = ww.getSettings();
