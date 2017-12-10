@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".GrupesSVMF">
+    tools:context="lt.kvk.i12_2.tvakarastis.GrupesSVMF">
 
     <item android:id="@+id/action_refresh"
         android:icon="@mipmap/ic_refresh_white_24dp"

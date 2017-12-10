@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.meskius.attemp2">
+    package="lt.kvk.i12_2.tvakarastis">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <supports-screens
         android:normalScreens="true"
@@ -15,25 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".GrupesTF"
+            android:name="lt.kvk.i12_2.tvakarastis.GrupesTF"
             android:label="TF Grupes"
-            android:parentActivityName=".TFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".DestytojaiTF"
+            android:name="lt.kvk.i12_2.tvakarastis.DestytojaiTF"
             android:label="TF Destytojai"
-            android:parentActivityName=".TFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".AuditorijosTF"
+            android:name="lt.kvk.i12_2.tvakarastis.AuditorijosTF"
             android:label="TF Auditorijos"
-            android:parentActivityName=".TFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Fakultetai"
+            android:name="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
@@ -43,69 +43,69 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".About"
-            android:parentActivityName=".Fakultetai"
+        <activity android:name="lt.kvk.i12_2.tvakarastis.About"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
 
         </activity>
         <activity
-            android:name=".TFMenu"
+            android:name="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:label="TF"
-            android:parentActivityName=".Fakultetai"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".SMFMenu"
+            android:name="lt.kvk.i12_2.tvakarastis.SMFMenu"
             android:label="SMF"
-            android:parentActivityName=".Fakultetai"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".GrupesSMF"
+            android:name="lt.kvk.i12_2.tvakarastis.GrupesSMF"
             android:label="SMF Grupes"
-            android:parentActivityName=".SMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".SVMFMenu"
+            android:name="lt.kvk.i12_2.tvakarastis.SVMFMenu"
             android:label="SVMF"
-            android:parentActivityName=".Fakultetai"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".GrupesSVMF"
+            android:name="lt.kvk.i12_2.tvakarastis.GrupesSVMF"
             android:label="SVMF Grupes"
-            android:parentActivityName=".SVMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SVMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".DestytojaiSVMF"
+            android:name="lt.kvk.i12_2.tvakarastis.DestytojaiSVMF"
             android:label="SVMF Destytojai"
-            android:parentActivityName=".SVMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SVMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".DestytojaiSMF"
+            android:name="lt.kvk.i12_2.tvakarastis.DestytojaiSMF"
             android:label="SMF Destytojai"
-            android:parentActivityName=".SMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".AuditorijosSMF"
+            android:name="lt.kvk.i12_2.tvakarastis.AuditorijosSMF"
             android:label="SMF Auditorijos"
-            android:parentActivityName=".SMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".AuditorijosSVMF"
+            android:name="lt.kvk.i12_2.tvakarastis.AuditorijosSVMF"
             android:label="SVMF Auditorijos"
-            android:parentActivityName=".SVMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SVMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Renginiai"
+            android:name="lt.kvk.i12_2.tvakarastis.Renginiai"
             android:label = "Kalendorius"
-            android:parentActivityName=".Fakultetai"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
         </activity>
 

@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
-        applicationId "com.example.meskius.attemp2"
+        applicationId "lt.kvk.i12_2.tvakarastis"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1

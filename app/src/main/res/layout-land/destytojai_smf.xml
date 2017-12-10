@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.meskius.attemp2.DestytojaiSMF"
+    tools:context="com.example.meskius.attemp2.lt.example.meskius.attemp2.DestytojaiSMF"
     android:background="@drawable/mizedblue">
 
     <Spinner
