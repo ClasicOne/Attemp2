@@ -16,13 +16,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.GrupesTF"
-            android:label="TF Grupes"
+            android:label="TF Grupės"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.DestytojaiTF"
-            android:label="TF Destytojai"
+            android:label="TF Dėstytojai"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:screenOrientation="portrait">
         </activity>
@@ -35,8 +35,7 @@
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -62,7 +61,7 @@
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.GrupesSMF"
-            android:label="SMF Grupes"
+            android:label="SMF Grupės"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
             android:screenOrientation="portrait">
         </activity>
@@ -74,19 +73,19 @@
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.GrupesSVMF"
-            android:label="SVMF Grupes"
+            android:label="SVMF Grupės"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.SVMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.DestytojaiSVMF"
-            android:label="SVMF Destytojai"
+            android:label="SVMF Dėstytojai"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.SVMFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.DestytojaiSMF"
-            android:label="SMF Destytojai"
+            android:label="SMF Dėstytojai"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
             android:screenOrientation="portrait">
         </activity>

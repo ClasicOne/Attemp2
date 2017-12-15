@@ -62,12 +62,9 @@ public class AuditorijosTF extends AppCompatActivity{
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
-
     }
-
     private void wwShit() {
         ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
@@ -92,11 +89,9 @@ public class AuditorijosTF extends AppCompatActivity{
             }
         });
     }
-
     private void click() {
         ww.loadUrl("javascript:$(document.querySelector(\".glyphicon.glyphicon-search\")).click()");
     }
-
     public void selection( String pasirinkimas, String val) {
 
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");

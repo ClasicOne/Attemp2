@@ -138,17 +138,6 @@ public class DestytojaiTF extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                // Isvalo db
-                //dbHandler.deleteDB();
-                //dbHandler.createTable();
-
-                // Ideda Destytojus ir values i db
-               /* for (int i=0;i<prof.length;i++){
-                    dbHandler.addProduct(prof[i].toString(), value[i].toString());
-                }*/
-
-                //  String dbString = dbHandler.dbToString().toString();
-
             }        }, (Calendar.getInstance().getTimeInMillis()+5000)-Calendar.getInstance().getTimeInMillis());
 
 

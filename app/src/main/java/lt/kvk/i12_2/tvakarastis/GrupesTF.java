@@ -38,14 +38,17 @@ public class GrupesTF extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grupes_tf);
-        text=(TextView)findViewById(R.id.text);
         Intent intent= getIntent();
+
         final Spinner programID=(Spinner)findViewById(R.id.program);
         final Spinner metaiID = (Spinner)findViewById(R.id.year);
         final Spinner grupeID = (Spinner)findViewById(R.id.group);
         final TextView grupe = (TextView)findViewById(R.id.group_text);
         final TextView metai =(TextView) findViewById(R.id.year_text);
-        //<------------------------- Deklaruojamas Hashmap
+
+        text=(TextView)findViewById(R.id.text);
+
+        //<------ Deklaruojamas Hashmap
         final HashMap<String,String> grupesHashmap = new  HashMap<>();
         String[] grupes_str = getResources().getStringArray(R.array.grupes_TF_str);
         String[] grupes_values = getResources().getStringArray(R.array.grupes_TF_value);
@@ -57,10 +60,9 @@ public class GrupesTF extends AppCompatActivity {
 
         metaiID.setVisibility(View.GONE);
         grupeID.setVisibility(View.GONE);
-
         metai.setVisibility(View.GONE);
-
         grupe.setVisibility(View.GONE);
+
         spinner(programTipas,programID);
 
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

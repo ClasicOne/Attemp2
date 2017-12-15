@@ -34,7 +34,7 @@ public class SMFMenu extends AppCompatActivity{
         destytojai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,DestytojaiSVMF.class);
+                Intent intent = new Intent(SMFMenu.this,DestytojaiSMF.class);
                 startActivity(intent);
             }
         });
