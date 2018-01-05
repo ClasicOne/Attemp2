@@ -127,6 +127,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@android:drawable/presence_away" />
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
 </android.support.constraint.ConstraintLayout>

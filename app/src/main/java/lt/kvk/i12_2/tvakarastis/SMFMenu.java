@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
 /**
  * Created by Meskius on 10/24/2017.
@@ -15,13 +15,12 @@ public class SMFMenu extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.smfmenu);
+        setContentView(R.layout.tfmenu);
         Intent intent= getIntent();
 
-        TextView grupes = (TextView)findViewById(R.id.grupesTF);
-
-        TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
-        TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
+        Button grupes = (Button)findViewById(R.id.btnGrupes);
+        Button destytojai = (Button)findViewById(R.id.btnDestytojai);
+        Button auditorijos = (Button)findViewById(R.id.btnAuditorijos);
 
 
         grupes.setOnClickListener(new View.OnClickListener() {

@@ -15,7 +15,7 @@ public class SVMFMenu extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.smfmenu);
+        setContentView(R.layout.tfmenu);
         Intent intent= getIntent();
 
         TextView grupes = (TextView)findViewById(R.id.grupesTF);
