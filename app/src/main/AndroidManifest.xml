@@ -57,13 +57,13 @@
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.VFMenu"
-            android:label="SMF"
+            android:label="VF"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.GrupesVF"
-            android:label="SMF Grupės"
+            android:label="VF Grupės"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:screenOrientation="portrait">
         </activity>
@@ -87,13 +87,13 @@
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.DestytojaiVF"
-            android:label="SMF Dėstytojai"
+            android:label="VF Dėstytojai"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.AuditorijosVF"
-            android:label="SMF Auditorijos"
+            android:label="VF Auditorijos"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:screenOrientation="portrait">
         </activity>
