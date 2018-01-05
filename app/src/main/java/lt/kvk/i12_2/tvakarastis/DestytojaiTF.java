@@ -1,5 +1,6 @@
 package lt.kvk.i12_2.tvakarastis;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -39,47 +40,31 @@ import java.util.TimerTask;
 
 public class DestytojaiTF extends AppCompatActivity {
     WebView ww;
-    DBHandler dbHandler;
+
     String[] value = null;
     String[] prof = null;
     String str = "",valuen = "";
-    Set<String> setStr = new HashSet<>();
+    final HashMap<String,String> grupesHashmap = new  HashMap<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.destytojai_tf);
         wwShit();
-        Intent intent= getIntent();
+        update();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
-        Timer timer = new Timer();
-
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                update();
-            }}, (Calendar.getInstance().getTimeInMillis()+1000)-Calendar.getInstance().getTimeInMillis());
-
-
-
+        ProgressDialog progress = new ProgressDialog(this,R.style.MyAlertDialogStyle);
+        progress.setTitle("Atnaujinimas");
+        progress.setMessage("Palaukite kol bus atnaujintas dėstytojų sąrašas");
+        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+        progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progress.show();
         //<---------- Deklaruojamas Hashmap --------
-        final HashMap<String,String> grupesHashmap = new  HashMap<>();
+
         final String[] destytojai_value= getResources().getStringArray(R.array.destytojai_TF_value);
         final String[] destytojai_str = getResources().getStringArray(R.array.destytojai_TF_str);
-
-        for(int i = 0;i<destytojai_str.length; i++)
-            grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
+        newFill(destytojai_str, destytojai_value);
         //<-------------------------
 
-
-        dbHandler = new DBHandler(this, null, null,1);
-
-
-
-
-
-
-        spinner(destytojai_str,profID);
 
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -97,57 +82,10 @@ public class DestytojaiTF extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-
-                Log.i("Database","dump : "+ str);
-                Log.i("Database","dump : "+ valuen);
-                Log.i("Database","dump : end");
-                Set<String> strSet1 = new HashSet<>(Arrays.asList(destytojai_str));
-                if(setStr.containsAll(strSet1)){
-                    Log.i("Database","dump : "+ str);
-                    Log.i("Database","dump : "+ valuen);
-                    Log.i("Database","dump : end");
-                }else{
-                    // Isvalo db
-                    dbHandler.deleteDB();
-                    dbHandler.createTable();
-                    dbHandler.deleteRow("null");
-                    // Ideda Destytojus ir values i db
-                    for (int i=0;i<prof.length;i++){
-                        dbHandler.addProduct(prof[i].toString(), value[i].toString());
-                    }
-                }
-                try {
-                    getData();
-                    //str.replaceAll("null","");
-                    str.replaceAll(" - - "," ");
-                    valuen.replaceAll(" 101 "," ");
-                   // valuen.replaceAll("null","");
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-
-            }        }, (Calendar.getInstance().getTimeInMillis()+5000)-Calendar.getInstance().getTimeInMillis());
-
-
+        timer( progress, profID);
 
     }
-    public void getData(){
 
-        int i=0;
-        Cursor cursor = dbHandler.getData();
-        for (cursor.moveToFirst();!cursor.isAfterLast();cursor.moveToNext()){
-            if (cursor.getString(cursor.getColumnIndex("str")) != "null"){
-            str += cursor.getString(cursor.getColumnIndex("str"));
-            valuen += cursor.getString(cursor.getColumnIndex("value"));
-            }
-            setStr.add(str);
-        }
-
-
-    }
     private void wwShit() {
         ww = (WebView)findViewById(R.id.wwID);
         WebSettings webSettings = ww.getSettings();
@@ -174,10 +112,45 @@ public class DestytojaiTF extends AppCompatActivity {
             }
         });
     }
+    private void newFill(String[] destytojai_str, String[] destytojai_value) {
+
+        for(int i = 0;i<destytojai_str.length; i++)
+            grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
+        //<-------------------------
+
+    }
+    public void timer(final ProgressDialog progress, final Spinner profID){
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try{
+                    if(value != null){
+                        newFill(prof,value);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                spinner(prof,profID);
+                            }
+                        });
+                        progress.cancel();
+                    }else timer(progress, profID);
+
+                }catch (Exception e){
+                    Log.e("Duck",""+e);
+                    e.fillInStackTrace();
+                }
+
+
+                Log.e("Duck","as");
+            }        }, (Calendar.getInstance().getTimeInMillis()+50)-Calendar.getInstance().getTimeInMillis());
+    }
     public  void update() {
         new Thread(new Runnable(){
             @Override
             public void run() {
+
                 try {
                     String el="";
                     String temp;
@@ -215,8 +188,9 @@ public class DestytojaiTF extends AppCompatActivity {
                             }
                         }
                         value[0]="duck";
-                       // Log.i("Duck","Value :"+ value[i]+ "  Prof : " + prof[i] );
+                        Log.i("Duck","Value :"+ value[i]+ "  Prof : " + prof[i] );
                     }
+
                 }catch (Exception e){
                     Log.e("Duck",""+ e.getMessage()+":" );
                     e.printStackTrace();
@@ -261,11 +235,6 @@ public class DestytojaiTF extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }
-    public void click(){
-        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
-        ww.loadUrl("javascript:viewWeek();");
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){

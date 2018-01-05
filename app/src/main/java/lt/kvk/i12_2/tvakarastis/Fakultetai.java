@@ -19,13 +19,12 @@ public class Fakultetai extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fakultetai);
 
-        Intent intent= getIntent();
-
         ImageButton tf=(ImageButton) findViewById(R.id.tf);
         ImageButton smf=(ImageButton) findViewById(R.id.smf);
         ImageButton svsmf=(ImageButton) findViewById(R.id.svmf);
         TextView about =(TextView) findViewById(R.id.about);
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

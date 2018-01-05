@@ -1,7 +1,7 @@
 package lt.kvk.i12_2.tvakarastis;
 
+import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -40,27 +40,30 @@ public class DestytojaiSVMF extends AppCompatActivity{
     WebView ww;
     String[] value = null;
     String[] prof = null;
+
+    final HashMap<String,String> grupesHashmap = new  HashMap<>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.destytojai_tf);
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                update();
-            }}, (Calendar.getInstance().getTimeInMillis()+1000)-Calendar.getInstance().getTimeInMillis());
 
-        Intent intent= getIntent();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
+
+        update();
+
+        ProgressDialog progress = new ProgressDialog(this,R.style.MyAlertDialogStyle);
+        progress.setTitle("Atnaujinimas");
+        progress.setMessage("Palaukite kol bus atnaujintas dėstytojų sąrašas");
+        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+        progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progress.show();
+
         //<------------------------- Deklaruojamas Hashmap
-        final HashMap<String,String> grupesHashmap = new  HashMap<>();
+
         final String[] destytojai_str = getResources().getStringArray(R.array.destytojai_SVMF_str);
         final String[] destytojai_value = getResources().getStringArray(R.array.destytojai_SVMF_value);
-        for(int i = 0;i<destytojai_str.length; i++)
-            grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
-        //<-------------------------
-        spinner(getResources().getStringArray(R.array.destytojai_SVMF_str),profID);
+        newFill(destytojai_str, destytojai_value);
+        //spinner(getResources().getStringArray(R.array.destytojai_SVMF_str),profID);
         wwShit();
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -76,33 +79,50 @@ public class DestytojaiSVMF extends AppCompatActivity{
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+        timer( progress, profID);
+
+
+    }
+
+    private void newFill(String[] destytojai_str, String[] destytojai_value) {
+
+        for(int i = 0;i<destytojai_str.length; i++)
+            grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
+        //<-------------------------
+
+    }
+    public void timer(final ProgressDialog progress, final Spinner profID){
+        final Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Log.e("Duck",""+value.length +"   "+ destytojai_str.length);
-                if(value.length != destytojai_str.length){
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            int a =0;
-                            while (true) {
-                                Toast.makeText(DestytojaiSVMF.this, "Reikia atnaujinimo\nkreipkitės į Džiuga Ramančioni", Toast.LENGTH_LONG).show();
-                                if (a==49)
-                                    break;
-                                a++;
+                try{
+                    if(value != null){
+                        newFill(prof,value);
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                spinner(prof,profID);
                             }
-                        }
-                    });
+                        });
+                        progress.cancel();
+                    }else timer(progress, profID);
 
+                }catch (Exception e){
+                    Log.e("Duck",""+e);
+                    e.fillInStackTrace();
                 }
-                Log.e("Duck","as");
-            }        }, (Calendar.getInstance().getTimeInMillis()+2000)-Calendar.getInstance().getTimeInMillis());
 
+
+                Log.e("Duck","as");
+            }        }, (Calendar.getInstance().getTimeInMillis()+50)-Calendar.getInstance().getTimeInMillis());
     }
     public  void update() {
         new Thread(new Runnable(){
             @Override
             public void run() {
+
                 try {
                     String el="";
                     String temp;
@@ -142,6 +162,7 @@ public class DestytojaiSVMF extends AppCompatActivity{
                         value[0]="duck";
                         Log.i("Duck","Value :"+ value[i]+ "  Prof : " + prof[i] );
                     }
+
                 }catch (Exception e){
                     Log.e("Duck",""+ e.getMessage()+":" );
                     e.printStackTrace();
@@ -206,10 +227,7 @@ public class DestytojaiSVMF extends AppCompatActivity{
         ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
 
     }
-    public void click(){
-        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
-        ww.loadUrl("javascript:viewWeek();");
-    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.smvf_destytojai,menu);
