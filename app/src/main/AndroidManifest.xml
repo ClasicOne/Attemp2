@@ -42,7 +42,9 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name="lt.kvk.i12_2.tvakarastis.About"
+        <activity
+            android:name="lt.kvk.i12_2.tvakarastis.About"
+            android:label="Apie"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
 

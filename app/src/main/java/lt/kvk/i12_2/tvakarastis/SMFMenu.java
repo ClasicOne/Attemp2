@@ -19,10 +19,10 @@ public class SMFMenu extends AppCompatActivity{
         Intent intent= getIntent();
 
         TextView grupes = (TextView)findViewById(R.id.grupesTF);
-        TextView dalykai = (TextView)findViewById(R.id.dalykaiTF);
+
         TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
         TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
-        TextView auditorijosvaiz = (TextView)findViewById(R.id.auditorijuvaizTF);
+
 
         grupes.setOnClickListener(new View.OnClickListener() {
             @Override

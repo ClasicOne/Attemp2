@@ -10,8 +10,7 @@
         android:id="@+id/grupesTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/dalykaiTF"
-        android:layout_alignTop="@+id/backTF"
+
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="40dp"
@@ -29,8 +28,7 @@
         android:id="@+id/destytojaiTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/auditorijuvaizTF"
-        android:layout_below="@+id/dalykaiTF"
+
         android:layout_column="0"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -50,7 +48,7 @@
         android:id="@+id/auditorijosTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/dalykaiTF"
+
         android:layout_below="@+id/destytojaiTF"
         android:layout_column="0"
         android:layout_marginLeft="8dp"

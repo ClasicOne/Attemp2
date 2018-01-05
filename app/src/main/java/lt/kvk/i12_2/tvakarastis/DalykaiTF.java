@@ -1,3 +1,4 @@
+/*
 package lt.kvk.i12_2.tvakarastis;
 
 import android.content.Context;
@@ -16,9 +17,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+*/
 /**
  * Created by Meskius on 10/23/2017.
- */
+ *//*
+
 
 public class DalykaiTF extends AppCompatActivity {
     WebView ww;
@@ -38,7 +41,7 @@ public class DalykaiTF extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dalykai_tf);
+
         ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -1245,4 +1248,4 @@ public class DalykaiTF extends AppCompatActivity {
                 break;
         }
     }
-}
+}*/
