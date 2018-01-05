@@ -11,7 +11,7 @@ import android.widget.Button;
  * Created by Meskius on 10/24/2017.
  */
 
-public class SMFMenu extends AppCompatActivity{
+public class VFMenu extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,21 +25,21 @@ public class SMFMenu extends AppCompatActivity{
         grupes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,GrupesSMF.class);
+                Intent intent = new Intent(VFMenu.this,GrupesVF.class);
                 startActivity(intent);
             }
         });
         destytojai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,DestytojaiSMF.class);
+                Intent intent = new Intent(VFMenu.this,DestytojaiVF.class);
                 startActivity(intent);
             }
         });
         auditorijos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SMFMenu.this,AuditorijosSMF.class);
+                Intent intent = new Intent(VFMenu.this,AuditorijosVF.class);
                 startActivity(intent);
             }
         });

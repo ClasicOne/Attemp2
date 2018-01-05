@@ -56,15 +56,15 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="lt.kvk.i12_2.tvakarastis.SMFMenu"
+            android:name="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:label="SMF"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="lt.kvk.i12_2.tvakarastis.GrupesSMF"
+            android:name="lt.kvk.i12_2.tvakarastis.GrupesVF"
             android:label="SMF Grupės"
-            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
@@ -86,15 +86,15 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="lt.kvk.i12_2.tvakarastis.DestytojaiSMF"
+            android:name="lt.kvk.i12_2.tvakarastis.DestytojaiVF"
             android:label="SMF Dėstytojai"
-            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="lt.kvk.i12_2.tvakarastis.AuditorijosSMF"
+            android:name="lt.kvk.i12_2.tvakarastis.AuditorijosVF"
             android:label="SMF Auditorijos"
-            android:parentActivityName="lt.kvk.i12_2.tvakarastis.SMFMenu"
+            android:parentActivityName="lt.kvk.i12_2.tvakarastis.VFMenu"
             android:screenOrientation="portrait">
         </activity>
         <activity

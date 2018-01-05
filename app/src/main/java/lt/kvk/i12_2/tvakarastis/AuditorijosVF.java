@@ -30,7 +30,7 @@ import java.util.HashMap;
         str += 'case "'+document.querySelectorAll('#room option')[i].innerText+'":\n'+'selection("prof","'+document.querySelectorAll('#prof option')[i].value+'");\n click();\nbreak;\n'}
         str += 'default:\nbreak;'}*/
 
-public class AuditorijosSMF extends AppCompatActivity{
+public class AuditorijosVF extends AppCompatActivity{
 
     WebView ww;
 

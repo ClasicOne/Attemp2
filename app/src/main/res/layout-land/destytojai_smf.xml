@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DestytojaiSMF"
+    tools:context=".DestytojaiVF"
     android:background="@drawable/mizedblue">
 
     <Spinner

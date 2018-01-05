@@ -23,7 +23,7 @@ import java.util.HashMap;
  * Created by Meskius on 10/24/2017.
  */
 
-public class GrupesSMF extends AppCompatActivity {
+public class GrupesVF extends AppCompatActivity {
     WebView ww;
     String programText[] = {"--pasirinkti--","Ištestinės","Nuolatinės"};
     String yearMetaiNL[] = {"--pasirinkti--", "1","2","3"};

@@ -52,14 +52,14 @@ public class Fakultetai extends AppCompatActivity {
         smf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Fakultetai.this,SMFMenu.class);
+                Intent intent = new Intent(Fakultetai.this,VFMenu.class);
                 startActivity(intent);
             }
         });
         smf.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                Intent intent = new Intent(Fakultetai.this,GrupesSMF.class);
+                Intent intent = new Intent(Fakultetai.this,GrupesVF.class);
                 startActivity(intent);
                 return false;
             }

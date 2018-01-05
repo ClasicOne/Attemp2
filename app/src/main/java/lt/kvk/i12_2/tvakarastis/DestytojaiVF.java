@@ -39,7 +39,7 @@ import java.util.TimerTask;
 /*function a(){for(var i=0;i<document.querySelectorAll('#prof option').length;i++){
         str += 'case "'+document.querySelectorAll('#prof option')[i].innerText+'":\n'+'selection("prof","'+document.querySelectorAll('#prof option')[i].value+'");\nbreak;\n'}
         str += 'default:\nbreak;'}*/
-public class DestytojaiSMF extends AppCompatActivity{
+public class DestytojaiVF extends AppCompatActivity{
 
     WebView ww;
     String[] value = null;
@@ -91,7 +91,7 @@ public class DestytojaiSMF extends AppCompatActivity{
                         public void run() {
                             int a =0;
                             while (true) {
-                                Toast.makeText(DestytojaiSMF.this, "Reikia atnaujinimo\nkreipkitės į Džiuga Ramančioni", Toast.LENGTH_LONG).show();
+                                Toast.makeText(DestytojaiVF.this, "Reikia atnaujinimo\nkreipkitės į Džiuga Ramančioni", Toast.LENGTH_LONG).show();
                                 if (a==49)
                                     break;
                                 a++;
