@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -16,13 +17,12 @@ public class SVMFMenu extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tfmenu);
-        Intent intent= getIntent();
 
-        TextView grupes = (TextView)findViewById(R.id.grupesTF);
-      //  TextView dalykai = (TextView)findViewById(R.id.dalykaiTF);
-        TextView destytojai = (TextView)findViewById(R.id.destytojaiTF);
-        TextView auditorijos = (TextView)findViewById(R.id.auditorijosTF);
-       // TextView auditorijosvaiz = (TextView)findViewById(R.id.auditorijuvaizTF);
+        Button grupes = (Button)findViewById(R.id.btnGrupes);
+
+        Button destytojai = (Button)findViewById(R.id.btnDestytojai);
+        Button auditorijos = (Button)findViewById(R.id.btnAuditorijos);
+
 
         grupes.setOnClickListener(new View.OnClickListener() {
             @Override

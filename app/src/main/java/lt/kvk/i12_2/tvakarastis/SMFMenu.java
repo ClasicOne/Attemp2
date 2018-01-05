@@ -16,7 +16,6 @@ public class SMFMenu extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tfmenu);
-        Intent intent= getIntent();
 
         Button grupes = (Button)findViewById(R.id.btnGrupes);
         Button destytojai = (Button)findViewById(R.id.btnDestytojai);
