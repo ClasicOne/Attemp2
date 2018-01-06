@@ -38,7 +38,7 @@ public class GrupesTF extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grupes_tf);
-        Intent intent= getIntent();
+
 
         final Spinner programID=(Spinner)findViewById(R.id.program);
         final Spinner metaiID = (Spinner)findViewById(R.id.year);

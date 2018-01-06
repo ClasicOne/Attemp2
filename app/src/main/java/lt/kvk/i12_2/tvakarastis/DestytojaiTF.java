@@ -1,5 +1,6 @@
 package lt.kvk.i12_2.tvakarastis;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -7,9 +8,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
@@ -18,6 +21,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -53,11 +57,15 @@ public class DestytojaiTF extends AppCompatActivity {
         update();
         final Spinner profID = (Spinner)findViewById(R.id.profID);
         ProgressDialog progress = new ProgressDialog(this,R.style.MyAlertDialogStyle);
-        progress.setTitle("Atnaujinimas");
-        progress.setMessage("Palaukite kol bus atnaujintas dėstytojų sąrašas");
+        progress.setTitle("Palaukite");
+        progress.setMessage("Gaunnamas dėstytojų sąrašas");
+        progress.setIndeterminate(true);
         progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progress.getWindow().setGravity(Gravity.CENTER);
+
         progress.show();
+
         //<---------- Deklaruojamas Hashmap --------
 
         final String[] destytojai_value= getResources().getStringArray(R.array.destytojai_TF_value);

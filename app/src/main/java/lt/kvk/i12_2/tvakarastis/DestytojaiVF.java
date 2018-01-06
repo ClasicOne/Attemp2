@@ -50,8 +50,8 @@ public class DestytojaiVF extends AppCompatActivity{
         wwShit();
          update();
         ProgressDialog progress = new ProgressDialog(this,R.style.MyAlertDialogStyle);
-        progress.setTitle("Atnaujinimas");
-        progress.setMessage("Palaukite kol bus atnaujintas dėstytojų sąrašas");
+        progress.setTitle("Palaukite");
+        progress.setMessage("Gaunnamas dėstytojų sąrašas");
         progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progress.show();
