@@ -146,12 +146,12 @@ public class DestytojaiTF extends AppCompatActivity {
                     }else timer(progress, profID);
 
                 }catch (Exception e){
-                   // Log.e("Duck",""+e);
+                    // Log.e("Duck",""+e);
                     e.fillInStackTrace();
                 }
 
 
-               // Log.e("Duck","as");
+                // Log.e("Duck","as");
             }        }, (Calendar.getInstance().getTimeInMillis()+50)-Calendar.getInstance().getTimeInMillis());
     }
     public  void update() {

@@ -130,6 +130,7 @@ public class GrupesSVMF extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 Log.e("Duck",""+spinnerText+" "+grupesHashmap.get(spinnerText));
+
                 if (!grupesHashmap.get(spinnerText).equals("duck")){
                 selection("group",""+grupesHashmap.get(spinnerText)+"");
                 click();
