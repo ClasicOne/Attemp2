@@ -235,11 +235,11 @@ public class DestytojaiTF extends AppCompatActivity {
     }
     public void selection( String pasirinkimas, String val) {
 
-        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
+        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val("+val+").change();");
 
     }
     public void spinner(String[] program, Spinner metai) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, program);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }

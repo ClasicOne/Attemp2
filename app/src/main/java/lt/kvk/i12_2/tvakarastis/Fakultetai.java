@@ -1,19 +1,28 @@
 package lt.kvk.i12_2.tvakarastis;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import org.jsoup.Jsoup;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Meskius on 10/23/2017.
  */
 
 public class Fakultetai extends AppCompatActivity {
+    ProgressDialog progress;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +33,7 @@ public class Fakultetai extends AppCompatActivity {
         ImageButton svsmf=(ImageButton) findViewById(R.id.svmf);
         TextView about =(TextView) findViewById(R.id.about);
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,5 +99,49 @@ public class Fakultetai extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        update();
+
+    }
+
+    public  void update() {
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                try {
+                    Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                }catch (Exception e){
+                    Log.e("Duck",""+ e.getMessage()+":" );
+                    e.printStackTrace();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            progress = new ProgressDialog(Fakultetai.this);
+                            progress.setTitle("Atsiprašome už nepatogumus");
+                            progress.setMessage("Serveris nepasiekiamas. \nBandykite vėliau    (._.)");
+                            progress.setIndeterminate(true);
+                            progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                            progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                            progress.show();
+                            timer();
+                        }
+                    });
+                }
+            }
+        }).start();
+    }
+    public void timer(){
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                    progress.cancel();
+                }catch (Exception e) {
+                    Log.e("Duck", "" + e.getMessage() + ": Timer");
+                    e.printStackTrace();
+                    timer();
+                }
+            }        }, (50));
     }
 }

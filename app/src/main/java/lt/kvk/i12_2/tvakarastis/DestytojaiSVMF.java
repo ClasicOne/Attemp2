@@ -124,7 +124,7 @@ public class DestytojaiSVMF extends AppCompatActivity{
             public void run() {
 
                 try {
-                    String el="";
+                    String el;
                     String temp;
                     String[] array;
                     Document doc = Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_svmf/prof.php").get();
@@ -218,13 +218,13 @@ public class DestytojaiSVMF extends AppCompatActivity{
 
     }
     public void spinner(String[] program, Spinner metai) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, program);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }
     public void selection( String pasirinkimas, String val) {
 
-        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
+        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val("+val+").change();");
 
     }
 

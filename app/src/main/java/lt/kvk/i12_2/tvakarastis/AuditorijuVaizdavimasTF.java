@@ -1,3 +1,4 @@
+/*
 package lt.kvk.i12_2.tvakarastis;
 
 import android.content.Context;
@@ -13,16 +14,18 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+*/
 /**
  * Created by Meskius on 10/23/2017.
- */
+ *//*
+
 
 public class AuditorijuVaizdavimasTF extends AppCompatActivity{
     WebView ww;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.auditorijuatvazdavimas_tf);
+       // setContentView(R.layout.auditorijuatvazdavimas_tf);
         ww= (WebView)findViewById(R.id.ww);
         WebSettings webSettings = ww.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -65,3 +68,4 @@ public class AuditorijuVaizdavimasTF extends AppCompatActivity{
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
     }
 }
+*/

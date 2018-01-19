@@ -48,19 +48,19 @@ public class DestytojaiVF extends AppCompatActivity{
         setContentView(R.layout.destytojai_tf);
         final Spinner profID = (Spinner)findViewById(R.id.profID);
         wwShit();
-         update();
+        update();
         ProgressDialog progress = new ProgressDialog(this,R.style.MyAlertDialogStyle);
         progress.setTitle("Palaukite");
         progress.setMessage("Gaunnamas dėstytojų sąrašas");
         progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progress.show();
-        //<------------------------- Deklaruojamas Hashmap
+       /* //<------------------------- Deklaruojamas Hashmap
 
         final String[] destytojai_str = getResources().getStringArray(R.array.destytojai_SMF_str);
         final String[] destytojai_value = getResources().getStringArray(R.array.destytojai_SMF_value);
         newFill(destytojai_str, destytojai_value);
-        //<-------------------------
+        //<-------------------------*/
         profID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -68,7 +68,10 @@ public class DestytojaiVF extends AppCompatActivity{
 
                 if (!grupesHashmap.get(destytojai).equals("duck")){
                     selection("prof",""+grupesHashmap.get(destytojai)+"");
-                   //click();
+
+                   // Log.e("Duck",destytojai  +  "id "+ grupesHashmap.get(destytojai));
+                    //click();
+
                     ww.setVisibility(View.VISIBLE);
                 }
             }
@@ -81,8 +84,10 @@ public class DestytojaiVF extends AppCompatActivity{
 
     private void newFill(String[] destytojai_str, String[] destytojai_value) {
 
-        for(int i = 0;i<destytojai_str.length; i++)
+        for(int i = 0;i<destytojai_str.length; i++) {
             grupesHashmap.put(destytojai_str[i], destytojai_value[i]);
+           // Log.e("Duck", destytojai_str[i]+ " id " +destytojai_value[i]);
+        }
         //<-------------------------
 
     }
@@ -119,7 +124,7 @@ public class DestytojaiVF extends AppCompatActivity{
             public void run() {
 
                 try {
-                    String el="";
+                    String el;
                     String temp;
                     String[] array;
                     Document doc = Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_smf/prof.php").get();
@@ -136,7 +141,7 @@ public class DestytojaiVF extends AppCompatActivity{
                             .replaceAll("\" selected>--pasirinkti-- value=\"101\" >- -","")
                             .replaceAll("value=\"","")
                             .replaceAll("\" selected>","")
-                            .replaceAll("\" >","_ ")
+                            .replaceAll("\" >","_")
                             .replaceAll("<",":");
                     array = temp.split(":");
                     value = new String[array.length];
@@ -212,13 +217,13 @@ public class DestytojaiVF extends AppCompatActivity{
 
     }
     public void spinner(String[] program, Spinner metai) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, program);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         metai.setAdapter(adapter);
     }
     public void selection( String pasirinkimas, String val) {
 
-        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
+        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val("+val+").change();");
 
     }
 
