@@ -27,7 +27,7 @@ import java.util.HashMap;
 public class GrupesTF extends AppCompatActivity {
     TextView text;
     WebView ww;
-   //-------------------------
+    //-------------------------
     String programSpinnerText;
     String yearSpinnerText;
     String programTipas[] = {"--pasirinkti--", "IŠT","NL"};
@@ -97,38 +97,38 @@ public class GrupesTF extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 yearSpinnerText = adapterView.getSelectedItem().toString();
                 if(programSpinnerText.indexOf("IŠT")!=-1)
-                switch (yearSpinnerText){
-                    case "1":
-                        spinner( getResources().getStringArray(R.array.G_TF_IST_1),grupeID);
-                        selection("year","1");
-                        selection("branch","8");
-                        grupe.setVisibility(View.VISIBLE);
-                        grupeID.setVisibility(View.VISIBLE);
-                        break;
-                    case "2":
-                        spinner(getResources().getStringArray(R.array.G_TF_IST_2),grupeID);
-                        selection("year","2");
-                        selection("branch","5");
-                        grupe.setVisibility(View.VISIBLE);
-                        grupeID.setVisibility(View.VISIBLE);
-                        break;
-                    case "3":
-                        spinner(getResources().getStringArray(R.array.G_TF_IST_3),grupeID);
-                        selection("year","3");
-                        selection("branch","4");
-                        grupe.setVisibility(View.VISIBLE);
-                        grupeID.setVisibility(View.VISIBLE);
-                        break;
-                    case "4":
-                        spinner(getResources().getStringArray(R.array.G_TF_IST_4),grupeID);
-                        selection("year","4");
-                        selection("branch","7");
-                        grupe.setVisibility(View.VISIBLE);
-                        grupeID.setVisibility(View.VISIBLE);
-                    default:
-                        break;
+                    switch (yearSpinnerText){
+                        case "1":
+                            spinner( getResources().getStringArray(R.array.G_TF_IST_1),grupeID);
+                            selection("year","1");
+                            selection("branch","8");
+                            grupe.setVisibility(View.VISIBLE);
+                            grupeID.setVisibility(View.VISIBLE);
+                            break;
+                        case "2":
+                            spinner(getResources().getStringArray(R.array.G_TF_IST_2),grupeID);
+                            selection("year","2");
+                            selection("branch","5");
+                            grupe.setVisibility(View.VISIBLE);
+                            grupeID.setVisibility(View.VISIBLE);
+                            break;
+                        case "3":
+                            spinner(getResources().getStringArray(R.array.G_TF_IST_3),grupeID);
+                            selection("year","3");
+                            selection("branch","4");
+                            grupe.setVisibility(View.VISIBLE);
+                            grupeID.setVisibility(View.VISIBLE);
+                            break;
+                        case "4":
+                            spinner(getResources().getStringArray(R.array.G_TF_IST_4),grupeID);
+                            selection("year","4");
+                            selection("branch","7");
+                            grupe.setVisibility(View.VISIBLE);
+                            grupeID.setVisibility(View.VISIBLE);
+                        default:
+                            break;
 
-                }else switch (yearSpinnerText){
+                    }else switch (yearSpinnerText){
                     case "1":
                         spinner(getResources().getStringArray(R.array.G_TF_NL_1),grupeID);
                         selection("year","1");
@@ -188,6 +188,8 @@ public class GrupesTF extends AppCompatActivity {
         ww.getSettings().setDisplayZoomControls(false);
         ww.setWebChromeClient(new WebChromeClient());
         //ww.loadUrl("http://google.com");
+//        ww.getSettings().setUseWideViewPort(true);
+//        ww.setInitialScale(2);
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_tf/groups.php");
         ww.setWebViewClient(new WebViewClient(){
             @Override

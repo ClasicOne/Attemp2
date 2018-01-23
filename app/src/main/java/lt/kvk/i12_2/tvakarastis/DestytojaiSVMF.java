@@ -179,7 +179,8 @@ public class DestytojaiSVMF extends AppCompatActivity{
         ww.getSettings().setBuiltInZoomControls(true);
         ww.getSettings().setDisplayZoomControls(false);
         ww.setWebChromeClient(new WebChromeClient());
-        //ww.loadUrl("http://google.com");
+//        ww.getSettings().setUseWideViewPort(true);
+//        ww.setInitialScale(1);
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/prof.php");
         ww.setWebViewClient(new WebViewClient(){
             @Override
@@ -211,11 +212,6 @@ public class DestytojaiSVMF extends AppCompatActivity{
         ww.loadUrl("javascript:document.body.style.marginTop=-10");
         ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
         ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[2]).hide()");
-    }
-    public void selectionD( String pasirinkimas, String val) {
-
-        ww.loadUrl("javascript:$('#" + pasirinkimas +"').val('"+val+"').change();");
-
     }
     public void spinner(String[] program, Spinner metai) {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, program);
