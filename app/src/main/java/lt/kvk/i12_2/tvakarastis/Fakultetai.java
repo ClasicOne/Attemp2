@@ -1,16 +1,21 @@
 package lt.kvk.i12_2.tvakarastis;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 
@@ -23,6 +28,7 @@ import java.util.TimerTask;
 
 public class Fakultetai extends AppCompatActivity {
     ProgressDialog progress;
+    String[] email = {"senasnaujokas@gmail.com"};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,10 +122,21 @@ public class Fakultetai extends AppCompatActivity {
                         @Override
                         public void run() {
                             progress = new ProgressDialog(Fakultetai.this);
-                            progress.setTitle("Atsiprašome už nepatogumus");
-                            progress.setMessage("Serveris nepasiekiamas. \nBandykite vėliau    (._.)");
+                            progress.setTitle("Napavyksta gauti duomenų iš serverio");
+                            progress.setMessage("Galimos priežastys: \n1. Nesate pasijungę interneto ryšį,\n" +
+                                    "2. Gali būti problemos serverio pusėje.\n" +
+                                    "Sprendimas:\n" +
+                                    "Pasitikrinkite interneto prieigą ir bandykite patikrinti vėliau. ");
                             progress.setIndeterminate(true);
                             progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                            progress.setButton(DialogInterface.BUTTON_POSITIVE, "Send Email", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    composeEmail(email,"test", "Tvarkarasciu serveris neveikia");
+
+                                    dialogInterface.dismiss();
+                                }
+                            });
                             progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                             progress.show();
                             timer();
@@ -138,10 +155,21 @@ public class Fakultetai extends AppCompatActivity {
                     Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
                     progress.cancel();
                 }catch (Exception e) {
-                    Log.e("Duck", "" + e.getMessage() + ": Timer");
-                    e.printStackTrace();
+                   // Log.e("Duck", "" + e.getMessage() + ": Timer");
+                   // e.printStackTrace();
                     timer();
                 }
             }        }, (50));
     }
+    public void composeEmail(String[] addresses, String subject, String message) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
 }
