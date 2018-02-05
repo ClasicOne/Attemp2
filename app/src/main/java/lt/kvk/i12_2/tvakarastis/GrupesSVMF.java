@@ -37,36 +37,6 @@ public class GrupesSVMF extends AppCompatActivity {
     String programText[] = {"--pasirinkti--", "Bendrosios praktikos slauga", "Burnos higiena", "Dietetika", "Grožio terapija", "Kineziterapija", "Odontologinė priežiūra", "Socialinis darbas"};
     String yearMetai3[] = {"--pasirinkti--", "1", "2", "3"};
     String yearMetai4[] = {"--pasirinkti--", "1", "2", "3", "4"};
-    // Bendrosios praktikos slauga
-    String bps1[] = {"--pasirinkti--", "SL 19-1", "SL 19-1, 1-2", "SL 19-1, 1-3", "SL 19-1, 2-2", "SL 19-1, 2-3", "SL 19-1, 3-3", "SL 20-1", "SL 20-1, 1-2", "SL 20-1, 1-3", "SL 20-1, 2-2", "SL 20-1, 2-3", "SL 20-1, 3-3", "SL 21-1", "SL 21-1, 1-2", "SL 21-1, 2-2", "SL 21-1,2-3", "SL 21-1,3-3", "SL 21-1.1-3"};
-    String bps2[] = {"--pasirinkti--", "SL 17-2", "SL 17-2, 1-2", "SL 17-2, 2-2", "SL 18-2", "SL 18-2, 1-2", "SL 18-2, 2-2"};
-    String bps3[] = {"--pasirinkti--", "SL 15-3", "SL 15-3, 1-2", "SL 15-3, 2-2", "SL 16-3", "SL 16-3, 1-2", "SL 16-3, 2-2"};
-    String bps4[] = {"--pasirinkti--", "SL 13-4", "SL 13-4, 1-2", "SL 13-4, 2-2", "SL 14-4", "SL 14-4, 1-2", "SL 14-4, 2-2"};
-    // Burnos higiena
-    String bh1[] = {"--pasirinkti--", "BH 10-1", "BH 10-1, 1-2", "BH 10-1, 2-2"};
-    String bh2[] = {"--pasirinkti--", "BH9-2", "BH9-2, 1-2", "BH9-2, 2-2"};
-    String bh3[] = {"--pasirinkti--", "BH8-3", "BH8-3, 1-2", "BH8-3, 1-3", "BH8-3, 2-2", "BH8-3, 2-3", "BH8-3, 3-3"};
-    // Dietetika
-    String d1[] = {"--pasirinkti--", "DT 4-1", "DT 4-1, 1-2", "DT 4-1, 2-2", "DTs 1-1", "DTs 1-1, 1-2", "DTs 1-1, 2-2"};
-    String d2[] = {"--pasirinkti--", "DT 3-2", "DT 3-2, 1-2", "DT 3-2, 2-2", "DTi 2-2", "DTi 2-2, 1-2", "DTi 2-2, 2-2"};
-    String d3[] = {"--pasirinkti--", "DT 2-3", "DTi 1-3"};
-    // Grožio terapija
-    String gt1[] = {"--pasirinkti--", "GT 17-1", "GT 17-1, 1-2", "GT 17-1, 1-3", "GT 17-1, 2-2", "GT 17-1, 2-3", "GT 17-1, 3-3", "GT 18-1", "GT 18-1, 1-2", "GT 18-1, 1-3", "GT 18-1, 2-2", "GT 18-1, 2-3", "GT 18-1, 3-3"};
-    String gt2[] = {"--pasirinkti--", "GT 15-2", "GT 15-2, 1-2", "GT 15-2, 1-3", "GT 15-2, 2-2", "GT 15-2, 2-3", "GT 15-2, 3-3", "GT 16-2", "GT 16-2, 1-2", "GT 16-2, 1-3", "GT 16-2, 2-2", "GT 16-2, 2-3", "GT 16-2, 3-3"};
-    String gt3[] = {"--pasirinkti--", "GT 13-3", "GT 13-3, 1-2", "GT 13-3, 1-3", "GT 13-3, 2-2", "GT 13-3, 2-3", "GT 13-3, 3-3", "GT 14-3", "GT 14-3, 1-2", "GT 14-3, 1-3", "GT 14-3, 2-2", "GT 14-3, 2-3", "GT 14-3, 3-3"};
-    // Kineziterapija
-    String k1[] = {"--pasirinkti--", "KT 16-1", "KT 16-1, 1-2", "KT 16-1, 2-2", "KT 17-1", "KT 17-1, 1-2", "KT 17-1, 2-2"};
-    String k2[] = {"--pasirinkti--", "KT 14-2", "KT 14-2  2-2", "KT 14-2, 1-2", "KT 14-2, 1-3", "KT 14-2, 2-3", "KT 14-2, 3-3", "KT 15-2", "KT 15-2, 1-2", "KT 15-2, 1-3", "KT 15-2, 2-2", "KT 15-2, 2-3", "KT 15-2, 3-3"};
-    String k3[] = {"--pasirinkti--", "KT 12-3", "KT 12-3, 1-2", "KT 12-3, 2-2", "KT 13-3", "KT 13-3, 1-2", "KT 13-3, 2-2"};
-    // Odontologinė priežiūra
-    String op1[] = {"--pasirinkti--", "OP10-1", "OP10-1, 1-2", "OP10-1, 2-2"};
-    String op2[] = {"--pasirinkti--", "OP9-2", "OP9-2, 1-2", "OP9-2, 2-2"};
-    String op3[] = {"--pasirinkti--", "OP8-3", "OP8-3, 1-3", "OP8-3, 2-3", "OP8-3, 3-3"};
-    // Socialinis darbas
-    String sd1[] = {"--pasirinkti--", "SD 16-1", "SD 16-1, 1-2", "SD 16-1, 2-2", "SDs 1-1", "SDs 1-1, 1-2", "SDs 1-1, 2-2"};
-    String sd2[] = {"--pasirinkti--", "SD 14-2", "SD 14-2, 1-2", "SD 14-2, 2-2", "SD 15-2", "SD 15-2, 1-2", "SD 15-2, 2-2"};
-    String sd3[] = {"--pasirinkti--", "SD 12-3", "SD 12-3, 1-2", "SD 12-3, 2-2", "SD 13-3", "SD 13-3, 1-2", "SD 13-3, 2-2"};
-    String sd4[] = {"--pasirinkti--", "SDi 6-4"};
 
     String programSpinnerText,
             yearSpinnerText;
@@ -90,12 +60,6 @@ public class GrupesSVMF extends AppCompatActivity {
         for(int i = 0;i<grupes_str.length; i++)
             grupesHashmap.put(grupes_str[i], grupes_values[i]);
         //<-------------------------
-
-        // Paslepti spinner kuriu nereikia
-       /* metai.setVisibility(View.INVISIBLE);
-        grupe.setVisibility(View.INVISIBLE);
-        metaiText.setVisibility(View.INVISIBLE);
-        grupeText.setVisibility(View.INVISIBLE);*/
 
         spinner(programText, program);
         // spiiner paspaudimas tipas
@@ -173,21 +137,21 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Bendrosios praktikos slauga"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(bps1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_1), grupe);
                     selection("year", "1");
                     selection("branch", "17");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(bps2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_2), grupe);
                     selection("year", "2");
                     selection("branch", "19");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(bps3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_3), grupe);
                     selection("year", "3");
                     selection("branch", "20");
 
@@ -195,7 +159,7 @@ public class GrupesSVMF extends AppCompatActivity {
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "4":
-                    spinner(bps4, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_4), grupe);
                     selection("year", "4");
                     selection("branch", "3");
                     grupe.setVisibility(View.VISIBLE);
@@ -206,21 +170,21 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Burnos higiena"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(bh1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bh_1), grupe);
                     selection("year", "1");
                     selection("branch", "22");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(bh2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bh_2), grupe);
                     selection("year", "2");
                     selection("branch", "21");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(bh3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_bh_3), grupe);
                     selection("year", "3");
                     selection("branch", "7");
                     grupe.setVisibility(View.VISIBLE);
@@ -232,21 +196,21 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Dietetika"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(d1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_d_1), grupe);
                     selection("year", "1");
                     selection("branch", "23");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(d2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_d_2), grupe);
                     selection("year", "2");
                     selection("branch", "26");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(d3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_d_3), grupe);
                     selection("year", "3");
                     selection("branch", "8");
                     grupe.setVisibility(View.VISIBLE);
@@ -258,21 +222,21 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Grožio terapija"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(gt1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_gt_1), grupe);
                     selection("year", "1");
                     selection("branch", "11");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(gt2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_gt_2), grupe);
                     selection("year", "2");
                     selection("branch", "12");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(gt3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_gt_3), grupe);
                     selection("year", "3");
                     selection("branch", "4");
                     grupe.setVisibility(View.VISIBLE);
@@ -284,21 +248,21 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Kineziterapija"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(k1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_k_1), grupe);
                     selection("year", "1");
                     selection("branch", "15");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(k2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_k_2), grupe);
                     selection("year", "2");
                     selection("branch", "16");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(k3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_k_3), grupe);
                     selection("year", "3");
                     selection("branch", "9");
                     grupe.setVisibility(View.VISIBLE);
@@ -310,21 +274,21 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Odontologinė priežiūra"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(op1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_op_1), grupe);
                     selection("year", "1");
                     selection("branch", "24");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(op2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_op_2), grupe);
                     selection("year", "2");
                     selection("branch", "25");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(op3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_op_3), grupe);
                     selection("year", "3");
                     selection("branch", "6");
                     grupe.setVisibility(View.VISIBLE);
@@ -336,28 +300,28 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Socialinis darbas"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(sd1, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_1), grupe);
                     selection("year", "1");
                     selection("branch", "13");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(sd2, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_2), grupe);
                     selection("year", "2");
                     selection("branch", "14");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(sd3, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_3), grupe);
                     selection("year", "3");
                     selection("branch", "10");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "4":
-                    spinner(sd4, grupe);
+                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_4), grupe);
                     selection("year", "3");
                     selection("branch", "27");
                     grupe.setVisibility(View.VISIBLE);

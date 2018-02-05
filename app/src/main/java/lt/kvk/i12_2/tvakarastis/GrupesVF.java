@@ -28,13 +28,7 @@ public class GrupesVF extends AppCompatActivity {
     String programText[] = {"--pasirinkti--","Ištestinės","Nuolatinės"};
     String yearMetaiNL[] = {"--pasirinkti--", "1","2","3"};
     String yearMetaiIST[] = {"--pasirinkti--", "1","2","3","4"};
-    String groupNL1[] = {"--pasirinkti--","A 16-1","As 15-1","As 15-1 1 pog","As 15-1 2 pog","BA 23-1","BA 23-1 1 pog","BA 23-1 2 pog","F 19-1","F 19-1 1 pog","F 19-1 2 pog","F 19-1 3 pog","F 19-1 4 pog","F 19-1 5 pog","IPP 7-1","IPP 7-1 1 pog","LV 20-1","LV 20-1 1 pog","LV 20-1 2 pog","LV 20-1 3 pog","LV 20-1 4 pog","LV 20-1 5 pog","LV 20-1 6 pog","SP 4-1","TA 19-1","TA 19-1 1 pog","TA 19-1 2 pog","TA-1"};
-    String groupNL2[] = {"--pasirinkti--","A 15-2","A 15-2 1 pog","A 15-2 2 pog","A 15-2 3 pog","A 15-2 4 pog","BA 22-2","BA 22-2 1 pog","BA 22-2 2 pog","BA 22-2 3 pog","ERASMUS","F 18-2","F 18-2 1 pog","F 18-2 2 pog","F 18-2 3 pog","F 18-2 4 pog","IPP 6-2","IPP 6-2 3 pog","IPP 6-2 4 pog","IPP 6-2 5 pog","IPP 6-2 6 pog","IPP 6-2 7 pog","IPP 6-2 8 pog","IPP 6-2 9 pog","LV 19-2","LV 19-2 1 pog","LV 19-2 2 pog","LV 19-2 3 pog","LV 19-2 4 pog","LV 19-2 5 pog","LV 19-2 6 pog","LV 19-2 7 pog","SP 3-2","TA 18-2","TA 18-2 1 pog","TA 18-2 2 pog","TA 18-2 3 pog","TA 18-2 4 pog","TA-3","VV 23-2"};
-    String groupNL3[] = {"--pasirinkti--","A 14-3","BA 21-3","BA 21-3 1 pog","BA 21-3 2 pog","F 17-3","F 17-3 1 pog","F 17-3 2 pog","IPP 5-3","KV 13-3","LV 18-3","SP 2-3","SPV 6-3","TA 17-3","TA 17-3 3 pog","TA 17-3 4 pog","TA 17-3 5 pog","TA 17-3 6 pog","VV 22-3"};
-    String groupIST1[] = {"--pasirinkti--","BAi 18-1","BAi 18-1 1pog","BAi 18-1 2 pog","Fi 14-1","IPPi 6-1","IPPi 6-1 1 pog","IPPi 6-1 2 pog","IPPi 6-1 3 pog","IPPi 6-1 4 pog","LVi 15-1","LVi 15-1 1 pog","LVi 15-1 2 pog"};
-    String groupIST2[] = {"--pasirinkti--","BAi 17-2","BAi 17-2 1 pog","BAi 17-2 2 pog","BAi 17-2 3 pog","BAi 17-2 4 pog","BAi 17-2 5 pog","Fi 13-2","Fi 13-2 1 pog","Fi 13-2 2 pog","IPPi 5-2","IPPi 5-2 1 pog","IPPi 5-2 2 pog","IPPi 5-2 3 pog","IPPi 5-2 4 pog","LVi 14-2","LVi 14-2 1 pog","LVi 14-2 2 pog"};
-    String groupIST3[] = {"--pasirinkti--","Ai 14-3","BAi 16-3","Fi 12-3","LVi1 3-3","VVi 11-3","VVi 11-3 1 pog","VVi 11-3 2 pog"};
-    String groupIST4[] = {"--pasirinkti--","Ai 13-4","BAi 15-4","Fi 11-4","LVi 12-4","LVi 12-4 1 pog","LVi 12-4 2 pog"};
+
 
     String programSpinnerText,
             yearSpinnerText;
@@ -134,27 +128,27 @@ public class GrupesVF extends AppCompatActivity {
         if(programSpinnerText.contains("Ištestinės"))
             switch (yearSpinnerText){
                 case "1":
-                    spinner(groupIST1,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_ist_1),grupe);
                     selection("year","1");
                     selection("branch","6");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(groupIST2,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_ist_2),grupe);
                     selection("year","2");
                     selection("branch","7");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(groupIST3,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_ist_3),grupe);
                     selection("year","4");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "4":
-                    spinner(groupIST4,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_ist_4),grupe);
                     selection("year","4");
                     selection("branch","1");
                     grupe.setVisibility(View.VISIBLE);
@@ -165,21 +159,21 @@ public class GrupesVF extends AppCompatActivity {
         if(programSpinnerText.contains("Nuolatinės"))
             switch (yearSpinnerText){
                 case "1":
-                    spinner(groupNL1,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_n_1),grupe);
                     selection("year","1");
                     selection("branch","5");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(groupNL2,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_n_2),grupe);
                     selection("year","2");
                     selection("branch","3");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(groupNL3,grupe);
+                    spinner(getResources().getStringArray(R.array.G_VF_n_3),grupe);
                     selection("year","3");
                     selection("branch","2");
                     grupe.setVisibility(View.VISIBLE);

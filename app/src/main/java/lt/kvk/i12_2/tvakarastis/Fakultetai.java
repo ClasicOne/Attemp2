@@ -28,7 +28,7 @@ import java.util.TimerTask;
 
 public class Fakultetai extends AppCompatActivity {
     ProgressDialog progress;
-    String[] email = {"senasnaujokas@gmail.com"};
+    String[] email = {"v.zalys@kvk.lt"};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,12 +129,14 @@ public class Fakultetai extends AppCompatActivity {
                                     "Pasitikrinkite interneto prieigą ir bandykite patikrinti vėliau. ");
                             progress.setIndeterminate(true);
                             progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
-                            progress.setButton(DialogInterface.BUTTON_POSITIVE, "Send Email", new DialogInterface.OnClickListener() {
+                            progress.setButton(DialogInterface.BUTTON_POSITIVE, "Pranešti administratoriui", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-                                    composeEmail(email,"test", "Tvarkarasciu serveris neveikia");
+                                    composeEmail(email,"Neveikia tvarkaraščiai",
+                                            "Sveiki,\n" +
+                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkkamai publikuojami.");
 
-                                    dialogInterface.dismiss();
+                                    //dialogInterface.dismiss();
                                 }
                             });
                             progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);

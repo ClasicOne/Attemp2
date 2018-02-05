@@ -683,6 +683,934 @@
         <item>781</item>
 
     </string-array>
+
+    <string-array name="G_SVMF_bps_1">
+        Bendrosios praktikos slauga
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>SL 19-1</item>
+        <item>SL 19-1, 1-2</item>
+        <item>SL 19-1, 1-3</item>
+        <item>SL 19-1, 2-2</item>
+        <item>SL 19-1, 2-3</item>
+        <item>SL 19-1, 3-3</item>
+        <item>SL 20-1</item>
+        <item>SL 20-1, 1-2</item>
+        <item>SL 20-1, 1-3</item>
+        <item>SL 20-1, 2-2</item>
+        <item>SL 20-1, 2-3</item>
+        <item>SL 20-1, 3-3</item>
+        <item>SL 21-1</item>
+        <item>SL 21-1, 1-2</item>
+        <item>SL 21-1, 2-2</item>
+        <item>SL 21-1,2-3</item>
+        <item>SL 21-1,3-3</item>
+        <item>SL 21-1.1-3</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_1_value">
+        Bendrosios praktikos slauga
+        Metai 1
+        <item>duck</item>
+        <item>68</item>
+        <item>69</item>
+        <item>71</item>
+        <item>70</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>77</item>
+        <item>76</item>
+        <item>78</item>
+        <item>79</item>
+        <item>188</item>
+        <item>184</item>
+        <item>183</item>
+        <item>186</item>
+        <item>187</item>
+        <item>185</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_2">
+        Bendrosios praktikos slauga
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>SL 17-2</item>
+        <item>SL 17-2, 1-2</item>
+        <item>SL 17-2, 2-2</item>
+        <item>SL 18-2</item>
+        <item>SL 18-2, 1-2</item>
+        <item>SL 18-2, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_2_value">
+        Bendrosios praktikos slauga
+        Metai 2
+        <item>duck</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_3">
+        Bendrosios praktikos slauga
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>SL 19-1</item>
+        <item>SL 19-1, 1-2</item>
+        <item>SL 19-1, 1-3</item>
+        <item>SL 19-1, 2-2</item>
+        <item>SL 19-1, 2-3</item>
+        <item>SL 19-1, 3-3</item>
+        <item>SL 20-1</item>
+        <item>SL 20-1, 1-2</item>
+        <item>SL 20-1, 1-3</item>
+        <item>SL 20-1, 2-2</item>
+        <item>SL 20-1, 2-3</item>
+        <item>SL 20-1, 3-3</item>
+        <item>SL 21-1</item>
+        <item>SL 21-1, 1-2</item>
+        <item>SL 21-1, 2-2</item>
+        <item>SL 21-1,2-3</item>
+        <item>SL 21-1,3-3</item>
+        <item>SL 21-1.1-3</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_3_value">
+        Bendrosios praktikos slauga
+        Metai 3
+        <item>duck</item>
+        <item>68</item>
+        <item>69</item>
+        <item>71</item>
+        <item>70</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>77</item>
+        <item>76</item>
+        <item>78</item>
+        <item>79</item>
+        <item>188</item>
+        <item>184</item>
+        <item>183</item>
+        <item>186</item>
+        <item>187</item>
+        <item>185</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_4">
+        Bendrosios praktikos slauga
+        Metai 4
+        <item>--pasirinkti--</item>
+        <item>SL 13-4</item>
+        <item>SL 13-4, 1-2</item>
+        <item>SL 13-4, 2-2</item>
+        <item>SL 14-4</item>
+        <item>SL 14-4, 1-2</item>
+        <item>SL 14-4, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_bps_4_value">
+        Bendrosios praktikos slauga
+        Metai 4
+        <item>duck</item>
+        <item>150</item>
+        <item>151</item>
+        <item>152</item>
+        <item>153</item>
+        <item>154</item>
+        <item>155</item>
+    </string-array>
+    <string-array name="G_SVMF_bh_1">
+        Burnos higiena
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>BH 10-1</item>
+        <item>BH 10-1, 1-2</item>
+        <item>BH 10-1, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_bh_1_value">
+        Burnos higiena
+        Metai 1
+        <item>duck</item>
+        <item>92</item>
+        <item>179</item>
+        <item>178</item>
+    </string-array>
+    <string-array name="G_SVMF_bh_2">
+        Burnos higiena
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>BH9-2</item>
+        <item>BH9-2, 1-2</item>
+        <item>BH9-2, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_bh_2_value">
+
+        Burnos higiena
+        Metai 2
+        <item>duck</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+    </string-array>
+    <string-array name="G_SVMF_bh_3">
+        Burnos higiena
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>BH8-3</item>
+        <item>BH8-3, 1-2</item>
+        <item>BH8-3, 1-3</item>
+        <item>BH8-3, 2-2</item>
+        <item>BH8-3, 2-3</item>
+        <item>BH8-3, 3-3</item>
+    </string-array>
+    <string-array name="G_SVMF_bh_3_value">
+        Burnos higiena
+        Metai 3
+        <item>duck</item>
+        <item>97</item>
+        <item>98</item>
+        <item>147</item>
+        <item>99</item>
+        <item>148</item>
+        <item>149</item>
+    </string-array>
+    <string-array name="G_SVMF_d_1">
+        Dietetika
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>DT 4-1</item>
+        <item>DT 4-1, 1-2</item>
+        <item>DT 4-1, 2-2</item>
+        <item>DTs 1-1</item>
+        <item>DTs 1-1, 1-2</item>
+        <item>DTs 1-1, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_d_1_value">
+
+        Dietetika
+        Metai 1
+        <item>duck</item>
+        <item>100</item>
+        <item>177</item>
+        <item>176</item>
+        <item>160</item>
+        <item>161</item>
+        <item>162</item>
+
+    </string-array>
+    <string-array name="G_SVMF_d_2">
+        Dietetika
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>DT 3-2</item>
+        <item>DT 3-2, 1-2</item>
+        <item>DT 3-2, 2-2</item>
+        <item>DTi 2-2</item>
+        <item>DTi 2-2, 1-2</item>
+        <item>DTi 2-2, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_d_2_value">
+
+        Dietetika
+        Metai 2
+        <item>duck</item>
+        <item>141</item>
+        <item>171</item>
+        <item>170</item>
+        <item>173</item>
+        <item>175</item>
+        <item>174</item>
+    </string-array>
+    <string-array name="G_SVMF_d_3">
+        Dietetika
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>DT 2-3</item>
+        <item>DTi 1-3</item>
+    </string-array>
+    <string-array name="G_SVMF_d_3_value">
+
+        Dietetika
+        Metai 3
+        <item>duck</item>
+        <item>172</item>
+        <item>182</item>
+
+    </string-array>
+    <string-array name="G_SVMF_gt_1">
+        Gro%u017Eio terapija
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>GT 17-1</item>
+        <item>GT 17-1, 1-2</item>
+        <item>GT 17-1, 1-3</item>
+        <item>GT 17-1, 2-2</item>
+        <item>GT 17-1, 2-3</item>
+        <item>GT 17-1, 3-3</item>
+        <item>GT 18-1</item>
+        <item>GT 18-1, 1-2</item>
+        <item>GT 18-1, 1-3</item>
+        <item>GT 18-1, 2-2</item>
+        <item>GT 18-1, 2-3</item>
+        <item>GT 18-1, 3-3</item>
+
+    </string-array>
+    <string-array name="G_SVMF_gt_1_value">
+        Gro%u017Eio terapija
+        Metai 1
+        <item>duck</item>
+        <item>123</item>
+        <item>124</item>
+        <item>126</item>
+        <item>125</item>
+        <item>127</item>
+        <item>128</item>
+        <item>25</item>
+        <item>26</item>
+        <item>28</item>
+        <item>27</item>
+        <item>29</item>
+        <item>30</item>
+
+    </string-array>
+    <string-array name="G_SVMF_gt_2">
+
+        Gro%u017Eio terapija
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>GT 15-2</item>
+        <item>GT 15-2, 1-2</item>
+        <item>GT 15-2, 1-3</item>
+        <item>GT 15-2, 2-2</item>
+        <item>GT 15-2, 2-3</item>
+        <item>GT 15-2, 3-3</item>
+        <item>GT 16-2</item>
+        <item>GT 16-2, 1-2</item>
+        <item>GT 16-2, 1-3</item>
+        <item>GT 16-2, 2-2</item>
+        <item>GT 16-2, 2-3</item>
+        <item>GT 16-2, 3-3</item>
+    </string-array>
+    <string-array name="G_SVMF_gt_2_value">
+
+        Gro%u017Eio terapija
+        Metai 2
+        <item>duck</item>
+        <item>37</item>
+        <item>38</item>
+        <item>119</item>
+        <item>39</item>
+        <item>120</item>
+        <item>121</item>
+        <item>31</item>
+        <item>32</item>
+        <item>34</item>
+        <item>33</item>
+        <item>35</item>
+        <item>36</item>
+
+    </string-array>
+    <string-array name="G_SVMF_gt_3">
+        Gro%u017Eio terapija
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>GT 13-3</item>
+        <item>GT 13-3, 1-2</item>
+        <item>GT 13-3, 1-3</item>
+        <item>GT 13-3, 2-2</item>
+        <item>GT 13-3, 2-3</item>
+        <item>GT 13-3, 3-3</item>
+        <item>GT 14-3</item>
+        <item>GT 14-3, 1-2</item>
+        <item>GT 14-3, 1-3</item>
+        <item>GT 14-3, 2-2</item>
+        <item>GT 14-3, 2-3</item>
+        <item>GT 14-3, 3-3</item>
+    </string-array>
+    <string-array name="G_SVMF_gt_3_value">
+        Gro%u017Eio terapija
+        Metai 3
+        <item>duck</item>
+        <item>111</item>
+        <item>112</item>
+        <item>166</item>
+        <item>113</item>
+        <item>167</item>
+        <item>168</item>
+        <item>114</item>
+        <item>115</item>
+        <item>163</item>
+        <item>116</item>
+        <item>164</item>
+        <item>165</item>
+    </string-array>
+    <string-array name="G_SVMF_k_1">
+        Kineziterapija
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>KT 16-1</item>
+        <item>KT 16-1, 1-2</item>
+        <item>KT 16-1, 1-3</item>
+        <item>KT 16-1, 2-2</item>
+        <item>KT 16-1, 2-3</item>
+        <item>KT 16-1, 3-3</item>
+        <item>KT 17-1</item>
+        <item>KT 17-1, 1-2</item>
+        <item>KT 17-1, 1-3</item>
+        <item>KT 17-1, 2-2</item>
+        <item>KT 17-1, 2-3</item>
+        <item>KT 17-1, 3-3</item>
+    </string-array>
+    <string-array name="G_SVMF_k_1_value">
+
+        Kineziterapija
+        Metai 1
+        <item>duck</item>
+        <item>59</item>
+        <item>60</item>
+        <item>194</item>
+        <item>61</item>
+        <item>193</item>
+        <item>192</item>
+        <item>56</item>
+        <item>57</item>
+        <item>191</item>
+        <item>58</item>
+        <item>190</item>
+        <item>189</item>
+    </string-array>
+    <string-array name="G_SVMF_k_2">
+        Kineziterapija
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>KT 14-2</item>
+        <item>KT 14-2  2-2</item>
+        <item>KT 14-2, 1-2</item>
+        <item>KT 14-2, 1-3</item>
+        <item>KT 14-2, 2-3</item>
+        <item>KT 14-2, 3-3</item>
+        <item>KT 15-2</item>
+        <item>KT 15-2, 1-2</item>
+        <item>KT 15-2, 1-3</item>
+        <item>KT 15-2, 2-2</item>
+        <item>KT 15-2, 2-3</item>
+        <item>KT 15-2, 3-3</item>
+    </string-array>
+    <string-array name="G_SVMF_k_2_value">
+        Kineziterapija
+        Metai 2
+        <item>duck</item>
+        <item>129</item>
+        <item>131</item>
+        <item>130</item>
+        <item>132</item>
+        <item>133</item>
+        <item>134</item>
+        <item>62</item>
+        <item>63</item>
+        <item>65</item>
+        <item>64</item>
+        <item>66</item>
+        <item>67</item>
+    </string-array>
+    <string-array name="G_SVMF_k_3">
+        Kineziterapija
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>KT 12-3</item>
+        <item>KT 12-3, 1-2</item>
+        <item>KT 12-3, 2-2</item>
+        <item>KT 13-3</item>
+        <item>KT 13-3, 1-2</item>
+        <item>KT 13-3, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_k_3_value">
+        Kineziterapija
+        Metai 3
+        <item>duck</item>
+        <item>138</item>
+        <item>139</item>
+        <item>140</item>
+        <item>135</item>
+        <item>136</item>
+        <item>137</item>
+    </string-array>
+    <string-array name="G_SVMF_op_1">
+        Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>OP10-1</item>
+        <item>OP10-1, 1-2</item>
+        <item>OP10-1, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_op_1_value">
+        Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 1
+        <item>duck</item>
+        <item>101</item>
+        <item>181</item>
+        <item>180</item>
+    </string-array>
+    <string-array name="G_SVMF_op_2">
+        Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>OP9-2</item>
+        <item>OP9-2, 1-2</item>
+        <item>OP9-2, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_op_2_value">
+
+        Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 2
+        <item>duck</item>
+        <item>102</item>
+        <item>145</item>
+        <item>146</item>
+
+    </string-array>
+    <string-array name="G_SVMF_op_3">
+        Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>OP8-3</item>
+        <item>OP8-3, 1-3</item>
+        <item>OP8-3, 2-3</item>
+        <item>OP8-3, 3-3</item>
+
+    </string-array>
+    <string-array name="G_SVMF_op_3_value">
+        Odontologin%u0117 prie%u017Ei%u016Bra
+        Metai 3
+        <item>duck</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_1">
+        Socialinis darbas
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>SD 16-1</item>
+        <item>SD 16-1, 1-2</item>
+        <item>SD 16-1, 2-2</item>
+        <item>SDs 1-1</item>
+        <item>SDs 1-1, 1-2</item>
+        <item>SDs 1-1, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_1_value">
+        Socialinis darbas
+        Metai 1
+        <item>duck</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_2">
+        Socialinis darbas
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>SD 14-2</item>
+        <item>SD 14-2, 1-2</item>
+        <item>SD 14-2, 2-2</item>
+        <item>SD 15-2</item>
+        <item>SD 15-2, 1-2</item>
+        <item>SD 15-2, 2-2</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_2_value">
+        Socialinis darbas
+        Metai 2
+        <item>duck</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_3">
+        Socialinis darbas
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>SD 12-3</item>
+        <item>SD 12-3, 1-2</item>
+        <item>SD 12-3, 2-2</item>
+        <item>SD 13-3</item>
+        <item>SD 13-3, 1-2</item>
+        <item>SD 13-3, 2-2</item>
+
+    </string-array>
+    <string-array name="G_SVMF_sd_3_value">
+        Socialinis darbas
+        Metai 3
+        <item>duck</item>
+        <item>142</item>
+        <item>143</item>
+        <item>144</item>
+        <item>54</item>
+        <item>55</item>
+        <item>107</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_4">
+        Socialinis darbas
+        Metai 4
+        <item>--pasirinkti--</item>
+        <item>SDi 6-4</item>
+    </string-array>
+    <string-array name="G_SVMF_sd_4_value">
+        Socialinis darbas
+        Metai 4
+        <item>duck</item>
+        <item>159</item>
+    </string-array>
+
+
+    <string-array name="G_VF_ist_1">
+        Tipas I%u0161testin%u0117s
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>BAi 18-1</item>
+        <item>BAi 18-1 1pog</item>
+        <item>BAi 18-1 2 pog</item>
+        <item>Fi 14-1</item>
+        <item>IPPi 6-1</item>
+        <item>IPPi 6-1 1 pog</item>
+        <item>IPPi 6-1 2 pog</item>
+        <item>IPPi 6-1 3 pog</item>
+        <item>IPPi 6-1 4 pog</item>
+        <item>LVi 15-1</item>
+        <item>LVi 15-1 1 pog</item>
+        <item>LVi 15-1 2 pog</item>
+    </string-array>
+    <string-array name="G_VF_ist_1_value">
+        Tipas I%u0161testin%u0117s
+        Metai 1
+        <item>duck</item>
+        <item>760</item>
+        <item>793</item>
+        <item>792</item>
+        <item>919</item>
+        <item>924</item>
+        <item>923</item>
+        <item>922</item>
+        <item>921</item>
+        <item>920</item>
+        <item>927</item>
+        <item>926</item>
+        <item>925</item>
+    </string-array>
+    <string-array name="G_VF_ist_2">
+        Tipas I%u0161testin%u0117s
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>BAi 17-2</item>
+        <item>BAi 17-2 1 pog</item>
+        <item>BAi 17-2 2 pog</item>
+        <item>BAi 17-2 3 pog</item>
+        <item>BAi 17-2 4 pog</item>
+        <item>BAi 17-2 5 pog</item>
+        <item>Fi 13-2</item>
+        <item>Fi 13-2 1 pog</item>
+        <item>Fi 13-2 2 pog</item>
+        <item>IPPi 5-2</item>
+        <item>IPPi 5-2 1 pog</item>
+        <item>IPPi 5-2 2 pog</item>
+        <item>IPPi 5-2 3 pog</item>
+        <item>IPPi 5-2 4 pog</item>
+        <item>LVi 14-2</item>
+        <item>LVi 14-2 1 pog</item>
+        <item>LVi 14-2 2 pog</item>
+
+    </string-array>
+    <string-array name="G_VF_ist_2_value">
+
+        Tipas I%u0161testin%u0117s
+        Metai 2
+        <item>duck</item>
+        <item>928</item>
+        <item>774</item>
+        <item>773</item>
+        <item>931</item>
+        <item>930</item>
+        <item>929</item>
+        <item>933</item>
+        <item>932</item>
+        <item>802</item>
+        <item>816</item>
+        <item>937</item>
+        <item>936</item>
+        <item>935</item>
+        <item>934</item>
+        <item>780</item>
+        <item>788</item>
+        <item>789</item>
+    </string-array>
+    <string-array name="G_VF_ist_3">
+        Tipas I%u0161testin%u0117s
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>Ai 14-3</item>
+        <item>BAi 16-3</item>
+        <item>Fi 12-3</item>
+        <item>LVi 13-3</item>
+        <item>VVi 11-3</item>
+        <item>VVi 11-3 1 pog</item>
+        <item>VVi 11-3 2 pog</item>
+    </string-array>
+    <string-array name="G_VF_ist_3_value">
+        Tipas I%u0161testin%u0117s
+        Metai 3
+        <item>duck</item>
+        <item>939</item>
+        <item>938</item>
+        <item>723</item>
+        <item>783</item>
+        <item>804</item>
+        <item>945</item>
+        <item>944</item>
+
+    </string-array>
+    <string-array name="G_VF_ist_4">
+        Tipas I%u0161testin%u0117s
+        Metai 4
+        <item>--pasirinkti--</item>
+        <item>Ai 13-4</item>
+        <item>BAi 15-4</item>
+        <item>Fi 11-4</item>
+        <item>LVi 12-4</item>
+        <item>LVi 12-4 1 pog</item>
+        <item>LVi 12-4 2 pog</item>
+
+    </string-array>
+    <string-array name="G_VF_ist_4_value">
+        Tipas I%u0161testin%u0117s
+        Metai 4
+        <item>duck</item>
+        <item>769</item>
+        <item>745</item>
+        <item>718</item>
+        <item>720</item>
+        <item>941</item>
+        <item>940</item>
+
+    </string-array>
+    <string-array name="G_VF_n_1">
+
+        Tipas Nuolatin%u0117s
+        Metai 1
+        <item>--pasirinkti--</item>
+        <item>A 16-1</item>
+        <item>As 15-1</item>
+        <item>As 15-1 1 pog</item>
+        <item>As 15-1 2 pog</item>
+        <item>BA 23-1</item>
+        <item>BA 23-1 1 pog</item>
+        <item>BA 23-1 2 pog</item>
+        <item>BM-1</item>
+        <item>F 19-1</item>
+        <item>F 19-1 1 pog</item>
+        <item>F 19-1 2 pog</item>
+        <item>F 19-1 3 pog</item>
+        <item>F 19-1 4 pog</item>
+        <item>F 19-1 5 pog</item>
+        <item>IPP 7-1</item>
+        <item>IPP 7-1 1 pog</item>
+        <item>LV 20-1</item>
+        <item>LV 20-1 1 pog</item>
+        <item>LV 20-1 2 pog</item>
+        <item>LV 20-1 3 pog</item>
+        <item>LV 20-1 4 pog</item>
+        <item>LV 20-1 5 pog</item>
+        <item>LV 20-1 6 pog</item>
+        <item>SP 4-1</item>
+        <item>TA 19-1</item>
+        <item>TA 19-1 1 pog</item>
+        <item>TA 19-1 2 pog</item>
+        <item>TA-1</item>
+
+    </string-array>
+    <string-array name="G_VF_n_1_value">
+        Tipas Nuolatin%u0117s
+        Metai 1
+        <item>duck</item>
+        <item>750</item>
+        <item>751</item>
+        <item>736</item>
+        <item>758</item>
+        <item>748</item>
+        <item>835</item>
+        <item>737</item>
+        <item>947</item>
+        <item>747</item>
+        <item>791</item>
+        <item>732</item>
+        <item>812</item>
+        <item>813</item>
+        <item>801</item>
+        <item>767</item>
+        <item>741</item>
+        <item>749</item>
+        <item>771</item>
+        <item>738</item>
+        <item>739</item>
+        <item>814</item>
+        <item>815</item>
+        <item>807</item>
+        <item>730</item>
+        <item>762</item>
+        <item>770</item>
+        <item>731</item>
+        <item>946</item>
+
+    </string-array>
+    <string-array name="G_VF_n_2">
+        Tipas Nuolatin%u0117s
+        Metai 2
+        <item>--pasirinkti--</item>
+        <item>A 15-2</item>
+        <item>A 15-2 1 pog</item>
+        <item>A 15-2 2 pog</item>
+        <item>A 15-2 3 pog</item>
+        <item>A 15-2 4 pog</item>
+        <item>BA 22-2</item>
+        <item>BA 22-2 1 pog</item>
+        <item>BA 22-2 2 pog</item>
+        <item>BA 22-2 3 pog</item>
+        <item>ERASMUS</item>
+        <item>F 18-2</item>
+        <item>F 18-2 1 pog</item>
+        <item>F 18-2 2 pog</item>
+        <item>F 18-2 3 pog</item>
+        <item>F 18-2 4 pog</item>
+        <item>IPP 6-2</item>
+        <item>IPP 6-2 3 pog</item>
+        <item>IPP 6-2 4 pog</item>
+        <item>IPP 6-2 5 pog</item>
+        <item>IPP 6-2 6 pog</item>
+        <item>IPP 6-2 7 pog</item>
+        <item>IPP 6-2 8 pog</item>
+        <item>IPP 6-2 9 pog</item>
+        <item>LV 19-2</item>
+        <item>LV 19-2 1 pog</item>
+        <item>LV 19-2 2 pog</item>
+        <item>LV 19-2 3 pog</item>
+        <item>LV 19-2 4 pog</item>
+        <item>LV 19-2 5 pog</item>
+        <item>LV 19-2 6 pog</item>
+        <item>LV 19-2 7 pog</item>
+        <item>SP 3-2</item>
+        <item>TA 18-2</item>
+        <item>TA 18-2 1 pog</item>
+        <item>TA 18-2 2 pog</item>
+        <item>TA 18-2 3 pog</item>
+        <item>TA 18-2 4 pog</item>
+        <item>TA-3</item>
+        <item>VV 23-2</item>
+    </string-array>
+    <string-array name="G_VF_n_2_value">
+        Tipas Nuolatin%u0117s
+        Metai 2
+        <item>duck</item>
+        <item>746</item>
+        <item>811</item>
+        <item>818</item>
+        <item>820</item>
+        <item>819</item>
+        <item>761</item>
+        <item>724</item>
+        <item>725</item>
+        <item>821</item>
+        <item>943</item>
+        <item>786</item>
+        <item>721</item>
+        <item>722</item>
+        <item>795</item>
+        <item>779</item>
+        <item>775</item>
+        <item>828</item>
+        <item>827</item>
+        <item>826</item>
+        <item>825</item>
+        <item>824</item>
+        <item>823</item>
+        <item>822</item>
+        <item>782</item>
+        <item>810</item>
+        <item>817</item>
+        <item>809</item>
+        <item>832</item>
+        <item>831</item>
+        <item>830</item>
+        <item>829</item>
+        <item>752</item>
+        <item>763</item>
+        <item>790</item>
+        <item>756</item>
+        <item>834</item>
+        <item>808</item>
+        <item>942</item>
+        <item>743</item>
+    </string-array>
+    <string-array name="G_VF_n_3">
+        Tipas Nuolatin%u0117s
+        Metai 3
+        <item>--pasirinkti--</item>
+        <item>A 14-3</item>
+        <item>BA 21-3</item>
+        <item>BA 21-3 1 pog</item>
+        <item>BA 21-3 2 pog</item>
+        <item>F 17-3</item>
+        <item>F 17-3 1 pog</item>
+        <item>F 17-3 2 pog</item>
+        <item>IPP 5-3</item>
+        <item>KV 13-3</item>
+        <item>LV 18-3</item>
+        <item>SP 2-3</item>
+        <item>SPV 6-3</item>
+        <item>TA 17-3</item>
+        <item>TA 17-3 3 pog</item>
+        <item>TA 17-3 4 pog</item>
+        <item>TA 17-3 5 pog</item>
+        <item>TA 17-3 6 pog</item>
+        <item>VV 22-3</item>
+
+    </string-array>
+    <string-array name="G_VF_n_3_value">
+
+        Tipas Nuolatin%u0117s
+        Metai 3
+        <item>duck</item>
+        <item>754</item>
+        <item>759</item>
+        <item>727</item>
+        <item>799</item>
+        <item>755</item>
+        <item>726</item>
+        <item>728</item>
+        <item>800</item>
+        <item>787</item>
+        <item>719</item>
+        <item>753</item>
+        <item>768</item>
+        <item>764</item>
+        <item>833</item>
+        <item>794</item>
+        <item>744</item>
+        <item>777</item>
+        <item>781</item>
+    </string-array>
+
+
+
+
+
+
+
     <string-array name="destytojai_TF_str">
         <item>--pasirinkti--</item>
         <item>Adomkus Aidas</item>
