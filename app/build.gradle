@@ -7,8 +7,8 @@ android {
         applicationId "lt.kvk.i12_2.tvakarastis"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 5
-        versionName "1.4"
+        versionCode 6
+        versionName "1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -29,5 +29,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'org.jsoup:jsoup:1.10.3'
     compile 'com.android.support:design:26.+'
-    implementation 'com.github.chrisbanes:PhotoView:1.+'
 }

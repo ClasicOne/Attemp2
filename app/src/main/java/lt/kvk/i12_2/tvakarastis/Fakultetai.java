@@ -1,7 +1,6 @@
 package lt.kvk.i12_2.tvakarastis;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,13 +8,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 
@@ -105,11 +101,11 @@ public class Fakultetai extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        update();
+        checkIfWorking();
 
     }
 
-    public  void update() {
+    public  void checkIfWorking() {
         new Thread(new Runnable(){
             @Override
             public void run() {
@@ -128,7 +124,7 @@ public class Fakultetai extends AppCompatActivity {
                                     "Sprendimas:\n" +
                                     "Pasitikrinkite interneto prieigą ir bandykite patikrinti vėliau. ");
                             progress.setIndeterminate(true);
-                            progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                            progress.setCancelable(true); // disable dismiss by tapping outside of the dialog
                             progress.setButton(DialogInterface.BUTTON_POSITIVE, "Pranešti administratoriui", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -141,14 +137,14 @@ public class Fakultetai extends AppCompatActivity {
                             });
                             progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                             progress.show();
-                            timer();
+                            timerIfWorking();
                         }
                     });
                 }
             }
         }).start();
     }
-    public void timer(){
+    public void timerIfWorking(){
         final Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -159,7 +155,7 @@ public class Fakultetai extends AppCompatActivity {
                 }catch (Exception e) {
                    // Log.e("Duck", "" + e.getMessage() + ": Timer");
                    // e.printStackTrace();
-                    timer();
+                    timerIfWorking();
                 }
             }        }, (50));
     }

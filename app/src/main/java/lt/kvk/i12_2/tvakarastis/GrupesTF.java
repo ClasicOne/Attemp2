@@ -1,11 +1,14 @@
 package lt.kvk.i12_2.tvakarastis;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Picture;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +27,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.jsoup.Jsoup;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.HashMap;
@@ -40,6 +45,8 @@ public class GrupesTF extends AppCompatActivity {
     String programTipas[] = {"--pasirinkti--", "IŠT", "NL"};
     String yearMetaiNL[] = {"--pasirinkti--", "1", "2", "3"};
     String yearMetaiIST[] = {"--pasirinkti--", "1", "2", "3", "4"};
+    ProgressDialog progress;
+    String[] email = {"v.zalys@kvk.lt"};
 
     //
     @Override
@@ -218,7 +225,7 @@ public class GrupesTF extends AppCompatActivity {
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
-
+        update();
     }
 
     public void click() {
@@ -368,5 +375,71 @@ public class GrupesTF extends AppCompatActivity {
         Intent mIntent = getIntent();
         finish();
         startActivity(mIntent);
+    }
+
+
+    public  void update() {
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                try {
+                    Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                }catch (Exception e){
+                    Log.e("Duck",""+ e.getMessage()+":" );
+                    e.printStackTrace();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            progress = new ProgressDialog(GrupesTF.this);
+                            progress.setTitle("Napavyksta gauti duomenų iš serverio");
+                            progress.setMessage("Galimos priežastys: \n1. Nesate pasijungę interneto ryšį,\n" +
+                                    "2. Gali būti problemos serverio pusėje.\n" +
+                                    "Sprendimas:\n" +
+                                    "Pasitikrinkite interneto prieigą ir bandykite patikrinti vėliau. ");
+                            progress.setIndeterminate(true);
+                            progress.setCancelable(true); // disable dismiss by tapping outside of the dialog
+                            progress.setButton(DialogInterface.BUTTON_POSITIVE, "Pranešti administratoriui", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    composeEmail(email,"Neveikia tvarkaraščiai",
+                                            "Sveiki,\n" +
+                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkkamai publikuojami.");
+
+                                    //dialogInterface.dismiss();
+                                }
+                            });
+                            progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                            progress.show();
+                            timer();
+                        }
+                    });
+                }
+            }
+        }).start();
+    }
+    public void timer(){
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                    progress.cancel();
+                }catch (Exception e) {
+                    // Log.e("Duck", "" + e.getMessage() + ": Timer");
+                    // e.printStackTrace();
+                    timer();
+                }
+            }        }, (50));
+    }
+    public void composeEmail(String[] addresses, String subject, String message) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }

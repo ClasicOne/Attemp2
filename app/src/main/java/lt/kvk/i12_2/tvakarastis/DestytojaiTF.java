@@ -3,11 +3,13 @@ package lt.kvk.i12_2.tvakarastis;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Picture;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -52,7 +54,8 @@ public class DestytojaiTF extends AppCompatActivity {
 
     String[] value = null;
     String[] prof = null;
-    String str = "",valuen = "";
+    ProgressDialog progress;
+    String[] email = {"v.zalys@kvk.lt"};
     final HashMap<String,String> grupesHashmap = new  HashMap<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +99,7 @@ public class DestytojaiTF extends AppCompatActivity {
             }
         });
         timer( progress, profID);
-
+checkIfWorking();
     }
 
     private void wwShit() {
@@ -285,7 +288,7 @@ public class DestytojaiTF extends AppCompatActivity {
             case R.id.showImage:
 
                 try{
-                    File temp = new File  ("/data/user/0/lt.kvk.i12_2.tvakarastis/files/saved.jpg");
+                    File temp = new File  ("/data/user/0/lt.kvk.i12_2.tvakarastis/files/TF_prof.jpg");
                     Intent intent = new Intent(DestytojaiTF.this, SavedImage_Prof_TF.class);
                     startActivity(intent);
                 }catch (NullPointerException e){
@@ -307,7 +310,7 @@ public class DestytojaiTF extends AppCompatActivity {
         picture.draw(c);
         FileOutputStream fos;
         try {
-            fos = openFileOutput("TF.jpg", Context.MODE_PRIVATE);
+            fos = openFileOutput("TF_prof.jpg", Context.MODE_PRIVATE);
             if (fos != null) {
                 b.compress(Bitmap.CompressFormat.JPEG, 100, fos);
 
@@ -346,5 +349,69 @@ public class DestytojaiTF extends AppCompatActivity {
         Intent mIntent = getIntent();
         finish();
         startActivity(mIntent);
+    }
+    public  void checkIfWorking() {
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                try {
+                    Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                }catch (Exception e){
+                    Log.e("Duck",""+ e.getMessage()+":" );
+                    e.printStackTrace();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            progress = new ProgressDialog(DestytojaiTF.this);
+                            progress.setTitle("Napavyksta gauti duomenų iš serverio");
+                            progress.setMessage("Galimos priežastys: \n1. Nesate pasijungę interneto ryšį,\n" +
+                                    "2. Gali būti problemos serverio pusėje.\n" +
+                                    "Sprendimas:\n" +
+                                    "Pasitikrinkite interneto prieigą ir bandykite patikrinti vėliau. ");
+                            progress.setIndeterminate(true);
+                            progress.setCancelable(true); // disable dismiss by tapping outside of the dialog
+                            progress.setButton(DialogInterface.BUTTON_POSITIVE, "Pranešti administratoriui", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    composeEmail(email,"Neveikia tvarkaraščiai",
+                                            "Sveiki,\n" +
+                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkkamai publikuojami.");
+
+                                    //dialogInterface.dismiss();
+                                }
+                            });
+                            progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                            progress.show();
+                            timerIfWorking();
+                        }
+                    });
+                }
+            }
+        }).start();
+    }
+    public void timerIfWorking(){
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
+                    progress.cancel();
+                }catch (Exception e) {
+                    // Log.e("Duck", "" + e.getMessage() + ": Timer");
+                    // e.printStackTrace();
+                    timerIfWorking();
+                }
+            }        }, (50));
+    }
+    public void composeEmail(String[] addresses, String subject, String message) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }

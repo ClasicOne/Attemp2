@@ -17,7 +17,7 @@ public class SavedImage_Prof_VF extends AppCompatActivity {
         setContentView(R.layout.imageview);
         ZoomableImageView imageView1 = (ZoomableImageView)findViewById(R.id.zoomableImageView);
         try {
-            imageView1.setImageBitmap(BitmapFactory.decodeFile("/data/user/0/lt.kvk.i12_2.tvakarastis/files/SVMF_prof.jpg"));
+            imageView1.setImageBitmap(BitmapFactory.decodeFile("/data/user/0/lt.kvk.i12_2.tvakarastis/files/VF_prof.jpg"));
         }catch (NullPointerException e){
             e.printStackTrace();
         }
