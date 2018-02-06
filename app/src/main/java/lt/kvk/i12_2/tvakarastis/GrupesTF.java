@@ -1,8 +1,17 @@
 package lt.kvk.i12_2.tvakarastis;
 
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Picture;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +30,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.HashMap;
 
 
@@ -195,6 +209,7 @@ public class GrupesTF extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+              //  saveImage();
                 hide();
             }
             @Override
@@ -204,6 +219,9 @@ public class GrupesTF extends AppCompatActivity {
                 Toast.makeText(context, "Oh no!", Toast.LENGTH_SHORT).show();
             }
         });
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            WebView.enableSlowWholeDocumentDraw();
+//        setContentView(ww);
     }
 
     public void click(){
@@ -255,8 +273,117 @@ public class GrupesTF extends AppCompatActivity {
             case R.id.action_refresh:
                 restartActivity();
                 break;
+            case R.id.saveImage:
+saveImage();
+//                captureScreen();
+                break;
+            case R.id.showImage:
+            {
+                Intent intent = new Intent(GrupesTF.this,SavedImageTF.class);
+                startActivity(intent);
+            }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void saveImage() {
+
+/*
+        String filename = "myfile";
+        String string = "Hello world!";
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+
+        Picture picture = ww.capturePicture();
+        Bitmap b = Bitmap.createBitmap( picture.getWidth(),
+                picture.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas( b );
+
+        picture.draw( c );
+        FileOutputStream fos = null;
+        try {
+
+            fos = openFileOutput("saved.jpg",Context.MODE_PRIVATE);
+            if ( fos != null )
+            {
+                b.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+
+                fos.close();
+            }
+        }
+        catch( Exception e )
+        {
+            e.printStackTrace();
+            String a= e.getMessage();
+            Log.e("Duck",e.getMessage());
+        }
+
+
+
+
+
+
+
+
+      /*  Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+        ContextWrapper wrapper = new ContextWrapper(getApplicationContext());
+        File file = wrapper.getDir("Images",MODE_PRIVATE);
+        file = new File(file, "UniqueFileName"+".jpg");
+        try{
+            OutputStream stream = null;
+            stream = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.JPEG,100,stream);
+            stream.flush();
+            stream.close();
+        }catch (Exception e) // Catch the exception
+        {
+            e.printStackTrace();
+        }
+        Uri savedImageURI = Uri.parse(file.getAbsolutePath());
+        Log.e("Duck", ""+ savedImageURI);
+
+*/
+
+
+
+    }
+    private void captureScreen() {
+
+        String mPath = getAppStorageFolder(GrupesTF.this) + File.separator + "test.png";
+
+        // create bitmap screen capture
+        Bitmap bitmap;
+        View v1 = ww.getRootView();
+        v1.setDrawingCacheEnabled(true);
+        bitmap = Bitmap.createBitmap(v1.getDrawingCache());
+        v1.setDrawingCacheEnabled(false);
+
+        OutputStream fout = null;
+        File imageFile = new File(mPath);
+
+        try {
+            fout = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 90, fout);
+            fout.flush();
+            fout.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public String getAppStorageFolder(Activity activity) {
+        return Environment.getExternalStorageDirectory() + File.separator;
     }
     public void restartActivity(){
         Intent mIntent = getIntent();
