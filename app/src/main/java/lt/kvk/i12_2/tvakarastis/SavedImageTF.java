@@ -19,8 +19,10 @@ public class SavedImageTF extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.imageview);
-        ImageView imageView ;
-        imageView = (ImageView) findViewById(R.id.imageViewSaved);
-        imageView.setImageBitmap(BitmapFactory.decodeFile("/data/user/0/lt.kvk.i12_2.tvakarastis/files/saved.jpg"));
+
+        ZoomableImageView imageView1 = (ZoomableImageView)findViewById(R.id.zoomableImageView);
+
+     //   imageView = (ImageView) findViewById(R.id.imageViewSaved);
+        imageView1.setImageBitmap(BitmapFactory.decodeFile("/data/user/0/lt.kvk.i12_2.tvakarastis/files/saved.jpg"));
     }
 }
