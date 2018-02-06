@@ -50,15 +50,49 @@
             android:label="Apie"
             android:parentActivityName="lt.kvk.i12_2.tvakarastis.Fakultetai"
             android:screenOrientation="portrait">
-
         </activity>
+
+
         <activity
-            android:name=".SavedImageTF"
-            android:label="Saved Images"
+            android:name=".SavedImage_Group_TF"
+            android:label="Išsaugota"
             android:parentActivityName=".GrupesTF"
             android:screenOrientation="portrait">
-
         </activity>
+        <activity
+            android:name=".SavedImage_Group_VF"
+            android:label="Išsaugota"
+            android:parentActivityName=".GrupesVF"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SavedImage_Group_SVMF"
+            android:label="Išsaugota"
+            android:parentActivityName=".GrupesSVMF"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name=".SavedImage_Prof_TF"
+            android:label="Išsaugota"
+            android:parentActivityName=".DestytojaiTF"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SavedImage_Prof_VF"
+            android:label="Išsaugota"
+            android:parentActivityName=".DestytojaiVF"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SavedImage_Prof_SVMF"
+            android:label="Išsaugota"
+            android:parentActivityName=".DestytojaiSVMF"
+            android:screenOrientation="portrait">
+        </activity>
+
+
         <activity
             android:name="lt.kvk.i12_2.tvakarastis.TFMenu"
             android:label="TF"

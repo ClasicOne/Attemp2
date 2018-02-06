@@ -1,6 +1,10 @@
 package lt.kvk.i12_2.tvakarastis;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Picture;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +21,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Meskius on 10/25/2017.
@@ -432,13 +440,96 @@ public class GrupesSVMF extends AppCompatActivity {
     // Refresh mygtukas
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_refresh:
-                //ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
                 restartActivity();
                 break;
+            case R.id.saveImage:
+                ww.getSettings().setUseWideViewPort(true);
+                ww.setInitialScale(1);
+
+                final Timer timer = new Timer();
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        try {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    saveImage();
+
+                                }
+                            });
+
+                            // ww.setInitialScale(0);
+                            Log.e("Duck", ": Timer");
+                        }catch (Exception e) {
+                            // Log.e("Duck", "" + e.getMessage() + ": Timer");
+                            // e.printStackTrace();
+
+                        }
+                    }        }, (300));
+
+
+                break;
+            case R.id.showImage:
+
+                try{
+                    File temp = new File  ("/data/user/0/lt.kvk.i12_2.tvakarastis/files/saved.jpg");
+                    Intent intent = new Intent(GrupesSVMF.this, SavedImage_Group_SVMF.class);
+                    startActivity(intent);
+                }catch (NullPointerException e){
+                }
+
+
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void saveImage() {
+
+
+        Picture picture = ww.capturePicture();
+        Bitmap b = Bitmap.createBitmap(picture.getWidth(),
+                picture.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(b);
+
+        picture.draw(c);
+        FileOutputStream fos;
+        try {
+            fos = openFileOutput("TF.jpg", Context.MODE_PRIVATE);
+            if (fos != null) {
+                b.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+
+                fos.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            String a = e.getMessage();
+            Log.e("Duck", e.getMessage());
+        }
+        final Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                try {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ww.getSettings().setUseWideViewPort(false);
+                            ww.setInitialScale(0);
+                        }
+                    });
+                    Log.e("Duck", ": Timer");
+                } catch (Exception e) {
+                    // Log.e("Duck", "" + e.getMessage() + ": Timer");
+                    // e.printStackTrace();
+
+                }
+            }
+        }, (550));
+
+
     }
     public void restartActivity(){
         Intent mIntent = getIntent();

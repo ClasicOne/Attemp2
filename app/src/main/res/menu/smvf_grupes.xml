@@ -3,7 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="lt.kvk.i12_2.tvakarastis.GrupesSVMF">
-
+    <item
+        android:id="@+id/showImage"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Item"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/saveImage"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Item"
+        app:showAsAction="always" />
     <item android:id="@+id/action_refresh"
         android:icon="@mipmap/ic_refresh_white_24dp"
         android:title="Refresh"
