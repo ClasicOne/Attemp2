@@ -160,7 +160,8 @@ public class GrupesVF extends AppCompatActivity {
                     break;
                 case "3":
                     spinner(getResources().getStringArray(R.array.G_VF_ist_3), grupe);
-                    selection("year", "4");
+                    selection("year", "3");
+                    selection("branch", "4");
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
