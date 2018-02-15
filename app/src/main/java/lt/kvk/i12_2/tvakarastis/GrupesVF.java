@@ -395,7 +395,7 @@ public class GrupesVF extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     composeEmail(email, "Neveikia tvarkaraščiai",
                                             "Sveiki,\n" +
-                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkkamai publikuojami.");
+                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkamai publikuojami.");
 
                                     //dialogInterface.dismiss();
                                 }

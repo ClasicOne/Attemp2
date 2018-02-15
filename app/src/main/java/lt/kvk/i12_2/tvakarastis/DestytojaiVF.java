@@ -61,7 +61,7 @@ public class DestytojaiVF extends AppCompatActivity{
         ProgressDialog progress = new ProgressDialog(this,R.style.MyAlertDialogStyle);
         progress.setTitle("Palaukite");
         progress.setMessage("Gaunnamas dėstytojų sąrašas");
-        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+        progress.setCancelable(true); // disable dismiss by tapping outside of the dialog
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progress.show();
        /* //<------------------------- Deklaruojamas Hashmap
@@ -370,7 +370,7 @@ public class DestytojaiVF extends AppCompatActivity{
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     composeEmail(email,"Neveikia tvarkaraščiai",
                                             "Sveiki,\n" +
-                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkkamai publikuojami.");
+                                                    "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkamai publikuojami.");
 
                                     //dialogInterface.dismiss();
                                 }
