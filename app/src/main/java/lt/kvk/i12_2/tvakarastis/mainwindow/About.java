@@ -1,8 +1,10 @@
-package lt.kvk.i12_2.tvakarastis;
+package lt.kvk.i12_2.tvakarastis.mainwindow;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import lt.kvk.i12_2.tvakarastis.R;
 
 /**
  * Created by Meskius on 10/25/2017.

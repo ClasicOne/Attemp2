@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/mizedblue"
     android:orientation="vertical"
-    tools:context=".GrupesTF"
+    tools:context=".group.GrupesTF"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp">
 

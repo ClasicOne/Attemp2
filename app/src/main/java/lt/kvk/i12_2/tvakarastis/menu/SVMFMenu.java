@@ -1,4 +1,4 @@
-package lt.kvk.i12_2.tvakarastis;
+package lt.kvk.i12_2.tvakarastis.menu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import lt.kvk.i12_2.tvakarastis.classroom.AuditorijosSVMF;
+import lt.kvk.i12_2.tvakarastis.prof.DestytojaiSVMF;
+import lt.kvk.i12_2.tvakarastis.group.GrupesSVMF;
+import lt.kvk.i12_2.tvakarastis.R;
 
 /**
  * Created by Meskius on 10/25/2017.

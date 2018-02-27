@@ -1,4 +1,4 @@
-package lt.kvk.i12_2.tvakarastis;
+package lt.kvk.i12_2.tvakarastis.imageview;
 
 /**
  * Created by Meskius on 2/6/2018.
@@ -13,7 +13,9 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ZoomableImageView extends ImageView
+
+
+public class ZoomableImageView extends android.support.v7.widget.AppCompatImageView
 {
     Matrix matrix = new Matrix();
 

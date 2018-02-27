@@ -1,4 +1,4 @@
-package lt.kvk.i12_2.tvakarastis;
+package lt.kvk.i12_2.tvakarastis.mainwindow;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+
+import lt.kvk.i12_2.tvakarastis.R;
 
 /**
  * Created by Meskius on 2017-12-03.

@@ -1,4 +1,4 @@
-package lt.kvk.i12_2.tvakarastis;
+package lt.kvk.i12_2.tvakarastis.mainwindow;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -17,6 +17,14 @@ import org.jsoup.Jsoup;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import lt.kvk.i12_2.tvakarastis.R;
+import lt.kvk.i12_2.tvakarastis.group.GrupesSVMF;
+import lt.kvk.i12_2.tvakarastis.group.GrupesTF;
+import lt.kvk.i12_2.tvakarastis.group.GrupesVF;
+import lt.kvk.i12_2.tvakarastis.menu.SVMFMenu;
+import lt.kvk.i12_2.tvakarastis.menu.TFMenu;
+import lt.kvk.i12_2.tvakarastis.menu.VFMenu;
 
 /**
  * Created by Meskius on 10/23/2017.

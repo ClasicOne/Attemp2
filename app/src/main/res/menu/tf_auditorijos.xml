@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="lt.kvk.i12_2.tvakarastis.AuditorijosTF">
+    tools:context="lt.kvk.i12_2.tvakarastis.classroom.AuditorijosTF">
 
     <item android:id="@+id/action_refresh"
         android:icon="@mipmap/ic_refresh_white_24dp"
-        android:title="Refresh"
+        android:title="refresh"
         app:showAsAction="always">
     </item>
 

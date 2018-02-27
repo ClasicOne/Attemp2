@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="lt.kvk.i12_2.tvakarastis.GrupesSVMF">
+    tools:context="lt.kvk.i12_2.tvakarastis.group.GrupesSVMF">
     <item
         android:id="@+id/showImage"
         android:icon="@android:drawable/ic_menu_slideshow"

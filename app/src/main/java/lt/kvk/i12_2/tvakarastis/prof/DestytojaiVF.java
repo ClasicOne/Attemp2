@@ -1,4 +1,4 @@
-package lt.kvk.i12_2.tvakarastis;
+package lt.kvk.i12_2.tvakarastis.prof;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -37,6 +37,9 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import lt.kvk.i12_2.tvakarastis.R;
+import lt.kvk.i12_2.tvakarastis.imageview.SavedImage_Prof_VF;
 
 /**
  * Created by Meskius on 10/25/2017.
