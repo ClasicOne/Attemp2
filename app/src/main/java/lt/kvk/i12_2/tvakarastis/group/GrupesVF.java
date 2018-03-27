@@ -15,8 +15,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
@@ -33,6 +31,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import lt.kvk.i12_2.tvakarastis.R;
+import lt.kvk.i12_2.tvakarastis.SpinnerManipulation;
+import lt.kvk.i12_2.tvakarastis.WebViewControls;
 import lt.kvk.i12_2.tvakarastis.imageview.SavedImage_Group_VF;
 
 /**
@@ -56,7 +56,7 @@ public class GrupesVF extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grupes_tf);
         wwShit();
-
+        ww = (WebView) findViewById(R.id.ww);
         final Spinner program = (Spinner) findViewById(R.id.program);
         final Spinner metai = (Spinner) findViewById(R.id.year);
         final Spinner grupe = (Spinner) findViewById(R.id.group);
@@ -76,7 +76,7 @@ public class GrupesVF extends AppCompatActivity {
         metaiText.setVisibility(View.GONE);
         grupeText.setVisibility(View.GONE);
 
-        spinner(programText, program);
+       SpinnerManipulation.spinnerFill(programText, program,this);
 
         program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -106,8 +106,8 @@ public class GrupesVF extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 if (!grupesHashmap.get(spinnerText).equals("duck")) {
-                    selection("group", "" + grupesHashmap.get(spinnerText) + "");
-                    click();
+                   WebViewControls.selectionOption("group", "" + grupesHashmap.get(spinnerText) + "",ww);
+                    WebViewControls.click(ww,"javascript:viewWeek();");
                     ww.setVisibility(View.VISIBLE);
                 }
 
@@ -122,56 +122,48 @@ public class GrupesVF extends AppCompatActivity {
     }
 
     private void wwShit() {
-        ww();
+        WebViewControls.webViewSetting(ww);
         //ww.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_smf/groups.php");
         ww.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                hide();
+                WebViewControls.hide(ww,"group");
             }
         });
     }
 
-    private void ww() {
-        ww = (WebView) findViewById(R.id.ww);
-        WebSettings webSettings = ww.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        ww.getSettings().setSupportZoom(true);
-        ww.getSettings().setBuiltInZoomControls(true);
-        ww.getSettings().setDisplayZoomControls(false);
-        ww.setWebChromeClient(new WebChromeClient());
-    }
+
 
     private void year(Spinner grupe, TextView grupeText) {
         if (programSpinnerText.contains("Ištestinės"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_VF_ist_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "6");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_ist_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "6",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_VF_ist_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "7");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_ist_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "7",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_VF_ist_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "4");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_ist_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "4",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "4":
-                    spinner(getResources().getStringArray(R.array.G_VF_ist_4), grupe);
-                    selection("year", "4");
-                    selection("branch", "1");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_ist_4), grupe,this);
+                    WebViewControls.selectionOption("year", "4",ww);
+                    WebViewControls.selectionOption("branch", "1",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                 default:
@@ -180,23 +172,23 @@ public class GrupesVF extends AppCompatActivity {
         if (programSpinnerText.contains("Nuolatinės"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_VF_n_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "5");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_n_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "5",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_VF_n_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "3");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_n_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "3",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_VF_n_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "2");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_VF_n_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "2",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -208,61 +200,20 @@ public class GrupesVF extends AppCompatActivity {
     private void program(Spinner metai, TextView metaiText) {
         switch (programSpinnerText) {
             case "Ištestinės":
-                spinner(yearMetaiIST, metai);
-                selection("program", "1");
+                SpinnerManipulation.spinnerFill(yearMetaiIST, metai,this);
+                WebViewControls.selectionOption("program", "1",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Nuolatinės":
-                spinner(yearMetaiNL, metai);
-                selection("program", "2");
+                SpinnerManipulation.spinnerFill(yearMetaiNL, metai,this);
+                WebViewControls.selectionOption("program", "2",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             default:
                 break;
         }
-    }
-
-    public void click() {
-        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
-        ww.loadUrl("javascript:viewWeek();");
-    }
-
-    public void hide() {
-        //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[1]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[2]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr td\")[8]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr button\")[0]).hide()");
-
-
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[5]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[6]).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
-        ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
-        ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
-        ww.loadUrl("javascript:document.body.style.marginTop=-10");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
-    }
-
-    public void selection(String pasirinkimas, String val) {
-
-        ww.loadUrl("javascript:$('#" + pasirinkimas + "').val('" + val + "').change();");
-
-    }
-
-    public void spinner(String[] program, Spinner metai) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        metai.setAdapter(adapter);
     }
 
     @Override

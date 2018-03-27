@@ -36,6 +36,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import lt.kvk.i12_2.tvakarastis.R;
+import lt.kvk.i12_2.tvakarastis.SpinnerManipulation;
+import lt.kvk.i12_2.tvakarastis.WebViewControls;
 import lt.kvk.i12_2.tvakarastis.imageview.SavedImage_Group_TF;
 
 
@@ -82,7 +84,7 @@ public class GrupesTF extends AppCompatActivity {
         metai.setVisibility(View.GONE);
         grupe.setVisibility(View.GONE);
 
-        spinner(programTipas, programID);
+        SpinnerManipulation.spinnerFill(programTipas, programID, this);
 
         programID.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -91,14 +93,14 @@ public class GrupesTF extends AppCompatActivity {
 
                 switch (programSpinnerText) {
                     case "IŠT":
-                        spinner(yearMetaiIST, metaiID);
-                        selection("program", "2");
+                        SpinnerManipulation.spinnerFill(yearMetaiIST, metaiID,GrupesTF.this);
+                        WebViewControls.selectionOption("program", "2",ww);
                         metai.setVisibility(View.VISIBLE);
                         metaiID.setVisibility(View.VISIBLE);
                         break;
                     case "NL":
-                        spinner(yearMetaiNL, metaiID);
-                        selection("program", "1");
+                        SpinnerManipulation.spinnerFill(yearMetaiNL, metaiID,GrupesTF.this);
+                        WebViewControls.selectionOption("program", "1",ww);
                         metai.setVisibility(View.VISIBLE);
                         metaiID.setVisibility(View.VISIBLE);
                         break;
@@ -118,30 +120,30 @@ public class GrupesTF extends AppCompatActivity {
                 if (programSpinnerText.indexOf("IŠT") != -1)
                     switch (yearSpinnerText) {
                         case "1":
-                            spinner(getResources().getStringArray(R.array.G_TF_IST_1), grupeID);
-                            selection("year", "1");
-                            selection("branch", "8");
+                            SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_IST_1), grupeID, GrupesTF.this);
+                            WebViewControls.selectionOption("year", "1",ww);
+                            WebViewControls.selectionOption("branch", "8",ww);
                             grupe.setVisibility(View.VISIBLE);
                             grupeID.setVisibility(View.VISIBLE);
                             break;
                         case "2":
-                            spinner(getResources().getStringArray(R.array.G_TF_IST_2), grupeID);
-                            selection("year", "2");
-                            selection("branch", "5");
+                            SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_IST_2), grupeID, GrupesTF.this);
+                            WebViewControls.selectionOption("year", "2",ww);
+                            WebViewControls.selectionOption("branch", "5",ww);
                             grupe.setVisibility(View.VISIBLE);
                             grupeID.setVisibility(View.VISIBLE);
                             break;
                         case "3":
-                            spinner(getResources().getStringArray(R.array.G_TF_IST_3), grupeID);
-                            selection("year", "3");
-                            selection("branch", "4");
+                            SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_IST_3), grupeID, GrupesTF.this);
+                            WebViewControls.selectionOption("year", "3",ww);
+                            WebViewControls.selectionOption("branch", "4",ww);
                             grupe.setVisibility(View.VISIBLE);
                             grupeID.setVisibility(View.VISIBLE);
                             break;
                         case "4":
-                            spinner(getResources().getStringArray(R.array.G_TF_IST_4), grupeID);
-                            selection("year", "4");
-                            selection("branch", "7");
+                            SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_IST_4), grupeID, GrupesTF.this);
+                            WebViewControls.selectionOption("year", "4",ww);
+                            WebViewControls.selectionOption("branch", "7",ww);
                             grupe.setVisibility(View.VISIBLE);
                             grupeID.setVisibility(View.VISIBLE);
                         default:
@@ -150,23 +152,23 @@ public class GrupesTF extends AppCompatActivity {
                     }
                 else switch (yearSpinnerText) {
                     case "1":
-                        spinner(getResources().getStringArray(R.array.G_TF_NL_1), grupeID);
-                        selection("year", "1");
-                        selection("branch", "1");
+                        SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_NL_1), grupeID, GrupesTF.this);
+                        WebViewControls.selectionOption("year", "1",ww);
+                        WebViewControls.selectionOption("branch", "1",ww);
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "2":
-                        spinner(getResources().getStringArray(R.array.G_TF_NL_2), grupeID);
-                        selection("year", "2");
-                        selection("branch", "2");
+                        SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_NL_2), grupeID, GrupesTF.this);
+                        WebViewControls.selectionOption("year", "2",ww);
+                        WebViewControls.selectionOption("branch", "2",ww);
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
                     case "3":
-                        spinner(getResources().getStringArray(R.array.G_TF_NL_3), grupeID);
-                        selection("year", "3");
-                        selection("branch", "3");
+                        SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_TF_NL_3), grupeID, GrupesTF.this);
+                        WebViewControls.selectionOption("year", "3",ww);
+                        WebViewControls.selectionOption("branch", "3",ww);
                         grupe.setVisibility(View.VISIBLE);
                         grupeID.setVisibility(View.VISIBLE);
                         break;
@@ -186,9 +188,9 @@ public class GrupesTF extends AppCompatActivity {
                 String spinnerText = adapterView.getSelectedItem().toString();
                 Log.e("Duck", "" + spinnerText + ":" + grupesHashmap.get(spinnerText));
                 if (!grupesHashmap.get(spinnerText).equals("duck")) {
-                    selection("group", "" + grupesHashmap.get(spinnerText) + "");
+                    WebViewControls.selectionOption("group", "" + grupesHashmap.get(spinnerText) + "",ww);
                     ww.setVisibility(View.VISIBLE);
-                    click();
+                    WebViewControls.click(ww, "javascript:viewWeek();");
                 }
             }
 
@@ -218,7 +220,7 @@ public class GrupesTF extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 //  saveImage();
-                hide();
+                WebViewControls.hide(ww, "group");
             }
 
             @Override
@@ -229,47 +231,6 @@ public class GrupesTF extends AppCompatActivity {
             }
         });
         update();
-    }
-
-    public void click() {
-        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
-        ww.loadUrl("javascript:viewWeek();");
-    }
-
-    public void hide() {
-        //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[1]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[2]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr td\")[8]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr button\")[0]).hide()");
-
-
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[5]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[6]).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
-        ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
-        ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
-        ww.loadUrl("javascript:document.body.style.marginTop=-10");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
-    }
-
-    public void selection(String pasirinkimas, String val) {
-
-        ww.loadUrl("javascript:$('#" + pasirinkimas + "').val('" + val + "').change();");
-
-    }
-
-    public void spinner(String[] program, Spinner metai) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        metai.setAdapter(adapter);
     }
 
     @Override
@@ -303,22 +264,23 @@ public class GrupesTF extends AppCompatActivity {
 
                             // ww.setInitialScale(0);
                             Log.e("Duck", ": Timer");
-                        }catch (Exception e) {
+                        } catch (Exception e) {
                             // Log.e("Duck", "" + e.getMessage() + ": Timer");
                             // e.printStackTrace();
 
                         }
-                    }        }, (300));
+                    }
+                }, (300));
 
 
                 break;
             case R.id.showImage:
 
-                try{
-                  File temp = new File  ("/data/user/0/lt.kvk.i12_2.tvakarastis/files/saved.jpg");
-                  Intent intent = new Intent(GrupesTF.this, SavedImage_Group_TF.class);
-                  startActivity(intent);
-                }catch (NullPointerException e){
+                try {
+                    File temp = new File("/data/user/0/lt.kvk.i12_2.tvakarastis/files/saved.jpg");
+                    Intent intent = new Intent(GrupesTF.this, SavedImage_Group_TF.class);
+                    startActivity(intent);
+                } catch (NullPointerException e) {
                 }
 
 
@@ -381,14 +343,14 @@ public class GrupesTF extends AppCompatActivity {
     }
 
 
-    public  void update() {
-        new Thread(new Runnable(){
+    public void update() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
-                }catch (Exception e){
-                    Log.e("Duck",""+ e.getMessage()+":" );
+                } catch (Exception e) {
+                    Log.e("Duck", "" + e.getMessage() + ":");
                     e.printStackTrace();
                     runOnUiThread(new Runnable() {
                         @Override
@@ -404,7 +366,7 @@ public class GrupesTF extends AppCompatActivity {
                             progress.setButton(DialogInterface.BUTTON_POSITIVE, "Pranešti administratoriui", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
-                                    composeEmail(email,"Neveikia tvarkaraščiai",
+                                    composeEmail(email, "Neveikia tvarkaraščiai",
                                             "Sveiki,\n" +
                                                     "Neina pamatyti tvarkaraščių, todėl reikia patikrinti ar jie yra tinkamai publikuojami.");
 
@@ -420,7 +382,8 @@ public class GrupesTF extends AppCompatActivity {
             }
         }).start();
     }
-    public void timer(){
+
+    public void timer() {
         final Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -428,13 +391,15 @@ public class GrupesTF extends AppCompatActivity {
                 try {
                     Jsoup.connect("http://is.kvk.lt/Tvarkarasciai_tf/prof.php").get();
                     progress.cancel();
-                }catch (Exception e) {
+                } catch (Exception e) {
                     // Log.e("Duck", "" + e.getMessage() + ": Timer");
                     // e.printStackTrace();
                     timer();
                 }
-            }        }, (50));
+            }
+        }, (50));
     }
+
     public void composeEmail(String[] addresses, String subject, String message) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this

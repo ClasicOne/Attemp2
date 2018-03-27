@@ -33,6 +33,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import lt.kvk.i12_2.tvakarastis.R;
+import lt.kvk.i12_2.tvakarastis.SpinnerManipulation;
+import lt.kvk.i12_2.tvakarastis.WebViewControls;
 import lt.kvk.i12_2.tvakarastis.imageview.SavedImage_Group_SVMF;
 
 /**
@@ -62,6 +64,7 @@ public class GrupesSVMF extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grupes_smf);
+        ww = (WebView) findViewById(R.id.ww);
         wwShit();
         final Spinner program = (Spinner) findViewById(R.id.program);
         final Spinner metai = (Spinner) findViewById(R.id.year);
@@ -78,7 +81,7 @@ public class GrupesSVMF extends AppCompatActivity {
             grupesHashmap.put(grupes_str[i], grupes_values[i]);
         //<-------------------------
 
-        spinner(programText, program);
+        SpinnerManipulation.spinnerFill(programText, program,this);
         // spiiner paspaudimas tipas
         program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -113,8 +116,8 @@ public class GrupesSVMF extends AppCompatActivity {
                 Log.e("Duck",""+spinnerText+" "+grupesHashmap.get(spinnerText));
 
                 if (!grupesHashmap.get(spinnerText).equals("duck")){
-                selection("group",""+grupesHashmap.get(spinnerText)+"");
-                click();
+                WebViewControls.selectionOption("group",""+grupesHashmap.get(spinnerText)+"",ww);
+                WebViewControls.click(ww,"javascript:viewWeek();");
                 ww.setVisibility(View.VISIBLE);
                 }
             }
@@ -127,7 +130,7 @@ public class GrupesSVMF extends AppCompatActivity {
     }
 
     private void wwShit() {
-        ww();
+        WebViewControls.webViewSetting(ww);
         //ww.loadUrl("http://google.com");
         ww.loadUrl("http://is.kvk.lt/Tvarkarasciai_svmf/groups.php");
         // Kai uzsikrauna puslapis isvkiecia metoda kad pasleptu nereikalingus puslapio elementus
@@ -135,51 +138,42 @@ public class GrupesSVMF extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                hide();
+                WebViewControls.hide(ww,"group");
             }
         });
     }
 
-    // ww stuf
-    private void ww() {
-        ww = (WebView) findViewById(R.id.ww);
-        WebSettings webSettings = ww.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        ww.getSettings().setSupportZoom(true);
-        ww.getSettings().setBuiltInZoomControls(true);
-        ww.getSettings().setDisplayZoomControls(false);
-        ww.setWebChromeClient(new WebChromeClient());
-    }
+
     // metai
     private void year(Spinner grupe, TextView grupeText) {
         if (programSpinnerText.contains("Bendrosios praktikos slauga"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "17");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bps_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "17",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "19");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bps_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "19",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "20");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bps_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "20",ww);
 
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "4":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bps_4), grupe);
-                    selection("year", "4");
-                    selection("branch", "3");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bps_4), grupe,this);
+                    WebViewControls.selectionOption("year", "4",ww);
+                    WebViewControls.selectionOption("branch", "3",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                 default:
@@ -188,23 +182,23 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Burnos higiena"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bh_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "22");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bh_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "22",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bh_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "21");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bh_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "21",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_bh_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "7");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_bh_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "7",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -214,23 +208,23 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Dietetika"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_d_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "23");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_d_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "23",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_d_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "26");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_d_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "26",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_d_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "8");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_d_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "8",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -240,23 +234,23 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Grožio terapija"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_gt_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "11");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_gt_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "11",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_gt_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "12");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_gt_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "12",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_gt_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "4");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_gt_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "4",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -266,23 +260,23 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Kineziterapija"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_k_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "15");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_k_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "15",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_k_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "16");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_k_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "16",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_k_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "9");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_k_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "9",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -292,23 +286,23 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Odontologinė priežiūra"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_op_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "24");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_op_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "24",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_op_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "25");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_op_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "25",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_op_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "6");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_op_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "6",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -318,30 +312,30 @@ public class GrupesSVMF extends AppCompatActivity {
         if (programSpinnerText.contains("Socialinis darbas"))
             switch (yearSpinnerText) {
                 case "1":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_1), grupe);
-                    selection("year", "1");
-                    selection("branch", "13");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_sd_1), grupe,this);
+                    WebViewControls.selectionOption("year", "1",ww);
+                    WebViewControls.selectionOption("branch", "13",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "2":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_2), grupe);
-                    selection("year", "2");
-                    selection("branch", "14");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_sd_2), grupe,this);
+                    WebViewControls.selectionOption("year", "2",ww);
+                    WebViewControls.selectionOption("branch", "14",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "3":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_3), grupe);
-                    selection("year", "3");
-                    selection("branch", "10");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_sd_3), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "10",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
                 case "4":
-                    spinner(getResources().getStringArray(R.array.G_SVMF_sd_4), grupe);
-                    selection("year", "3");
-                    selection("branch", "27");
+                    SpinnerManipulation.spinnerFill(getResources().getStringArray(R.array.G_SVMF_sd_4), grupe,this);
+                    WebViewControls.selectionOption("year", "3",ww);
+                    WebViewControls.selectionOption("branch", "27",ww);
                     grupe.setVisibility(View.VISIBLE);
                     grupeText.setVisibility(View.VISIBLE);
                     break;
@@ -355,44 +349,44 @@ public class GrupesSVMF extends AppCompatActivity {
     private void program(Spinner metai, TextView metaiText) {
         switch (programSpinnerText) {
             case "Bendrosios praktikos slauga":
-                spinner(yearMetai4, metai);
-                selection("program", "1");
+                SpinnerManipulation.spinnerFill(yearMetai4, metai,this);
+                WebViewControls.selectionOption("program", "1",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Burnos higiena":
-                spinner(yearMetai3, metai);
-                selection("program", "5");
+                SpinnerManipulation.spinnerFill(yearMetai3, metai,this);
+                WebViewControls.selectionOption("program", "5",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Dietetika":
-                spinner(yearMetai3, metai);
-                selection("program", "6");
+                SpinnerManipulation.spinnerFill(yearMetai3, metai,this);
+                WebViewControls.selectionOption("program", "6",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Grožio terapija":
-                spinner(yearMetai3, metai);
-                selection("program", "2");
+                SpinnerManipulation.spinnerFill(yearMetai3, metai,this);
+                WebViewControls.selectionOption("program", "2",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Kineziterapija":
-                spinner(yearMetai3, metai);
-                selection("program", "3");
+                SpinnerManipulation.spinnerFill(yearMetai3, metai,this);
+                WebViewControls.selectionOption("program", "3",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Odontologinė priežiūra":
-                spinner(yearMetai3, metai);
-                selection("program", "4");
+                SpinnerManipulation.spinnerFill(yearMetai3, metai,this);
+                WebViewControls.selectionOption("program", "4",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
             case "Socialinis darbas":
-                spinner(yearMetai4, metai);
-                selection("program", "7");
+                SpinnerManipulation.spinnerFill(yearMetai4, metai,this);
+                WebViewControls.selectionOption("program", "7",ww);
                 metai.setVisibility(View.VISIBLE);
                 metaiText.setVisibility(View.VISIBLE);
                 break;
@@ -401,46 +395,7 @@ public class GrupesSVMF extends AppCompatActivity {
         }
     }
     // Rodyti savaite
-    public void click() {
-        // ww.loadUrl("javascript:$(document.querySelector(\"input.inputbutton.special\")).click();");
-        ww.loadUrl("javascript:viewWeek();");
-    }
-    // Paslepia nereikalingus elementusa
-    public void hide() {
-        //ww.loadUrl("javascript:$(document.querySelector(\"#data_form\")).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[0]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[1]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[2]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[3]).hide()");
 
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr td\")[8]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"tbody tr button\")[0]).hide()");
-
-
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[5]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\".hdrTable tbody tr\")[6]).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelector(\".main_menu\")).hide()");
-
-        ww.loadUrl("javascript:$(document.querySelector(\"#customMessage\")).hide()");
-        ww.loadUrl("javascript:$(document.querySelector(\"#adminError\")).hide()");
-        ww.loadUrl("javascript:$(\"html\").css(\"margin-top\", 0);");
-        ww.loadUrl("javascript:document.body.style.marginTop=-10");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[4]).hide()");
-        ww.loadUrl("javascript:$(document.querySelectorAll(\"div\")[3]).hide()");
-    }
-    // Pasirinkimo grupes ww js
-    public void selection(String pasirinkimas, String val) {
-
-        ww.loadUrl("javascript:$('#" + pasirinkimas + "').val('" + val + "').change();");
-
-    }
-    // Spinner idejimas duomenu (string array)
-    public void spinner(String[] program, Spinner metai) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, program);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        metai.setAdapter(adapter);
-    }
 
     public  void update() {
         new Thread(new Runnable(){
